@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="How to Paint Warhammer 40k Miniatures — Beginner's Guide"
+  description="A practical painting guide for Warhammer 40k beginners. Learn the three techniques that do 90% of the work, what to actually buy, and how to paint your first model."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-4 font-display">Painting Guide</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold mb-6">
+        It looks harder<br />than it is.
+      </h1>
+      <p class="text-[#8a8590] text-lg leading-relaxed max-w-2xl mx-auto">
+        Miniature painting has a reputation for being intimidating. It isn't — 
+        at least not at the level you actually need to play the game. 
+        Three techniques do 90% of the work. This guide covers all of them.
+      </p>
+    </div>
+  </section>
+
+  <!-- What you need -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">What you actually need</h2>
+      <p class="text-[#b8b4c0] mb-8 text-lg leading-relaxed">
+        Don't buy a full paint set. You'll end up with 30 colors you'll never use and 
+        missing the 3 you need constantly. Buy these specifically — 
+        the faction guides tell you which colors to add on top.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <!-- Tools -->
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold text-lg mb-4">Tools (~$45 one-time)</h3>
+          <div class="space-y-3">
+            {[
+              { item: 'Clippers (sprue cutters)', note: 'Cut models off the sprue. Don\'t use scissors.' },
+              { item: 'Hobby knife (X-Acto or similar)', note: 'Trim mold lines off models before painting.' },
+              { item: 'Base brush (size 2)', note: 'For basecoating large areas. Any brand.' },
+              { item: 'Drybrush (old or cheap)', note: 'A ruined brush works better than a new one.' },
+              { item: 'Detail brush (size 0)', note: 'For eyes, gems, and small details.' },
+              { item: 'Superglue', note: 'Multi-part plastic kits need this.' },
+            ].map(tool => (
+              <div class="flex gap-3 items-start">
+                <span class="text-[#c9a84c] mt-0.5 flex-shrink-0">▸</span>
+                <div>
+                  <span class="text-sm font-semibold">{tool.item}</span>
+                  <p class="text-xs text-[#4a4855] mt-0.5">{tool.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Universal paints -->
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold text-lg mb-4">Universal paints (~$24)</h3>
+          <div class="space-y-3">
+            {[
+              { item: 'Nuln Oil', note: 'Black wash. Works on metal, dark colors, details.' },
+              { item: 'Agrax Earthshade', note: 'Brown wash. Works on almost everything.' },
+              { item: 'Leadbelcher', note: 'Silver metallic. Every army needs this.' },
+              { item: 'Abaddon Black', note: 'True black for weapons and dark areas.' },
+              { item: 'Ironbreaker', note: 'Silver for drybrushing metal highlights.' },
+            ].map(paint => (
+              <div class="flex gap-3 items-start">
+                <span class="text-[#c9a84c] mt-0.5 flex-shrink-0">▸</span>
+                <div>
+                  <span class="text-sm font-semibold">{paint.item}</span>
+                  <p class="text-xs text-[#4a4855] mt-0.5">{paint.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">One essential you might miss: spray primer</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Every model needs primer before paint will stick properly. 
+          Your faction guide specifies which spray to get — 
+          it doubles as your base color so you're not doing extra work. 
+          Corax White, Wraithbone, Abaddon Black, Mephiston Red, and others all exist as spray primers. 
+          Get the right one for your faction and it saves you an entire step.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Three techniques -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">The three techniques that do 90% of the work</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">Learn these three things and you can paint any model to a good tabletop standard.</p>
+
+      <!-- Washing -->
+      <div class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0">1</div>
+          <h3 class="font-display text-xl font-semibold">Washing</h3>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+          <p class="text-[#b8b4c0] leading-relaxed mb-4">
+            A wash is a thin, dark liquid that flows into recesses and dries there, 
+            creating instant shadow and depth. It's the single most powerful technique in miniature painting — 
+            one step transforms a flat base coat into something with genuine dimension.
+          </p>
+          <div class="space-y-2 text-sm text-[#b8b4c0]">
+            <p><strong class="text-[#f0ede8]">How to do it:</strong> Load your brush with wash, apply it directly over the painted area. It self-levels into recesses. Don't brush it around — let it flow naturally.</p>
+            <p><strong class="text-[#f0ede8]">When to use Nuln Oil:</strong> Metal surfaces, black armor, dark colors, anything mechanical.</p>
+            <p><strong class="text-[#f0ede8]">When to use Agrax Earthshade:</strong> Skin, leather, brown/tan colors, fabric, bone — basically everything else.</p>
+            <p><strong class="text-[#f0ede8]">The key rule:</strong> Let it dry completely before doing anything else. 15–20 minutes minimum.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drybrushing -->
+      <div class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0">2</div>
+          <h3 class="font-display text-xl font-semibold">Drybrushing</h3>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+          <p class="text-[#b8b4c0] leading-relaxed mb-4">
+            Drybrushing deposits paint only on raised surfaces — edges, ridges, and high points — 
+            while leaving recesses dark. It creates highlights and texture without needing any brush control. 
+            It's how you make a black model look like dark metal, or make green skin look muscular.
+          </p>
+          <div class="space-y-2 text-sm text-[#b8b4c0]">
+            <p><strong class="text-[#f0ede8]">How to do it:</strong> Load your brush with paint. Wipe almost all of it off on a paper towel until the brush feels almost dry — you should barely see color when you brush your hand. Then brush lightly across the model's raised surfaces. Repeat until you see the highlight building up.</p>
+            <p><strong class="text-[#f0ede8]">Common mistake:</strong> Too much paint on the brush. The brush should feel practically empty. If paint is going on in thick streaks, you have too much — wipe more off.</p>
+            <p><strong class="text-[#f0ede8]">Use old brushes:</strong> Drybrushing destroys brush tips. Use a designated drybrush or an old one you don't care about.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contrast / Layer -->
+      <div class="mb-4">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0">3</div>
+          <h3 class="font-display text-xl font-semibold">Contrast Paints</h3>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+          <p class="text-[#b8b4c0] leading-relaxed mb-4">
+            Contrast paints are the single biggest improvement in beginner painting in the last decade. 
+            Applied over a light base coat (Wraithbone or Grey Seer spray), 
+            they flow into recesses like a wash while leaving raised areas bright — 
+            combining base coat and shade in one step. 
+            One coat of the right Contrast paint can finish an entire section of a model.
+          </p>
+          <div class="space-y-2 text-sm text-[#b8b4c0]">
+            <p><strong class="text-[#f0ede8]">The catch:</strong> They only work over light primers (Wraithbone, Grey Seer, Corax White). Over dark primer, they look muddy and wrong.</p>
+            <p><strong class="text-[#f0ede8]">How to apply:</strong> Load brush, apply generously. Don't overwork it — one pass and leave it. Let it flow where it wants to go.</p>
+            <p><strong class="text-[#f0ede8]">Best uses:</strong> Skin, cloth, leather, fur, organic surfaces. Less effective on flat armor plates where you want an even color.</p>
+            <p><strong class="text-[#f0ede8]">Every faction guide specifies which Contrast paints to use.</strong> They're not required, but they make life significantly easier.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- The process -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Your first model — the process</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">Every model, every faction, every skill level follows the same sequence. This is the order. Don't skip steps.</p>
+
+      <div class="space-y-4">
+        {[
+          {
+            step: 'Clean and assemble',
+            detail: 'Remove mold lines with your hobby knife — thin raised lines running across the model from the casting process. Then clip parts off the sprue and glue. Let glue cure before moving on.',
+            warn: null,
+          },
+          {
+            step: 'Prime',
+            detail: 'Spray primer from about 30cm (12 inches) away in short, sweeping passes. Rotate the model to get all angles. Thin coats. The goal is full coverage without obscuring detail.',
+            warn: 'Don\'t prime in humid weather or rain — the paint will bubble.',
+          },
+          {
+            step: 'Basecoat the main color',
+            detail: 'If your primer is already the right color (most are), this step is done. If you need a different color on parts of the model, apply it now with a base brush. Use thin coats — two thin coats cover better than one thick one.',
+            warn: null,
+          },
+          {
+            step: 'Block in secondary colors',
+            detail: 'Apply your other colors — leather, skin, metal areas. Don\'t worry about being perfect. Small overlaps get fixed in later steps. Basecoating is about coverage, not precision.',
+            warn: null,
+          },
+          {
+            step: 'Wash everything',
+            detail: 'Apply your wash over the whole model or specific sections. Agrax over organic areas, Nuln Oil over metal. Let it flow into recesses. Walk away and let it dry completely.',
+            warn: 'Patience here is everything. Applying anything over a wet wash ruins it.',
+          },
+          {
+            step: 'Drybrush/highlight raised surfaces',
+            detail: 'Drybrush a lighter version of your main color over raised armor edges, muscles, fur, or texture. This brings the model back to life after the wash darkened everything.',
+            warn: null,
+          },
+          {
+            step: 'Paint the details',
+            detail: 'Eyes, gems, lenses, teeth, weapon markings. Small details with your detail brush. These take the most time per square millimeter but have the biggest visual impact.',
+            warn: null,
+          },
+          {
+            step: 'Base the model',
+            detail: 'Apply texture paint to the base (not the model\'s feet). Let it dry. Drybrush a lighter color over the texture. Add a tuft or two. Done.',
+            warn: null,
+          },
+        ].map((s, i) => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-7 h-7 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">{i + 1}</div>
+              <div class="flex-1">
+                <p class="font-semibold mb-1">{s.step}</p>
+                <p class="text-[#8a8590] text-sm leading-relaxed">{s.detail}</p>
+                {s.warn && (
+                  <p class="text-amber-500 text-xs mt-2 font-semibold">⚠ {s.warn}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Common mistakes -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Common mistakes — and how to avoid them</h2>
+
+      <div class="space-y-4">
+        {[
+          {
+            mistake: 'Too much paint on the brush',
+            fix: 'Wipe the side of the brush on the pot rim before applying. The brush should be loaded but not dripping. Excess paint causes clumping and obscures detail.',
+          },
+          {
+            mistake: 'Paint too thick (gloopy, grainy texture)',
+            fix: 'Add a tiny drop of water to your paint and mix. The consistency should be like skimmed milk — thin enough to flow but not so thin it loses color. Thin coats over two passes beat one thick coat every time.',
+          },
+          {
+            mistake: 'Painting in bad light',
+            fix: 'Get a daylight lamp. The difference is massive — you\'ll see detail you couldn\'t see before, and your colors will look more accurate. A cheap desk lamp with a daylight bulb works.',
+          },
+          {
+            mistake: 'Skipping primer',
+            fix: 'Paint applied directly to plastic doesn\'t stick properly and chips at the slightest touch. Always prime. Always.',
+          },
+          {
+            mistake: 'Rushing between steps',
+            fix: 'Wet wash + wet layer paint = streaky disaster. If you\'re not sure if something is dry, wait another five minutes. You cannot rush drying.',
+          },
+          {
+            mistake: 'Starting on your best model',
+            fix: 'Practice on a Poxwalker, a Guardsman, or a Gretchin — cheap, small, forgiving. Save the hero model for when you know what you\'re doing.',
+          },
+          {
+            mistake: 'Thinking "tabletop standard" isn\'t good enough',
+            fix: 'At arm\'s length on a table, a basecoat + wash + drybrush model looks great. The goal is a painted army on the table, not a display cabinet piece. One well-painted squad beats a pile of grey plastic every time.',
+          },
+        ].map(item => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <p class="text-red-400 text-sm font-semibold mb-1">✗ {item.mistake}</p>
+            <p class="text-[#b8b4c0] text-sm leading-relaxed">{item.fix}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Batch painting -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Batch painting — how to actually finish an army</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-8">
+        <p>
+          Painting one model at a time from start to finish is inefficient and demoralizing — 
+          you'll burn out long before you have an army. 
+          The solution is batch painting: doing one step across all your models before moving to the next.
+        </p>
+        <p>
+          The method: line up 10 models (or 5 if they're complex). 
+          Do step 1 on all 10. By the time you've done the tenth, the first has dried and you can move to step 2. 
+          You're effectively painting in parallel. 
+          A squad that might take 3 hours painted individually takes 90 minutes in a batch of 10.
+        </p>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-3">The batch size rule</h3>
+        <div class="space-y-2 text-sm text-[#b8b4c0]">
+          <p><strong class="text-[#f0ede8]">Simple models (Poxwalkers, Gretchin, Guardsmen):</strong> Batch 10–20 at a time.</p>
+          <p><strong class="text-[#f0ede8]">Medium models (Space Marines, Necron Warriors):</strong> Batch 5–10.</p>
+          <p><strong class="text-[#f0ede8]">Complex models (characters, monsters):</strong> Batch 1–3. These get individual attention.</p>
+          <p><strong class="text-[#f0ede8]">Vehicles:</strong> One at a time — too big to benefit from batching, too complex to rush.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Going further -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">When you want to go further</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">Once you're comfortable with the basics, these techniques are the next step up.</p>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        {[
+          {
+            name: 'Edge highlighting',
+            desc: 'A thin, precise line of lighter color along the sharpest armor edges. Requires a steady hand and a fine brush. The technique that makes Aeldari look spectacular.',
+            difficulty: 'Intermediate',
+          },
+          {
+            name: 'Layering',
+            desc: 'Building up multiple thin layers of progressively lighter color on raised surfaces — a smoother, more realistic highlight than drybrushing. Takes more time but looks cleaner.',
+            difficulty: 'Intermediate',
+          },
+          {
+            name: 'Wet blending',
+            desc: 'Mixing two colors while they\'re still wet on the model to create a seamless gradient. Used for cloaks, skin, and dramatic color transitions.',
+            difficulty: 'Advanced',
+          },
+          {
+            name: 'OSL (Object Source Lighting)',
+            desc: 'Painting the glow of a light source (a weapon, a gem, an eye) radiating outward onto the surrounding model. Creates dramatic, cinematic effects.',
+            difficulty: 'Advanced',
+          },
+          {
+            name: 'Sponge chipping',
+            desc: 'Torn foam sponge dipped lightly in metallic paint, dabbed onto armor edges for instant battle damage. Easy, fast, and looks great on Chaos and Imperial models.',
+            difficulty: 'Easy',
+          },
+          {
+            name: 'Technical paints',
+            desc: 'Typhus Corrosion for chunky rust, Nurgle\'s Rot for slime, Blood for the Blood God for wet gore. Each creates a specific effect that would be very hard to fake otherwise.',
+            difficulty: 'Easy',
+          },
+        ].map(tech => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-display font-semibold">{tech.name}</h3>
+              <span class={`text-xs px-2 py-0.5 rounded font-display flex-shrink-0 ml-2 ${
+                tech.difficulty === 'Easy' ? 'bg-green-900 text-green-300' :
+                tech.difficulty === 'Intermediate' ? 'bg-yellow-900 text-yellow-300' :
+                'bg-red-900 text-red-300'
+              }`}>{tech.difficulty}</span>
+            </div>
+            <p class="text-[#8a8590] text-sm leading-relaxed">{tech.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">The first model is the hardest.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        After that, each one gets faster and better. 
+        Don't wait until you feel ready — you'll never feel ready. 
+        Start with one model, use the steps above, and see what you make.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/factions"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Find Your Faction →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Take the Army Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
