@@ -1,0 +1,465 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="How to Play Warhammer 40k — Beginner's Guide"
+  description="A plain-English guide to how Warhammer 40k actually works. Turn structure, dice mechanics, objectives, and what your first game looks like."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-4 font-display">How to Play</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold mb-6">
+        A game of 40k looks<br />overwhelming. It isn't.
+      </h1>
+      <p class="text-[#8a8590] text-lg leading-relaxed max-w-2xl mx-auto">
+        The full rulebook is 60 pages. The core of the game is three dice rolls per attack.
+        This guide explains how a game actually works — without drowning you in the full rules before you've played once.
+      </p>
+    </div>
+  </section>
+
+  <!-- What you're trying to do -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">What you're actually trying to do</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-8">
+        <p>
+          Most new players assume 40k is about killing all your opponent's models. 
+          It isn't. 40k is about <strong class="text-[#f0ede8]">controlling objectives</strong>.
+        </p>
+        <p>
+          Objective markers are small tokens placed around the battlefield. 
+          Holding them at the right time scores you <strong class="text-[#f0ede8]">Victory Points (VPs)</strong>. 
+          The player with the most VPs at the end of five battle rounds wins. 
+          You can table your opponent (kill everything) and still lose 
+          if you ignored the objectives while doing it.
+        </p>
+        <p>
+          This matters for how you play: your goal isn't maximum destruction. 
+          Your goal is to put models in the right places at the right times 
+          while preventing your opponent from doing the same.
+        </p>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">The win condition in one sentence</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Score more Victory Points than your opponent over five battle rounds 
+          by holding objective markers and completing secondary missions — 
+          while keeping enough of your army alive to keep scoring.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- The shape of a game -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">The shape of a game</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-8">
+        <p>
+          A game is divided into <strong class="text-[#f0ede8]">Battle Rounds</strong>. 
+          There are five of them. In each Battle Round, both players take a turn — 
+          the person who goes first finishes their turn, then the other player takes theirs. 
+          One Battle Round = both players have acted.
+        </p>
+        <p>
+          Standard games are played at 2,000 points — a full evening's game, 
+          typically 2.5 to 3 hours. But you'll start at 
+          <strong class="text-[#f0ede8]">Combat Patrol</strong> (roughly 500 points) — 
+          a much smaller game that takes about an hour and uses simplified rules. 
+          It's designed exactly for learning.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        {[
+          { label: 'Combat Patrol', pts: '~500 pts', time: '~1 hour', note: 'Start here' },
+          { label: 'Incursion', pts: '~1000 pts', time: '~1.5 hours', note: 'Next step up' },
+          { label: 'Strike Force', pts: '~2000 pts', time: '~2.5–3 hours', note: 'Standard game' },
+        ].map(size => (
+          <div class={`bg-[#1a1a1f] border rounded-lg p-4 text-center ${size.note === 'Start here' ? 'border-[#c9a84c]' : 'border-[#2a2a35]'}`}>
+            <p class="font-display font-semibold text-sm mb-1">{size.label}</p>
+            <p class="text-[#c9a84c] text-xs mb-1">{size.pts}</p>
+            <p class="text-[#4a4855] text-xs">{size.time}</p>
+            {size.note === 'Start here' && <p class="text-[#c9a84c] text-xs font-semibold mt-1">← Start here</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Your turn -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Your turn — phase by phase</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">Every turn follows the same sequence. Learn this order and 40k starts making sense.</p>
+
+      <div class="space-y-4">
+        {[
+          {
+            phase: 'Command Phase',
+            icon: '⚑',
+            detail: 'Rally any units that fled last turn. Use Command Points — a resource that lets you use special abilities called Stratagems throughout the game. Command Points regenerate each turn.',
+            key: 'Think of it as your planning phase. Use Stratagems here or save CPs for later.',
+          },
+          {
+            phase: 'Movement Phase',
+            icon: '➤',
+            detail: 'Move all your units. Each unit has a Movement characteristic (M) — the maximum distance in inches it can move. You can move less, but not more. Units can also Advance (move further but can\'t shoot afterward) or Remain Stationary for bonuses.',
+            key: 'This is where 40k is won or lost. Getting units onto objectives early, screening against charges, and cutting off your opponent\'s movement — all happens here.',
+          },
+          {
+            phase: 'Shooting Phase',
+            icon: '◎',
+            detail: 'All your units with ranged weapons fire at enemy units. Pick a unit, pick a target within range and line of sight, roll dice to hit, roll dice to wound, opponent rolls saves. Remove casualties.',
+            key: 'Units that Advanced or are in melee combat cannot shoot. Pick targets carefully — you must declare all shots from a unit before resolving any.',
+          },
+          {
+            phase: 'Charge Phase',
+            icon: '⚔',
+            detail: 'Declare which units want to charge into melee. Roll 2D6 — if the result equals or exceeds the distance to the target, the charge succeeds and your unit moves into base contact. Opponent can Overwatch (shoot at the charging unit for free).',
+            key: 'Failed charges happen. Manage expectations — a 9" charge (two 6s needed) is risky. A 4" charge is almost guaranteed.',
+          },
+          {
+            phase: 'Fight Phase',
+            icon: '✦',
+            detail: 'Units in melee combat fight. Crucially: BOTH players fight in this phase, not just the active player. The charging player fights first, then the other player. Units locked in combat cannot shoot — getting charged is costly.',
+            key: 'This is the most interactive phase. Both players are rolling dice simultaneously (in sequence). Good positioning before the charge determines everything.',
+          },
+          {
+            phase: 'Morale & Battleshock',
+            icon: '◈',
+            detail: 'Units that took casualties may have to take a Battleshock test. In 10th edition this is simplified — units below half strength are Battleshocked, reducing their effectiveness. No models flee from Battleshock in 10th edition.',
+            key: 'Less punishing than previous editions. But Battleshocked units lose their Objective Control bonus — important for scoring.',
+          },
+        ].map((p, i) => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-[#1f1d14] border border-[#c9a84c] text-[#c9a84c] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">{i + 1}</div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-lg">{p.icon}</span>
+                  <h3 class="font-display font-semibold text-lg">{p.phase}</h3>
+                </div>
+                <p class="text-[#8a8590] text-sm leading-relaxed mb-2">{p.detail}</p>
+                <p class="text-[#c9a84c] text-xs font-semibold">Key: {p.key}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- The dice -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How the dice work</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        Every attack in 40k is three rolls: hit, wound, save. 
+        That's the whole combat system. Everything else is modifiers on top of these three rolls.
+      </p>
+
+      <!-- The three rolls -->
+      <div class="space-y-4 mb-10">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-lg">Roll 1 — To Hit</h3>
+          <p class="text-[#b8b4c0] text-sm leading-relaxed mb-2">
+            Roll a D6 for each attack. Compare to the weapon's 
+            <strong class="text-[#f0ede8]">Ballistic Skill</strong> (ranged) or 
+            <strong class="text-[#f0ede8]">Weapon Skill</strong> (melee). 
+            Roll equal to or higher than the characteristic to score a hit.
+          </p>
+          <p class="text-[#4a4855] text-xs">Example: BS 3+ means you need a 3, 4, 5, or 6. Half your rolls hit.</p>
+        </div>
+
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-lg">Roll 2 — To Wound</h3>
+          <p class="text-[#b8b4c0] text-sm leading-relaxed mb-3">
+            For each hit, roll again. Compare the weapon's 
+            <strong class="text-[#f0ede8]">Strength (S)</strong> 
+            to the target's <strong class="text-[#f0ede8]">Toughness (T)</strong>:
+          </p>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            {[
+              { condition: 'S ≥ double T', result: 'Wound on 2+', color: 'text-green-400' },
+              { condition: 'S > T', result: 'Wound on 3+', color: 'text-green-400' },
+              { condition: 'S = T', result: 'Wound on 4+', color: 'text-yellow-400' },
+              { condition: 'S < T', result: 'Wound on 5+', color: 'text-red-400' },
+              { condition: 'T ≥ double S', result: 'Wound on 6+', color: 'text-red-400' },
+            ].map(row => (
+              <div class="bg-[#111113] rounded px-3 py-2">
+                <span class="text-[#8a8590]">{row.condition} → </span>
+                <span class={`font-semibold ${row.color}`}>{row.result}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-lg">Roll 3 — Armor Save</h3>
+          <p class="text-[#b8b4c0] text-sm leading-relaxed mb-2">
+            The <em>defending</em> player rolls a D6 for each wound. 
+            Compare to the model's <strong class="text-[#f0ede8]">Save</strong> characteristic. 
+            Roll equal to or higher to save the wound — no damage taken. 
+            Fail the save — remove a wound (or the model if wounds reach zero).
+          </p>
+          <p class="text-[#b8b4c0] text-sm leading-relaxed">
+            Weapons have an <strong class="text-[#f0ede8]">Armour Penetration (AP)</strong> value 
+            that worsens the target's save. 
+            AP -1 means a 3+ save becomes a 4+. AP -3 means a 3+ save becomes a 6+.
+          </p>
+          <p class="text-[#4a4855] text-xs mt-2">Example: Space Marine saves on 3+. Hit by a lascannon (AP -3). Now saves on 6+. Most shots get through.</p>
+        </div>
+      </div>
+
+      <!-- Keywords -->
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">The one rule that confuses everyone: Invulnerable Saves</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Some models have an <strong class="text-[#f0ede8]">Invulnerable Save</strong> — 
+          a second save that ignores AP entirely. 
+          A model with a 5++ (invulnerable) always saves on 5+ regardless of the weapon's AP. 
+          The defending player uses whichever save is better. 
+          Invulnerable saves make certain models extremely hard to kill with high-AP weapons.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Key concepts -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Key concepts you'll encounter immediately</h2>
+
+      <div class="space-y-4">
+        {[
+          {
+            concept: 'Line of Sight',
+            detail: 'A unit can shoot at a target if it can draw a line from any model in the unit to any part of the target unit. In practice: look from roughly model eye level. If you can see the target, you can shoot it. Terrain blocks line of sight completely (area terrain) or partially (ruins).',
+          },
+          {
+            concept: 'Cover',
+            detail: 'Models partially behind terrain get a cover bonus — typically +1 to their armor save. Makes units harder to kill when positioned behind walls, ruins, and obstacles. Always use terrain. Always.',
+          },
+          {
+            concept: 'Objective Control (OC)',
+            detail: 'Each model has an OC value — usually 1 or 2. Add up the OC of all your models on an objective marker. If your total is higher than your opponent\'s total, you control it. Battleshocked units contribute 0 OC.',
+          },
+          {
+            concept: 'Unit Coherency',
+            detail: 'Models in a unit must stay within 2" of at least one other model in the same unit. If a unit gets spread out, you have to move models back into coherency at the end of your movement phase. Spreading out means less area controlled.',
+          },
+          {
+            concept: 'Keywords',
+            detail: 'Every unit has a list of keywords — tags that abilities and rules reference. INFANTRY, VEHICLE, CHARACTER, FLY, MONSTER, CHAOS, IMPERIUM, etc. Many rules say "applies to INFANTRY units" or "cannot target CHARACTERs unless..." — knowing your keywords matters.',
+          },
+          {
+            concept: 'Characters and Leader',
+            detail: 'Characters can attach to infantry units as Leaders, granting the unit special abilities. A character attached to a unit fights with it, shoots with it, and provides its buff as long as it\'s alive. Characters can\'t be targeted while attached — they\'re protected by the squad.',
+          },
+          {
+            concept: 'Stratagems',
+            detail: 'Special abilities you activate by spending Command Points (CPs). Each faction has unique Stratagems — some let units fight again, some negate wounds, some give extra attacks. CPs regenerate each turn. Learning your Stratagems is a big part of improving at the game.',
+          },
+        ].map(item => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <h3 class="font-display font-semibold mb-2 text-[#f0ede8]">{item.concept}</h3>
+            <p class="text-[#8a8590] text-sm leading-relaxed">{item.detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Building your army -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Building your first army list</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-8">
+        <p>
+          Every model has a <strong class="text-[#f0ede8]">points cost</strong>. 
+          An army list is a selection of units within an agreed points limit. 
+          You build your list, your opponent builds theirs to the same limit, 
+          and that's what you bring to the table.
+        </p>
+        <p>
+          For your first games: use the <strong class="text-[#f0ede8]">Combat Patrol box straight out of the box</strong>. 
+          It's already balanced as a list. You don't need to think about list building 
+          until you've played five or ten games and understand what your units actually do.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            title: 'Detachment',
+            desc: 'In 10th edition, you choose a Detachment for your army — a pre-built army structure that gives you a set of Enhancements, Stratagems, and a Detachment Rule. Each faction has several options. Pick the one that sounds most fun, not the one that sounds most powerful.',
+          },
+          {
+            title: 'Points cost',
+            desc: 'Available free from Warhammer Community — look up your faction\'s points document. Each unit has a base cost. Most weapons and upgrades are included in that cost in 10th edition, which simplified things significantly.',
+          },
+          {
+            title: 'Battle size determines point limit',
+            desc: 'Combat Patrol: 500 pts. Incursion: 1,000 pts. Strike Force: 2,000 pts. Start at Combat Patrol and only move up when you feel confident with the game flow at that size.',
+          },
+          {
+            title: 'Battlescribe or Warhammer app',
+            desc: 'Free army list builder apps that do the points math for you. Battlescribe is community-maintained and always current. The official Warhammer 40k app is GW\'s version. Both work. Use one from the beginning.',
+          },
+        ].map(item => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <h3 class="font-semibold text-sm mb-1 text-[#f0ede8]">{item.title}</h3>
+            <p class="text-[#8a8590] text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Your first game -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Your first game — what to actually focus on</h2>
+
+      <div class="space-y-4 mb-10">
+        {[
+          {
+            priority: 'Learn the turn sequence, not the rules',
+            detail: 'Your first game should be about getting through Command → Movement → Shooting → Charge → Fight → Morale in the right order without forgetting a phase. The specific rules of each phase come with repetition.',
+          },
+          {
+            priority: 'Ask questions out loud',
+            detail: 'Tell your opponent what you\'re trying to do before you do it. "I want to move this squad here and shoot at that unit — is that legal?" Most players are happy to help beginners. The community is generally welcoming.',
+          },
+          {
+            priority: 'Focus on objectives early',
+            detail: 'In the first two battle rounds, get units onto objective markers. Don\'t get distracted by killing things that aren\'t threatening your objectives. Holding objectives from turn 1 builds a scoring lead that\'s hard to overcome.',
+          },
+          {
+            priority: 'Don\'t worry about winning',
+            detail: 'Your first game is a tutorial. You will make mistakes, forget phases, and probably lose. That\'s fine. Every veteran player has a story about their first terrible game. The goal is to understand what happened and why — not to win.',
+          },
+          {
+            priority: 'Play one more game immediately',
+            detail: 'The second game, armed with what you learned from the first, is dramatically better. Book your second game before you leave the first.',
+          },
+        ].map((item, i) => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-3">
+              <span class="text-[#c9a84c] font-display font-bold text-sm flex-shrink-0 mt-0.5">{i + 1}.</span>
+              <div>
+                <p class="font-semibold text-sm mb-1">{item.priority}</p>
+                <p class="text-[#8a8590] text-sm leading-relaxed">{item.detail}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Where to play -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-3">Where to find games</h3>
+        <div class="space-y-2 text-sm text-[#b8b4c0]">
+          <p><strong class="text-[#f0ede8]">Local game store (LGS):</strong> The best place to start. Most stores with a 40k section have a gaming room and regular play nights. Walk in and ask — staff will introduce you to the community.</p>
+          <p><strong class="text-[#f0ede8]">Warhammer stores:</strong> GW's own retail stores run demo games and beginner events. Free to attend, often include a free model. Look up your nearest store at games-workshop.com.</p>
+          <p><strong class="text-[#f0ede8]">Warhammer Community finder:</strong> Games Workshop's official store and event finder at warhammer-community.com includes club finders for your region.</p>
+          <p><strong class="text-[#f0ede8]">Reddit & Facebook:</strong> r/Warhammer40k, r/40kLore, faction-specific subreddits, and local Facebook groups. People post Looking For Game (LFG) threads constantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Free resources -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Free resources to learn the rules</h2>
+
+      <div class="space-y-3">
+        {[
+          {
+            name: 'Warhammer Community — Free Core Rules',
+            url: 'https://www.warhammer-community.com/en-gb/articles/warhammer-40000-rules/',
+            desc: 'The full core rules PDF is free to download from Games Workshop\'s website. 60 pages, but the first 30 are what you actually need to play.',
+          },
+          {
+            name: 'Battlescribe',
+            url: 'https://battlescribe.net/',
+            desc: 'Free army list builder. Has every faction, all points costs, and validates your list automatically. Essential.',
+          },
+          {
+            name: 'Goonhammer — Start Competing guides',
+            url: 'https://www.goonhammer.com/',
+            desc: 'The best tactical writing on the internet for 40k. Their faction guides and "How to Play" articles are detailed, funny, and genuinely helpful.',
+          },
+          {
+            name: 'Auspex Tactics on YouTube',
+            url: 'https://www.youtube.com/@AuspexTactics',
+            desc: 'Prolific YouTube channel covering rules breakdowns, faction analysis, and news. Good for understanding how units actually work in practice.',
+          },
+          {
+            name: 'Tabletop Battles app',
+            url: 'https://www.tabletopbattles.app/',
+            desc: 'Tracks game score, missions, and tactical objectives during a game. Makes your first games much easier to manage without paper.',
+          },
+        ].map(res => (
+          <a
+            href={res.url}
+            target="_blank"
+            rel="noopener"
+            class="block bg-[#1a1a1f] border border-[#2a2a35] hover:border-[#c9a84c] rounded-lg p-5 transition-colors group"
+          >
+            <p class="font-semibold text-sm mb-1 group-hover:text-[#c9a84c] transition-colors">{res.name} →</p>
+            <p class="text-[#8a8590] text-sm leading-relaxed">{res.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">You know enough to play.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        The rules make more sense after one game than after hours of reading. 
+        Get your Combat Patrol built and painted, find an opponent, 
+        and learn the rest at the table.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/factions"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Find Your Faction →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Take the Army Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
