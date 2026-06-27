@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const factions = [
+  {
+    slug: 'necrons',
+    name: 'Necrons',
+    emoji: '🤖',
+    tagline: 'Ancient machine gods, awoken and merciless',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Durable Shooter',
+    cost: '~$170–$250',
+    beginner: true,
+  },
+  {
+    slug: 'space-marines',
+    name: 'Space Marines',
+    emoji: '⚔️',
+    tagline: 'Humanity\'s ultimate warriors — versatile, iconic, and everywhere',
+    painting: 'Medium',
+    paintingColor: 'text-yellow-400',
+    playstyle: 'Versatile',
+    cost: '~$160–$230',
+    beginner: true,
+  },
+  {
+    slug: 'orks',
+    name: 'Orks',
+    emoji: '💀',
+    tagline: 'Fungal alien berserkers who win through sheer overwhelming numbers',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Melee Horde',
+    cost: '~$160–$220',
+    beginner: true,
+  },
+  {
+    slug: 'tyranids',
+    name: 'Tyranids',
+    emoji: '🐛',
+    tagline: 'An extragalactic swarm that consumes entire worlds — no mercy, no individual will',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Fast Swarm',
+    cost: '~$160–$220',
+    beginner: false,
+  },
+  {
+    slug: 'astra-militarum',
+    name: 'Astra Militarum',
+    emoji: '🪖',
+    tagline: 'Ordinary humans holding the line against gods of war — with tanks',
+    painting: 'Medium',
+    paintingColor: 'text-yellow-400',
+    playstyle: 'Gunline + Armor',
+    cost: '~$160–$230',
+    beginner: false,
+  },
+  {
+    slug: 'tau',
+    name: "T'au Empire",
+    emoji: '🎯',
+    tagline: 'Technologically advanced mech-suit warriors united under the Greater Good',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Pure Shooting',
+    cost: '~$160–$230',
+    beginner: false,
+  },
+  {
+    slug: 'aeldari',
+    name: 'Aeldari',
+    emoji: '👁️',
+    tagline: 'Ancient masters of the galaxy, now a dying race haunted by the god they created',
+    painting: 'Medium',
+    paintingColor: 'text-yellow-400',
+    playstyle: 'Elite & Fast',
+    cost: '~$160–$240',
+    beginner: false,
+  },
+  {
+    slug: 'adeptus-mechanicus',
+    name: 'Adeptus Mechanicus',
+    emoji: '⚙️',
+    tagline: 'Tech-priests who replace flesh with machine and worship the Omnissiah',
+    painting: 'Medium',
+    paintingColor: 'text-yellow-400',
+    playstyle: 'Shooting + Combo',
+    cost: '~$160–$240',
+    beginner: false,
+  },
+  {
+    slug: 'chaos-space-marines',
+    name: 'Chaos Space Marines',
+    emoji: '💀',
+    tagline: 'Traitor Legions who turned against the Emperor ten thousand years ago and never stopped',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Aggressive Melee',
+    cost: '~$160–$230',
+    beginner: false,
+  },
+  {
+    slug: 'death-guard',
+    name: 'Death Guard',
+    emoji: '🦫',
+    tagline: 'Nurgle\'s plague marines — rotting, unkillable, and trudging forward forever',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Slow Juggernaut',
+    cost: '~$160–$230',
+    beginner: true,
+  },
+  // More factions coming soon
+];
+---
+
+<BaseLayout
+  title="Warhammer 40k Factions — Beginner's Guide"
+  description="Every major Warhammer 40k faction explained for beginners — lore, playstyle, painting difficulty, and what to buy first."
+>
+
+  <section class="px-6 pt-16 pb-12">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-4 font-display">Faction Guides</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Choose Your Army</h1>
+      <p class="text-[#8a8590] text-lg max-w-2xl mb-12">
+        Every faction guide covers the lore, how they play, how hard they are to paint, and exactly what to buy first. Not sure where to start? <a href="/quiz" class="text-[#c9a84c] hover:text-[#dfc070] transition-colors">Take the quiz</a>.
+      </p>
+
+      <div class="space-y-4">
+        {factions.map(f => (
+          <a
+            href={`/factions/${f.slug}`}
+            class="block bg-[#1a1a1f] border border-[#2a2a35] hover:border-[#c9a84c] rounded-lg p-6 transition-colors group"
+          >
+            <div class="flex items-start gap-4">
+              <div class="text-4xl">{f.emoji}</div>
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-1 flex-wrap">
+                  <h2 class="font-display font-semibold text-xl group-hover:text-[#c9a84c] transition-colors">{f.name}</h2>
+                  {f.beginner && (
+                    <span class="bg-green-900 text-green-300 text-xs font-semibold px-2 py-0.5 rounded font-display">Beginner Friendly</span>
+                  )}
+                </div>
+                <p class="text-[#8a8590] text-sm mb-3">{f.tagline}</p>
+                <div class="flex gap-5 text-xs text-[#4a4855]">
+                  <span>Playstyle: <span class="text-[#b8b4c0]">{f.playstyle}</span></span>
+                  <span>Painting: <span class={f.paintingColor}>{f.painting}</span></span>
+                  <span>Starter cost: <span class="text-[#b8b4c0]">{f.cost}</span></span>
+                </div>
+              </div>
+              <div class="text-[#4a4855] group-hover:text-[#c9a84c] transition-colors text-xl self-center">→</div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- More coming soon -->
+      <div class="mt-8 bg-[#1a1a1f] border border-dashed border-[#2a2a35] rounded-lg p-6 text-center">
+        <p class="text-[#4a4855] text-sm">More faction guides coming soon — Space Marines, Orks, Tyranids, Aeldari, and more.</p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

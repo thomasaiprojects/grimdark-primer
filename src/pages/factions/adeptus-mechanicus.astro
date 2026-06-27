@@ -1,0 +1,474 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Adeptus Mechanicus Beginner's Guide — Warhammer 40k"
+  description="New to the Adeptus Mechanicus? Learn the Machine God lore, how the tech-priest army plays, how to paint red robes and metal, and what to buy first."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-4xl mx-auto">
+      <a href="/factions" class="text-sm text-[#4a4855] hover:text-[#8a8590] transition-colors mb-6 inline-block">
+        ← All Factions
+      </a>
+      <div class="flex items-start gap-6">
+        <div class="text-6xl">⚙️</div>
+        <div>
+          <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-2 font-display">Faction Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Adeptus Mechanicus</h1>
+          <p class="text-[#8a8590] text-lg max-w-2xl leading-relaxed">
+            Humanity's tech-priests — half-human, half-machine, and convinced that 
+            flesh is a design flaw. They worship technology as a religion, 
+            replace their bodies with cybernetics until little human remains, 
+            and guard the ancient knowledge of a golden age they're desperate to reclaim. 
+            The most unique looking army in the game.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Playstyle</p>
+          <p class="font-semibold text-sm">Shooting + Combo</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Painting</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Rules</p>
+          <p class="font-semibold text-sm text-red-400">Complex</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Starter Cost</p>
+          <p class="font-semibold text-sm">~$160–$240</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Who are the Adeptus Mechanicus?</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          Before the Imperium existed, Mars had already built a civilization. 
+          The Cult Mechanicus — the priesthood of the Machine God — 
+          had been worshipping technology as religion for thousands of years 
+          while Terra tore itself apart in nuclear war. 
+          When the Emperor unified humanity, he needed Mars's weapons factories. 
+          Mars needed Terra's armies. They signed a treaty. 
+          The arrangement has never been entirely comfortable.
+        </p>
+        <p>
+          The Mechanicus believe in the <strong class="text-[#f0ede8]">Omnissiah</strong> — 
+          the Machine God, the divine intelligence behind all technology. 
+          They believe the Emperor is a physical manifestation of this god 
+          (a claim the rest of the Imperium finds deeply heretical). 
+          Knowledge is sacred. Ignorance is sin. 
+          Destroying working technology, even enemy technology, 
+          is an act of almost religious offense.
+        </p>
+        <p>
+          Their defining obsession is the <strong class="text-[#f0ede8]">STC</strong> — 
+          Standard Template Construct — an ancient database from humanity's golden age 
+          containing blueprints for every machine ever devised. 
+          Most STCs were lost in the Age of Strife. 
+          Finding even a fragment of an STC is the greatest possible discovery. 
+          Tech-Priests have started wars over a single blueprint.
+        </p>
+        <p>
+          A Tech-Priest's spiritual journey is one of progressive augmentation. 
+          They replace flesh with machine — one eye for an optical mechadendrite, 
+          one arm for a servo-arm, the nervous system for hard-wired circuitry. 
+          The highest-ranking Tech-Priests are barely recognizable as human. 
+          The Fabricator-General of Mars is, effectively, a machine that remembers being a person. 
+          This is considered the highest possible honor.
+        </p>
+        <p class="italic text-[#8a8590]">
+          "Flesh is weak. The Machine is eternal."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Forge Worlds -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Choose your Forge World</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        Forge Worlds are the AdMech equivalent of Space Marine Chapters — 
+        industrial planets with distinct doctrines, colors, and battlefield approaches.
+      </p>
+
+      <div class="space-y-4">
+        {[
+          {
+            name: 'Mars',
+            colors: 'Red & Silver',
+            swatch1: 'bg-red-700',
+            swatch2: 'bg-slate-400',
+            painting: 'Medium',
+            paintColor: 'text-yellow-400',
+            desc: "The original Forge World. Canonical red robes and silver metal — the scheme GW uses for all their official photography. Bold and striking. Medium difficulty because red requires layering to look good but it's the most supported scheme.",
+          },
+          {
+            name: 'Lucius',
+            colors: 'Silver & White',
+            swatch1: 'bg-slate-300',
+            swatch2: 'bg-gray-100',
+            painting: 'Medium',
+            paintColor: 'text-yellow-400',
+            desc: 'The Forge World of illusions — known for dimensional shielding technology and a silver/white color scheme. Elegant and clean. The cool contrast to Mars\'s warmth.',
+          },
+          {
+            name: 'Graia',
+            colors: 'Blue & Silver',
+            swatch1: 'bg-blue-800',
+            swatch2: 'bg-slate-400',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: 'Dark blue robes with silver metal — one of the easiest AdMech schemes to execute. Less common on the table than Mars, which makes it stand out. Mechanicus Standard Grey spray + wash gets you most of the way there.',
+          },
+          {
+            name: 'Stygies VIII',
+            colors: 'Dark Brown & Bronze',
+            swatch1: 'bg-amber-900',
+            swatch2: 'bg-yellow-600',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: "Secretive, distrusted by other Forge Worlds, suspected of xenos contact. Dark, muted brown robes with bronze metal accents. Fast to paint with contrast paints and very atmospheric on the table.",
+          },
+        ].map(fw => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="flex gap-1 flex-shrink-0">
+                <div class={`w-3 h-12 rounded-l ${fw.swatch1}`}></div>
+                <div class={`w-3 h-12 rounded-r ${fw.swatch2}`}></div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center flex-wrap gap-3 mb-1">
+                  <h3 class="font-display font-semibold text-lg">{fw.name}</h3>
+                  <span class="text-xs text-[#4a4855]">{fw.colors}</span>
+                  <span class={`text-xs font-semibold ${fw.paintColor}`}>Painting: {fw.painting}</span>
+                </div>
+                <p class="text-[#b8b4c0] text-sm leading-relaxed">{fw.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Playstyle -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">How they play on the table</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-10">
+        <p>
+          AdMech are a <strong class="text-[#f0ede8]">mid-range shooting army</strong> 
+          with a uniquely combo-driven playstyle. 
+          Individual units are specialist tools — 
+          Skitarii Rangers are reliable long-range shooters, 
+          Sicarian Infiltrators are fast melee assassins, 
+          Kastelan Robots are walking fortresses when properly supported. 
+          The army rewards knowing exactly what each unit does and deploying them 
+          against the right targets.
+        </p>
+        <p>
+          The defining mechanic is <strong class="text-[#f0ede8]">Doctrina Imperatives</strong> — 
+          special combat protocols you cycle through each turn. 
+          In Protector Doctrina your Skitarii shoot better. 
+          In Conqueror Doctrina they fight better in melee. 
+          You can only use each a limited number of times, 
+          so you're constantly thinking several turns ahead about when to switch modes. 
+          It's the most tactical faction in the game for people who like planning.
+        </p>
+        <p>
+          The unit roster is strikingly varied: Skitarii infantry, walking spider-legged tanks (Dunecrawlers), 
+          bipedal strider vehicles (Ironstriders), ancient giant robots (Kastelans), 
+          tracked cannon platforms with human torsos (Kataphrons). 
+          Few armies have this much visual variety, and painting the collection feels like 
+          a genuinely diverse project rather than repetitive squads.
+        </p>
+        <p>
+          Honest caveat: <strong class="text-[#f0ede8]">this is not a beginner army</strong>. 
+          The synergies between units matter a lot, mistakes are punishing, 
+          and the Doctrina system adds planning overhead on top of learning the base rules. 
+          If you're drawn to the aesthetic and lore, play a few games with a friend first 
+          before committing. If you love puzzle-solving, this is your faction.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-green-400">AdMech are for you if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✓ The half-human, half-machine aesthetic is exactly what you want</li>
+            <li>✓ You like puzzle-solving and planning multiple turns ahead</li>
+            <li>✓ You want the most unique looking army in the game</li>
+            <li>✓ You enjoy painting a huge variety of model types</li>
+            <li>✓ You're interested in the tech-religion lore angle</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-red-400">Maybe look elsewhere if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✗ You're new to 40k — too many synergies to manage early</li>
+            <li>✗ You want a simple, forgiving playstyle</li>
+            <li>✗ You prefer organic, living aesthetics</li>
+            <li>✗ You want a horde army with lots of bodies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Painting -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How to paint Adeptus Mechanicus</h2>
+      <p class="text-[#8a8590] mb-4 text-lg">Mars scheme (red + silver). The canonical look, and the one with the most tutorials.</p>
+      <p class="text-[#b8b4c0] mb-10 leading-relaxed">
+        AdMech models have two distinct surfaces: flowing fabric robes and intricate mechanical parts. 
+        Each requires a different approach. The good news is that both are relatively straightforward 
+        — red robes with a wash look immediately striking, and metallic washes do most of the work 
+        on the mechanical components. The challenge is the sheer density of tiny detail per model.
+      </p>
+
+      <h3 class="font-display text-lg font-semibold mb-4 text-[#f0ede8]">The robes</h3>
+      <div class="space-y-3 mb-8">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Spray Mephiston Red</p>
+            <p class="text-[#8a8590] text-sm">The base coat over everything. Full coverage is important — red over black primer looks muddy and is harder to fix than starting light.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Agrax Earthshade wash over all fabric</p>
+            <p class="text-[#8a8590] text-sm">A generous wash into all the robe folds. It darkens the recesses and gives the fabric genuine depth — takes the red from flat to rich.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Evil Sunz Scarlet layer on raised folds</p>
+            <p class="text-[#8a8590] text-sm">Restore the brighter red on the raised areas of the robes, avoiding the recesses. This creates the classic shaded fabric look without advanced techniques.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="font-display text-lg font-semibold mb-4 text-[#f0ede8]">The mechanical parts</h3>
+      <div class="space-y-3 mb-8">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Leadbelcher on all metal surfaces</p>
+            <p class="text-[#8a8590] text-sm">Cybernetic limbs, exposed pistons, weapon casings, tubes, cables. AdMech models have a lot of metal — drybrush it liberally.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">5</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Nuln Oil wash over all metal</p>
+            <p class="text-[#8a8590] text-sm">Gets into every cable groove, every rivet, every gear tooth. The single most effective step on mechanical models — the metal goes from flat to industrial instantly.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">6</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Drybrush Ironbreaker on raised metal edges</p>
+            <p class="text-[#8a8590] text-sm">Brings the metallic sheen back on corners and raised surfaces. Makes the machinery look like it's actually used — worn edges, maintained metal.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="font-display text-lg font-semibold mb-4 text-[#f0ede8]">The finishing details</h3>
+      <div class="space-y-3 mb-8">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">7</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Corax White on skull faces and bone details</p>
+            <p class="text-[#8a8590] text-sm">Many Tech-Priests have exposed or augmetic skulls. A clean white over these — then a thin wash of Agrax Earthshade to age them — creates the perfect bleached bone look.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">8</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Tesseract Glow or Moot Green on optical lenses</p>
+            <p class="text-[#8a8590] text-sm">Every AdMech model has optical sensors, augmetic eyes, or weapon targeting lenses. A tiny dab of glowing green makes them read as powered up and alive. This one detail sells the whole model.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">Patience over speed</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          AdMech models have more detail per model than almost anything else in the game. 
+          Don't rush. Work in good light with magnification if you have it. 
+          A single well-painted Tech-Priest Dominus is a showpiece. 
+          The army is smaller than most (fewer models overall), 
+          so you can afford to spend more time on each one — and it shows.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What to buy -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">What to buy first</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">One box. It will take longer to assemble than you expect. That's the AdMech experience — and it's worth it.</p>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-6 mb-6">
+        <div class="mb-4">
+          <span class="bg-[#c9a84c] text-[#111113] text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Start Here</span>
+          <span class="text-xs text-[#4a4855]">~$160</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Combat Patrol: Adeptus Mechanicus</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Includes a Tech-Priest Dominus (your commander — and one of the most impressive character models in 40k), 
+          Skitarii Rangers (core infantry), an Onager Dunecrawler (the iconic spider-legged walker tank), 
+          and Sicarian Infiltrators (fast elite melee). 
+          Every unit type in this box plays and looks completely different — 
+          a perfect introduction to the faction's incredible variety.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Adeptus-Mechanicus-Combat-Patrol"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Buy from Games Workshop →
+        </a>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6 mb-6">
+        <div class="mb-3">
+          <span class="text-xs text-[#4a4855]">~$75 · the natural second purchase</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Kastelan Robots</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Two enormous ancient robots controlled by a Datasmith Tech-Priest. 
+          Pre-Imperial machines that the Mechanicus maintains but cannot fully understand — 
+          which delights them. Extremely durable and powerful when buffed correctly, 
+          they're one of the faction's most unique tactical elements 
+          and absolutely spectacular models to paint.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Kastelan-Robots"
+          target="_blank"
+          rel="noopener"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          View on Games Workshop →
+        </a>
+      </div>
+
+      <!-- Paints -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+        <h3 class="font-display font-semibold text-xl mb-4">Paints you need (Mars scheme)</h3>
+        <div class="space-y-3">
+          {[
+            { name: 'Mephiston Red Spray', use: 'Base coat — robes and fabric', required: true },
+            { name: 'Agrax Earthshade', use: 'Wash on robes and metal both', required: true },
+            { name: 'Evil Sunz Scarlet', use: 'Layer on raised robe folds', required: true },
+            { name: 'Leadbelcher', use: 'All metal and mechanical parts', required: true },
+            { name: 'Nuln Oil', use: 'Wash on all metal surfaces', required: true },
+            { name: 'Ironbreaker', use: 'Drybrush highlight on metal', required: true },
+            { name: 'Tesseract Glow', use: 'Optical lenses and sensor eyes', required: true },
+            { name: 'Corax White', use: 'Skull faces and bone details', required: false },
+          ].map(paint => (
+            <div class="flex items-start gap-3">
+              <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${paint.required ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+                {paint.required ? 'Essential' : 'Optional'}
+              </span>
+              <div>
+                <span class="text-sm font-semibold">{paint.name}</span>
+                <span class="text-[#8a8590] text-sm"> — {paint.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-[#4a4855] text-sm mt-4 italic">~$45 for the full set. More paints than most factions — the detail count demands it.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Cost breakdown -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Honest cost breakdown</h2>
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg overflow-hidden">
+        {[
+          { item: 'Combat Patrol: Adeptus Mechanicus', cost: '~$160', note: 'Dominus, Rangers, Dunecrawler, Sicarians' },
+          { item: 'Essential paints (7)', cost: '~$45', note: 'Spray + layer + 2 washes + 2 metals + glow' },
+          { item: 'Basing supplies', cost: '~$12', note: 'Industrial/urban texture + rust tufts' },
+          { item: 'Clippers + hobby knife', cost: '~$20', note: 'One-time purchase' },
+          { item: 'Superglue', cost: '~$5', note: 'Fine multi-part models with small mechanical pieces' },
+        ].map((row, i) => (
+          <div class={`flex items-start justify-between px-5 py-4 gap-4 ${i % 2 === 0 ? '' : 'bg-[#111113]'}`}>
+            <div>
+              <p class="text-sm font-semibold">{row.item}</p>
+              <p class="text-xs text-[#4a4855] mt-0.5">{row.note}</p>
+            </div>
+            <span class="text-sm font-semibold text-[#c9a84c] flex-shrink-0">{row.cost}</span>
+          </div>
+        ))}
+        <div class="flex items-center justify-between px-5 py-4 bg-[#1f1d14] border-t border-[#c9a84c]">
+          <p class="font-display font-semibold">All-in starter total</p>
+          <span class="font-display font-bold text-[#c9a84c] text-lg">~$242</span>
+        </div>
+      </div>
+      <p class="text-[#4a4855] text-sm mt-4 italic">
+        Slightly higher paint cost than other factions due to the model complexity. 
+        The Kastelan Robots (~$75) are the recommended second purchase — 
+        they look spectacular and define the army's heaviest firepower.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">Knowledge is power. Guard it well.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Grab the Combat Patrol. Build slowly, paint carefully, and let yourself enjoy 
+        the detail. These aren't models you rush — they're models you finish and display.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Retake the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

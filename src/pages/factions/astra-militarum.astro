@@ -1,0 +1,464 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Astra Militarum Beginner's Guide — Warhammer 40k"
+  description="New to the Astra Militarum? Learn how the Imperial Guard plays, which regiment to choose, how to paint infantry fast, and what to buy first."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-4xl mx-auto">
+      <a href="/factions" class="text-sm text-[#4a4855] hover:text-[#8a8590] transition-colors mb-6 inline-block">
+        ← All Factions
+      </a>
+      <div class="flex items-start gap-6">
+        <div class="text-6xl">🪖</div>
+        <div>
+          <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-2 font-display">Faction Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Astra Militarum</h1>
+          <p class="text-[#8a8590] text-lg max-w-2xl leading-relaxed">
+            Ordinary humans. No gene-mods, no power armor, no psychic gifts. 
+            Just a lasgun, a flak vest, and orders to hold the line against things 
+            that would make a Space Marine hesitate. The bravest faction in the game — 
+            and the one with the best tanks.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Playstyle</p>
+          <p class="font-semibold text-sm">Gunline + Armor</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Painting</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium*</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Rules</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Starter Cost</p>
+          <p class="font-semibold text-sm">~$160–$230</p>
+        </div>
+      </div>
+      <p class="text-xs text-[#4a4855] mt-3 italic">*Infantry is detail-heavy. Tanks are fast and forgiving. A mixed list is the sweet spot for new painters.</p>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Who are the Astra Militarum?</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          The Imperium of Man spans a million worlds. Defending it requires an army 
+          so large that the number is effectively meaningless — billions of soldiers, 
+          hundreds of thousands of tanks, artillery that can flatten cities from the horizon. 
+          That army is the Astra Militarum, and every soldier in it is completely, 
+          utterly ordinary.
+        </p>
+        <p>
+          No gene-seed. No power armor. No centuries of combat experience. 
+          A Guardsman is recruited from whatever world they're raised on, 
+          given basic training, issued a lasgun that fires bolts of focused light, 
+          and shipped to whatever warzone the Imperium needs filled with bodies. 
+          Their life expectancy in active combat is measured in days.
+        </p>
+        <p>
+          They know this. And they go anyway.
+        </p>
+        <p>
+          That's what makes the Astra Militarum compelling in a way no other faction quite matches. 
+          The Space Marines are superhuman. The Necrons are immortal machines. 
+          The Astra Militarum are <em>people</em> — afraid, mortal, outnumbered — 
+          and they hold the line because someone has to. 
+          The Imperium does not survive without them. Every other faction in this game 
+          is powerful. The Guard is brave.
+        </p>
+        <p>
+          They compensate for individual fragility with overwhelming collective firepower, 
+          armored vehicles, and artillery that can reach across entire battlefields. 
+          Leman Russ battle tanks. Chimera transports. Basilisk artillery pieces 
+          that lob shells twelve kilometers. When the Guard advances, it advances as a wall of steel and fire.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Regiments -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Choose your regiment</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        The Guard draws regiments from across the Imperium — each world produces soldiers 
+        shaped by their environment. Your regiment determines your colors and your army's special character.
+      </p>
+
+      <div class="space-y-4">
+        {[
+          {
+            name: 'Cadian Shock Troops',
+            colors: 'Olive Green & Khaki',
+            swatch: 'bg-[#4a5e3a]',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: 'The default Guard regiment and GW\'s poster children. Cadians are disciplined, professional soldiers — the closest thing the Guard has to an elite core. Green fatigues and tan armor. Most tutorials are written for Cadian colors.',
+          },
+          {
+            name: 'Catachan Jungle Fighters',
+            colors: 'Khaki & Skin',
+            swatch: 'bg-amber-700',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: 'Raised on the most lethal death world in the Imperium — a planet where everything wants to kill you. Catachans are massive, bare-armed, and dressed for the jungle. Easy to paint: tan and skin tones with Agrax Earthshade does most of the work.',
+          },
+          {
+            name: 'Valhallan Ice Warriors',
+            colors: 'Grey & White',
+            swatch: 'bg-slate-400',
+            painting: 'Medium',
+            paintColor: 'text-yellow-400',
+            desc: 'Stoic survivors of a frozen death world who lost their planet to Tyranids and kept fighting anyway. Cold grey and white winter camo. Stubborn defenders with high morale in rules.',
+          },
+          {
+            name: 'Tallarn Desert Raiders',
+            colors: 'Sand & Brown',
+            swatch: 'bg-yellow-700',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: 'Desert warriors from a world rebuilt after an ancient war. Flowing robes, desert camo. Very fast cavalry-focused regiment. Sandy tones paint quickly with contrast paints.',
+          },
+          {
+            name: 'Custom Regiment',
+            colors: 'Your choice',
+            swatch: 'bg-gradient-to-r from-purple-800 to-red-800',
+            painting: 'Varies',
+            paintColor: 'text-[#8a8590]',
+            desc: 'Create your own homeworld, your own colors, your own backstory. The Guard supports custom regiments fully in the rules. Many players build their own with unique paint schemes.',
+          },
+        ].map(reg => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class={`w-4 min-h-[48px] rounded flex-shrink-0 ${reg.swatch}`}></div>
+              <div class="flex-1">
+                <div class="flex items-center flex-wrap gap-3 mb-1">
+                  <h3 class="font-display font-semibold text-lg">{reg.name}</h3>
+                  <span class="text-xs text-[#4a4855]">{reg.colors}</span>
+                  <span class={`text-xs font-semibold ${reg.paintColor}`}>Painting: {reg.painting}</span>
+                </div>
+                <p class="text-[#b8b4c0] text-sm leading-relaxed">{reg.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Playstyle -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">How they play on the table</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-10">
+        <p>
+          The Guard plays a <strong class="text-[#f0ede8]">combined arms gunline</strong>. 
+          Infantry squads hold objectives and put out volume fire. 
+          Tanks push forward or sit back and delete threats. 
+          Commanders issue <strong class="text-[#f0ede8]">Orders</strong> — special commands 
+          that make nearby units shoot twice, reroll hits, hold steady, or advance and fire. 
+          Every turn, your command structure is as important as your models.
+        </p>
+        <p>
+          The cardinal rule of Guard play: 
+          <strong class="text-[#f0ede8]">do not get into melee</strong>. 
+          A Guardsman in hand-to-hand combat with almost anything is a dead Guardsman. 
+          Your job is to keep distance, maximize firepower, and use tanks to threaten 
+          anything that gets close. The Guard wins by controlling the board with fire, 
+          not by fighting over ground.
+        </p>
+        <p>
+          There are two broad approaches. 
+          <strong class="text-[#f0ede8]">Infantry heavy</strong> armies flood the table 
+          with Guardsmen — cheap, expendable, surprisingly resilient in numbers. 
+          <strong class="text-[#f0ede8]">Armored Company</strong> lists go wall-to-wall tanks — 
+          three or four Leman Russ variants, a Baneblade superheavy, artillery. 
+          Both are completely valid, and most players land somewhere in between.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-green-400">Guard are for you if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✓ You want real tanks on the table</li>
+            <li>✓ The "ordinary humans vs. gods" story resonates</li>
+            <li>✓ You like commanding an army, not a warband</li>
+            <li>✓ You want overwhelming firepower and artillery</li>
+            <li>✓ You love historical military aesthetics</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-red-400">Maybe look elsewhere if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✗ You don't want to assemble 40+ infantry models</li>
+            <li>✗ You want your individual models to be tough</li>
+            <li>✗ You want melee combat as a real option</li>
+            <li>✗ You want psychic powers or alien aesthetics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Painting -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How to paint Astra Militarum</h2>
+      <p class="text-[#8a8590] mb-4 text-lg">
+        The honest word: infantry squads take time. There's no getting around the detail on a Guardsman. 
+        But contrast paints changed this significantly — here's the fastest method that still looks great.
+      </p>
+      <p class="text-[#b8b4c0] mb-10 leading-relaxed">
+        We're painting Cadians. The approach transfers to any regiment — just swap the fatigue and armor colors.
+      </p>
+
+      <!-- Infantry -->
+      <h3 class="font-display text-lg font-semibold mb-4 text-[#f0ede8]">Infantry (Cadian Shock Troops)</h3>
+      <div class="space-y-4 mb-10">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Spray Zandri Dust</p>
+            <p class="text-[#8a8590] text-sm">A warm tan base coat. Works for Cadian khaki armor and reads well under both green and brown tones.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Militarum Green Contrast on all fatigues and webbing</p>
+            <p class="text-[#8a8590] text-sm">The jacket, trousers, straps, and pouches. One coat. The contrast paint shades itself into folds and creases.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Leave armor plates as Zandri Dust, wash with Agrax Earthshade</p>
+            <p class="text-[#8a8590] text-sm">The shoulder pads, helmet, and chest armor stay the base tan color. One wash of Agrax over the whole model ties everything together and adds instant grime.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Leadbelcher on the lasgun</p>
+            <p class="text-[#8a8590] text-sm">Metal on the barrel and body. Black on the stock. Quick and effective.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">5</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Kislev Flesh on skin, base the model</p>
+            <p class="text-[#8a8590] text-sm">Face and hands. A thin layer of Kislev Flesh, maybe a light shade of Reikland Fleshshade. Then base with a sandy texture paint and a tuft.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tanks -->
+      <h3 class="font-display text-lg font-semibold mb-4 text-[#f0ede8]">Tanks (Leman Russ & vehicles)</h3>
+      <div class="space-y-4 mb-8">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Spray Zandri Dust, then heavy drybrush Ushabti Bone</p>
+            <p class="text-[#8a8590] text-sm">Covers the hull. The drybrush over the spray creates a natural worn look before you've done anything else.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Agrax Earthshade wash over the whole vehicle</p>
+            <p class="text-[#8a8590] text-sm">Flows into panel lines and rivets. Tanks have a lot of rivets. The wash does all the work of making them read as detail.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Leadbelcher on tracks, barrels, and metal trim</p>
+            <p class="text-[#8a8590] text-sm">Drybrush along the track links and stipple it onto barrel tips and exhaust vents.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Ryza Rust on track edges, Nuln Oil on recesses</p>
+            <p class="text-[#8a8590] text-sm">Optional but very effective. Drybrush Ryza Rust on the track edges for battle damage. Everything looks like it's been in a warzone without any skill required.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">The real talk on infantry</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Infantry squads take longer than Necrons or Orks. A 10-man squad 
+          done properly with contrast paints takes about 2–3 hours. 
+          That's fine — batch paint them in groups of 10, do one step across all 10 before moving on, 
+          and you'll have a squad done in a session. 
+          The tanks are the reward: one Leman Russ painted to a great standard in an hour is deeply satisfying.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What to buy -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">What to buy first</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">Start with the Combat Patrol. It gives you infantry AND a vehicle — the right introduction to how the army actually works.</p>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-6 mb-6">
+        <div class="mb-4">
+          <span class="bg-[#c9a84c] text-[#111113] text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Start Here</span>
+          <span class="text-xs text-[#4a4855]">~$160</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Combat Patrol: Astra Militarum</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Includes Cadian Shock Troops (your core infantry), a Chimera APC (transport vehicle and fire support), 
+          a Company Commander (issues orders), and a Heavy Weapons Squad (crew-served weapons). 
+          A legal, playable force that covers all the roles the army needs.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Astra-Militarum-Combat-Patrol"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Buy from Games Workshop →
+        </a>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6 mb-6">
+        <div class="mb-3">
+          <span class="text-xs text-[#4a4855]">~$65 · the obvious second purchase</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Leman Russ Battle Tank</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          The iconic Guard tank. One kit builds multiple variants — 
+          Battle Cannon for general use, Demolisher Cannon for close-range destruction, 
+          Exterminator for anti-infantry. Adds serious firepower and is one of the most 
+          satisfying models to paint in the entire game.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Leman-Russ-Battle-Tank"
+          target="_blank"
+          rel="noopener"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          View on Games Workshop →
+        </a>
+      </div>
+
+      <!-- Paints -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+        <h3 class="font-display font-semibold text-xl mb-4">Paints you need (Cadian scheme)</h3>
+        <div class="space-y-3">
+          {[
+            { name: 'Zandri Dust Spray', use: 'Base coat — infantry armor and vehicle hull', required: true },
+            { name: 'Militarum Green (Contrast)', use: 'Fatigues, webbing, straps', required: true },
+            { name: 'Agrax Earthshade', use: 'Full model wash — grime and shadow', required: true },
+            { name: 'Leadbelcher', use: 'Guns, tracks, metal fittings', required: true },
+            { name: 'Kislev Flesh', use: 'Skin on faces and hands', required: true },
+            { name: 'Ushabti Bone', use: 'Drybrush highlight on armor and hull', required: false },
+            { name: 'Ryza Rust', use: 'Battle damage on tracks and edges', required: false },
+          ].map(paint => (
+            <div class="flex items-start gap-3">
+              <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${paint.required ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+                {paint.required ? 'Essential' : 'Optional'}
+              </span>
+              <div>
+                <span class="text-sm font-semibold">{paint.name}</span>
+                <span class="text-[#8a8590] text-sm"> — {paint.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-[#4a4855] text-sm mt-4 italic">~$38 for the full set. The same paints work across your entire army — infantry and vehicles both.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Cost breakdown -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Honest cost breakdown</h2>
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg overflow-hidden">
+        {[
+          { item: 'Combat Patrol: Astra Militarum', cost: '~$160', note: 'Infantry, Chimera, Commander, Heavy Weapons' },
+          { item: 'Essential paints (5)', cost: '~$38', note: 'Spray + contrast + wash + metal + flesh' },
+          { item: 'Basing supplies', cost: '~$12', note: 'Sandy texture paint + tufts' },
+          { item: 'Clippers + hobby knife', cost: '~$20', note: 'One-time purchase' },
+          { item: 'Superglue', cost: '~$5', note: 'Multi-part infantry kits' },
+        ].map((row, i) => (
+          <div class={`flex items-start justify-between px-5 py-4 gap-4 ${i % 2 === 0 ? '' : 'bg-[#111113]'}`}>
+            <div>
+              <p class="text-sm font-semibold">{row.item}</p>
+              <p class="text-xs text-[#4a4855] mt-0.5">{row.note}</p>
+            </div>
+            <span class="text-sm font-semibold text-[#c9a84c] flex-shrink-0">{row.cost}</span>
+          </div>
+        ))}
+        <div class="flex items-center justify-between px-5 py-4 bg-[#1f1d14] border-t border-[#c9a84c]">
+          <p class="font-display font-semibold">All-in starter total</p>
+          <span class="font-display font-bold text-[#c9a84c] text-lg">~$235</span>
+        </div>
+      </div>
+      <p class="text-[#4a4855] text-sm mt-4 italic">
+        The Leman Russ (~$65) is the natural next purchase and worth budgeting for early. 
+        A Guardsman army without a tank feels incomplete — and the tank is the most fun thing to paint.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">For the Emperor. Hold the line.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Pick your regiment, grab the Combat Patrol, and paint your infantry in batches. 
+        Then reward yourself with a Leman Russ. The Guard is a slow build — and completely worth it.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Retake the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

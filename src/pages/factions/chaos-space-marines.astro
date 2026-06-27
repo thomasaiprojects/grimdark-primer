@@ -1,0 +1,480 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Chaos Space Marines Beginner's Guide — Warhammer 40k"
+  description="New to Chaos Space Marines? Learn the Horus Heresy lore, how the traitor legions play, how to paint battle-damaged armor, and what to buy first."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-4xl mx-auto">
+      <a href="/factions" class="text-sm text-[#4a4855] hover:text-[#8a8590] transition-colors mb-6 inline-block">
+        ← All Factions
+      </a>
+      <div class="flex items-start gap-6">
+        <div class="text-6xl">💀</div>
+        <div>
+          <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-2 font-display">Faction Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Chaos Space Marines</h1>
+          <p class="text-[#8a8590] text-lg max-w-2xl leading-relaxed">
+            Once the Emperor's finest — now his most dangerous enemies.
+            The Traitor Legions turned against the Imperium ten thousand years ago 
+            and have spent every moment since trying to finish the job. 
+            Corrupted, warped, and utterly terrifying, 
+            they are everything a Space Marine could become if they fell.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Playstyle</p>
+          <p class="font-semibold text-sm">Aggressive Melee</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Painting</p>
+          <p class="font-semibold text-sm text-green-400">Forgiving ✓</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Rules</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Starter Cost</p>
+          <p class="font-semibold text-sm">~$160–$230</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">The Horus Heresy — how they fell</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          Ten thousand years ago, the Emperor of Mankind was at the height of his power. 
+          His Great Crusade had reunited a fractured humanity across thousands of worlds. 
+          At the center of it all was <strong class="text-[#f0ede8]">Horus Lupercal</strong> — 
+          the Warmaster, the Emperor's favorite son, the greatest of the Primarchs 
+          who led the twenty Space Marine Legions. 
+          If the Emperor trusted anyone absolutely, it was Horus.
+        </p>
+        <p>
+          The Chaos Gods saw an opportunity. 
+          Through a cascade of manipulation, corruption, and whispered lies, 
+          they turned Horus against his father. 
+          And when Horus fell, half the Legions fell with him — 
+          either through loyalty to their Primarch, 
+          through their own grievances against the Emperor, 
+          or through direct corruption by the Warp.
+        </p>
+        <p>
+          What followed was the <strong class="text-[#f0ede8]">Horus Heresy</strong> — 
+          a galaxy-wide civil war that nearly destroyed humanity. 
+          Brother fought brother. Worlds burned. The Legions that had conquered 
+          the galaxy turned their weapons on the civilization they had built. 
+          It ended at the Siege of Terra: Horus and the Emperor met in single combat 
+          aboard a traitor warship. Horus died. The Emperor survived — 
+          barely, catastrophically, entombed on the Golden Throne for the next ten thousand years 
+          in a state between life and death.
+        </p>
+        <p>
+          The Traitor Legions fled into the <strong class="text-[#f0ede8]">Eye of Terror</strong> — 
+          the massive Warp rift where the Aeldari empire used to be. 
+          Time moves differently there. Some Chaos Marines who fought at Terra 
+          are still alive, still fighting, still burning with the hatred of ten millennia. 
+          They have not forgotten. They have not forgiven. 
+          And every generation, they pour back out of the Eye to try again.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Legion choice -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Choose your Legion</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        The Traitor Legions each serve a different Chaos God — or no single god at all. 
+        This is the biggest identity choice you'll make, 
+        and it shapes your colors, your lore, and your playstyle.
+      </p>
+
+      <div class="space-y-4">
+        {[
+          {
+            name: 'Black Legion',
+            god: 'Chaos Undivided',
+            colors: 'Black & Gold',
+            swatch1: 'bg-gray-900',
+            swatch2: 'bg-yellow-500',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: "Horus's own Legion — once the Luna Wolves, now the greatest Chaos warband in existence. Led by Abaddon the Despoiler, who has launched thirteen Black Crusades against the Imperium. Black armor with gold trim. The default Chaos scheme and the easiest to execute.",
+          },
+          {
+            name: 'Word Bearers',
+            god: 'Chaos Undivided',
+            colors: 'Dark Red & Black',
+            swatch1: 'bg-red-900',
+            swatch2: 'bg-gray-900',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: "The first Legion to fall — the Emperor publicly humiliated their Primarch, and they never forgave it. True believers in Chaos, they write scripture across their armor and summon daemons as a religious act. Dark crimson with black detailing.",
+          },
+          {
+            name: 'Iron Warriors',
+            god: 'Chaos Undivided',
+            colors: 'Silver & Hazard Stripes',
+            swatch1: 'bg-slate-500',
+            swatch2: 'bg-yellow-400',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: "Siege specialists who resented being used as cannon fodder during the Crusade. Cold, methodical, and machine-obsessed — closer to the Adeptus Mechanicus in temperament than most Chaos factions. Metallic silver with yellow and black hazard markings.",
+          },
+          {
+            name: 'Night Lords',
+            god: 'Chaos Undivided',
+            colors: 'Dark Blue & Lightning',
+            swatch1: 'bg-blue-900',
+            swatch2: 'bg-sky-300',
+            painting: 'Medium',
+            paintColor: 'text-yellow-400',
+            desc: 'Terror specialists. They were monsters before Chaos touched them — recruited from the worst criminal underworld of their homeworld. They flay their enemies and hang the remains as warnings. Dark midnight blue with freehand lightning bolt designs — striking but requires a steady hand.',
+          },
+          {
+            name: 'Alpha Legion',
+            god: 'Unknown',
+            colors: 'Hydra Green & Teal',
+            swatch1: 'bg-teal-700',
+            swatch2: 'bg-green-500',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: "The most mysterious Legion. Nobody knows if they're truly Chaos, loyalist infiltrators pretending to be Chaos, or something else entirely. Every model is called Alpharius. The lore is deliberately unresolved and fascinating. Iridescent green-teal scheme with a shifting quality.",
+          },
+        ].map(legion => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="flex gap-1 flex-shrink-0">
+                <div class={`w-3 h-12 rounded-l ${legion.swatch1}`}></div>
+                <div class={`w-3 h-12 rounded-r ${legion.swatch2}`}></div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center flex-wrap gap-3 mb-1">
+                  <h3 class="font-display font-semibold text-lg">{legion.name}</h3>
+                  <span class="text-xs text-[#4a4855]">{legion.god} · {legion.colors}</span>
+                  <span class={`text-xs font-semibold ${legion.paintColor}`}>Painting: {legion.painting}</span>
+                </div>
+                <p class="text-[#b8b4c0] text-sm leading-relaxed">{legion.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-6 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+        <p class="text-[#8a8590] text-sm leading-relaxed">
+          <strong class="text-[#f0ede8]">Prefer a Chaos God specifically?</strong> 
+          The dedicated cult legions — <strong class="text-[#f0ede8]">World Eaters</strong> (Khorne), 
+          <strong class="text-[#f0ede8]">Thousand Sons</strong> (Tzeentch), 
+          <strong class="text-[#f0ede8]">Death Guard</strong> (Nurgle), and 
+          <strong class="text-[#f0ede8]">Emperor's Children</strong> (Slaanesh) — 
+          are their own separate factions with focused rules. 
+          This page covers the generic Chaos Space Marines who can serve any or all gods.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Playstyle -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">How they play on the table</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-10">
+        <p>
+          Chaos Space Marines are an <strong class="text-[#f0ede8]">aggressive melee army</strong> 
+          with real shooting capability. Think of them as Space Marines who chose violence — 
+          similar stat lines, similar durability, but with a distinct push forward 
+          rather than a tactical hold-and-shoot approach.
+        </p>
+        <p>
+          The army's flexibility comes from <strong class="text-[#f0ede8]">Marks of Chaos</strong> — 
+          blessings from individual gods you can apply to units. 
+          Mark of Khorne makes a unit deadlier in melee. 
+          Mark of Nurgle makes them tougher. 
+          Mark of Tzeentch improves their saves. 
+          Mark of Slaanesh makes them faster. 
+          This lets you customize each unit for a specific role within the same army.
+        </p>
+        <p>
+          Elite units make the roster genuinely exciting: 
+          <strong class="text-[#f0ede8]">Possessed</strong> are Chaos Marines fully merged with daemons — 
+          terrifying in close combat and grotesquely beautiful models. 
+          <strong class="text-[#f0ede8]">Obliterators</strong> are flesh-metal fusions that can generate 
+          any weapon they need from their own bodies. 
+          <strong class="text-[#f0ede8]">Warp Talons</strong> are jump troops that emerge 
+          directly from the Warp mid-charge. Nothing in the game looks quite like them.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-green-400">CSM are for you if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✓ You want to be the villain — the original traitors</li>
+            <li>✓ You love the Horus Heresy lore and backstory</li>
+            <li>✓ You want to convert and customize your models</li>
+            <li>✓ You want an aggressive, forward army</li>
+            <li>✓ You want dark, gothic, corrupted aesthetics</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-red-400">Maybe look elsewhere if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✗ You want a pure ranged gunline</li>
+            <li>✗ You want simple, clean aesthetics</li>
+            <li>✗ You specifically want one Chaos God — look at the cult legions</li>
+            <li>✗ You want a horde of cheap bodies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Painting -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How to paint Chaos Space Marines</h2>
+      <p class="text-[#8a8590] mb-4 text-lg">Black Legion scheme — the fastest, most iconic approach.</p>
+      <p class="text-[#b8b4c0] mb-10 leading-relaxed">
+        Here's the secret about painting Chaos: battle damage, scratches, grime, rust, 
+        and imperfect edges are not mistakes — they're the aesthetic. 
+        A Chaos Marine who looks too clean looks wrong. 
+        This makes Chaos one of the most forgiving factions to paint in the game. 
+        If something goes slightly wrong, it probably looks better for it.
+      </p>
+
+      <div class="space-y-4 mb-10">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Spray Abaddon Black</p>
+            <p class="text-[#8a8590] text-sm">Full black primer. Black Legion armor is genuinely black — not dark grey. Get full coverage, especially in the recesses.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Drybrush Mechanicus Standard Grey on armor edges</p>
+            <p class="text-[#8a8590] text-sm">A medium grey drybrush across all raised armor surfaces. Creates edge highlights and makes the black read as textured rather than flat. The worn-armor look happens in this step.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Retributor Armour on all gold trim</p>
+            <p class="text-[#8a8590] text-sm">Shoulder rims, helmet horns, chains, trophy racks, eye lenses on some models. Black Legion gold is the soul of the scheme — take your time here and stay reasonably neat.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Reikland Fleshshade wash over the gold</p>
+            <p class="text-[#8a8590] text-sm">Flows into the trim and enriches it. Darkens recesses, creates depth in the chains and horns. The gold goes from flat to genuinely ancient-looking.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">5</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Mephiston Red on eye lenses</p>
+            <p class="text-[#8a8590] text-sm">The red eyes are what makes a Chaos Marine feel predatory. A dot of red in each lens socket, no shading needed. The contrast against black armor is immediately striking.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">6</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Leadbelcher on weapons, Nuln Oil wash over metal</p>
+            <p class="text-[#8a8590] text-sm">Bolters, blades, bolt pistols — silver metal then black wash. The wash pools into every machined detail and makes the weapons look used and dangerous.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">7</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Sponge chipping for battle damage (optional)</p>
+            <p class="text-[#8a8590] text-sm">Tear a small piece of foam, dab it in Ironbreaker, wipe most off on paper, then dab lightly on armor edges. Creates instant scratched metal battle damage that makes the model look like it's been fighting for ten thousand years. Because it has.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">The conversion culture</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Chaos players convert more than any other faction. 
+          Adding spikes from a bitz box, repositioning arms, swapping heads, 
+          adding chains or trophies — every Chaos Marine can feel unique. 
+          This is encouraged, expected, and celebrated in the community. 
+          You don't need to do it, but it's one of the most rewarding parts of the hobby 
+          if you choose to lean into it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What to buy -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">What to buy first</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">One box. Commit to a Legion before you buy anything else — it determines everything from colors to second purchases.</p>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-6 mb-6">
+        <div class="mb-4">
+          <span class="bg-[#c9a84c] text-[#111113] text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Start Here</span>
+          <span class="text-xs text-[#4a4855]">~$160</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Combat Patrol: Chaos Space Marines</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Includes a Chaos Lord (your warlord), Chaos Space Marines (core infantry), 
+          Possessed (daemon-fused elite melee), and Chaos Cultists (cheap expendable troops). 
+          Covers the full range from cannon-fodder to elite — and the Possessed models 
+          are some of the most impressive kits Games Workshop has ever produced.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Chaos-Space-Marines-Combat-Patrol"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Buy from Games Workshop →
+        </a>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6 mb-6">
+        <div class="mb-3">
+          <span class="text-xs text-[#4a4855]">~$60 · essential expansion</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Chaos Space Marines (10-model box)</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          The core troop. Highly customizable with multiple weapon options and 
+          enough parts in the kit to make every model look different. 
+          The new sculpts are dramatically better than older kits — 
+          dynamic, detailed, and full of character.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Chaos-Space-Marines-2022"
+          target="_blank"
+          rel="noopener"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          View on Games Workshop →
+        </a>
+      </div>
+
+      <!-- Paints -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+        <h3 class="font-display font-semibold text-xl mb-4">Paints you need (Black Legion)</h3>
+        <div class="space-y-3">
+          {[
+            { name: 'Abaddon Black Spray', use: 'Primer and armor base — genuinely black', required: true },
+            { name: 'Mechanicus Standard Grey', use: 'Drybrush on armor edges', required: true },
+            { name: 'Retributor Armour', use: 'Gold trim — horns, rims, chains', required: true },
+            { name: 'Reikland Fleshshade', use: 'Wash over gold', required: true },
+            { name: 'Leadbelcher', use: 'Weapons and metal details', required: true },
+            { name: 'Nuln Oil', use: 'Wash over all metal', required: true },
+            { name: 'Mephiston Red', use: 'Eye lenses — the defining detail', required: true },
+            { name: 'Ironbreaker', use: 'Sponge chipping for battle damage', required: false },
+          ].map(paint => (
+            <div class="flex items-start gap-3">
+              <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${paint.required ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+                {paint.required ? 'Essential' : 'Optional'}
+              </span>
+              <div>
+                <span class="text-sm font-semibold">{paint.name}</span>
+                <span class="text-[#8a8590] text-sm"> — {paint.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-[#4a4855] text-sm mt-4 italic">~$44 total. The sponge chipping technique uses a piece of blister pack foam — free from any GW purchase.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Cost breakdown -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Honest cost breakdown</h2>
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg overflow-hidden">
+        {[
+          { item: 'Combat Patrol: Chaos Space Marines', cost: '~$160', note: 'Lord, CSM, Possessed, Cultists' },
+          { item: 'Essential paints (7)', cost: '~$44', note: 'Spray + grey + gold + wash + metal + red' },
+          { item: 'Basing supplies', cost: '~$12', note: 'Ash/rubble texture + scorched tufts' },
+          { item: 'Clippers + hobby knife', cost: '~$20', note: 'One-time purchase' },
+          { item: 'Superglue', cost: '~$5', note: 'Multi-part models with small trophy/spike bits' },
+        ].map((row, i) => (
+          <div class={`flex items-start justify-between px-5 py-4 gap-4 ${i % 2 === 0 ? '' : 'bg-[#111113]'}`}>
+            <div>
+              <p class="text-sm font-semibold">{row.item}</p>
+              <p class="text-xs text-[#4a4855] mt-0.5">{row.note}</p>
+            </div>
+            <span class="text-sm font-semibold text-[#c9a84c] flex-shrink-0">{row.cost}</span>
+          </div>
+        ))}
+        <div class="flex items-center justify-between px-5 py-4 bg-[#1f1d14] border-t border-[#c9a84c]">
+          <p class="font-display font-semibold">All-in starter total</p>
+          <span class="font-display font-bold text-[#c9a84c] text-lg">~$241</span>
+        </div>
+      </div>
+      <p class="text-[#4a4855] text-sm mt-4 italic">
+        A Chaos Space Marines box (~$60) is the natural second purchase — 
+        more troops and more conversion options. 
+        Pick up a used bitz box online for additional spikes, skulls, and trophies.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">The Long War never ended.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Choose your Legion. Embrace the damage. Every scratch on your models 
+        is ten thousand years of war — and you're just getting started.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Retake the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,418 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Tyranids Beginner's Guide — Warhammer 40k"
+  description="New to Tyranids? Learn the Hive Mind lore, how the swarm plays on the table, how to paint a whole horde fast, and what to buy first."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-4xl mx-auto">
+      <a href="/factions" class="text-sm text-[#4a4855] hover:text-[#8a8590] transition-colors mb-6 inline-block">
+        ← All Factions
+      </a>
+      <div class="flex items-start gap-6">
+        <div class="text-6xl">🐛</div>
+        <div>
+          <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-2 font-display">Faction Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Tyranids</h1>
+          <p class="text-[#8a8590] text-lg max-w-2xl leading-relaxed">
+            A living swarm from beyond the galaxy, driven by a single psychic will: consume everything. 
+            No mercy, no malice, no individual thought. Just hunger on an extinction-level scale.
+            One of the most unique and visually striking armies in the game.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Playstyle</p>
+          <p class="font-semibold text-sm">Fast Swarm</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Painting</p>
+          <p class="font-semibold text-sm text-green-400">Easy ✓</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Rules</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Starter Cost</p>
+          <p class="font-semibold text-sm">~$160–$220</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Who are the Tyranids?</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          They don't come from the Milky Way. They come from the void between galaxies — 
+          the lightless space where nothing lives. Nobody knows what drove them here. 
+          Nobody knows how many more are coming. What's known is that the first Hive Fleets 
+          to arrive were not the main fleet. They were the scouts.
+        </p>
+        <p>
+          A Tyranid Hive Fleet is a living organism on a galactic scale. Every creature 
+          in the swarm — from the smallest ripper to the towering Hive Tyrant — 
+          is a cell in a single body, controlled by the Hive Mind. 
+          There are no generals, no orders, no dissent. 
+          Every being acts with perfect coordination toward a single purpose.
+        </p>
+        <p>
+          That purpose is consumption. When a Hive Fleet reaches a planet, 
+          it doesn't destroy it — it <em>eats</em> it. Every tree, every animal, 
+          every human, every microbe is broken down into raw biomatter. 
+          That biomatter is processed back into the fleet to birth new creatures, 
+          new weapons, new adaptations. Nothing is wasted. 
+          When they're done, the planet is a lifeless rock.
+        </p>
+        <p>
+          The most terrifying thing about the Tyranids isn't their numbers. 
+          It's that they <em>adapt</em>. If a weapon kills them effectively, 
+          the next wave is immune to it. They study every enemy, 
+          evolve a counter, and keep coming. There is no "winning" against the Tyranids. 
+          There is only surviving long enough to matter.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Hive Fleets -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Pick your Hive Fleet</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        Like Space Marine Chapters, Hive Fleets give you distinct colors and special rules. 
+        This is your biggest aesthetic decision — Tyranids can look wildly different depending on your scheme.
+      </p>
+
+      <div class="space-y-4">
+        {[
+          {
+            name: 'Hive Fleet Leviathan',
+            colors: 'White & Purple',
+            swatch1: 'bg-purple-700',
+            swatch2: 'bg-gray-100',
+            painting: 'Medium',
+            paintColor: 'text-yellow-400',
+            desc: 'The largest and most dangerous Hive Fleet currently threatening the galaxy. Classic, striking color scheme — pale bone body with deep purple chitin plates. The "official" look from GW\'s marketing.',
+          },
+          {
+            name: 'Hive Fleet Behemoth',
+            colors: 'Red & Blue',
+            swatch1: 'bg-red-700',
+            swatch2: 'bg-blue-700',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: 'The first Hive Fleet to reach the galaxy — and the one that destroyed an entire Space Marine Chapter. Bold red and blue is easy to paint and looks aggressive on the table.',
+          },
+          {
+            name: 'Hive Fleet Kraken',
+            colors: 'Red & Bone',
+            swatch1: 'bg-red-600',
+            swatch2: 'bg-amber-200',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: 'Known for speed and overwhelming multiple-front attacks. Warm red chitin with bone-colored flesh — one of the easiest schemes to execute and looks fantastic with contrast paints.',
+          },
+          {
+            name: 'Custom Hive Fleet',
+            colors: 'Your choice',
+            swatch1: 'bg-gradient-to-r from-green-700 to-teal-600',
+            swatch2: 'bg-emerald-400',
+            painting: 'Varies',
+            paintColor: 'text-[#8a8590]',
+            desc: 'Many players invent their own Hive Fleet with completely custom colors — green and black, orange and bone, teal and white. Tyranids reward creative schemes more than almost any other faction.',
+          },
+        ].map(fleet => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="flex gap-1 flex-shrink-0">
+                <div class={`w-3 h-12 rounded-l ${fleet.swatch1}`}></div>
+                <div class={`w-3 h-12 rounded-r ${fleet.swatch2}`}></div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center flex-wrap gap-3 mb-1">
+                  <h3 class="font-display font-semibold text-lg">{fleet.name}</h3>
+                  <span class="text-xs text-[#4a4855]">{fleet.colors}</span>
+                  <span class={`text-xs font-semibold ${fleet.paintColor}`}>Painting: {fleet.painting}</span>
+                </div>
+                <p class="text-[#b8b4c0] text-sm leading-relaxed">{fleet.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Playstyle -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">How they play on the table</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-10">
+        <p>
+          Tyranids are a <strong class="text-[#f0ede8]">fast, aggressive swarm</strong>. 
+          They flood the table with cheap fast troops — Hormagaunts, Termagants, Rippers — 
+          while bigger creatures like Warriors and Carnifexes support and lead the charge.
+        </p>
+        <p>
+          The army's key mechanic is <strong class="text-[#f0ede8]">Synapse</strong>. 
+          Larger Tyranid creatures (called Synapse creatures) project a psychic field that 
+          keeps nearby smaller units focused and effective. Push your Synapse creatures 
+          forward and your swarm operates like a machine. Lose them and smaller units 
+          start acting on instinct — still dangerous, but less controlled.
+        </p>
+        <p>
+          You have two main army styles to choose from. 
+          <strong class="text-[#f0ede8]">Swarm</strong> lists flood the board with 50–80 
+          small models and overwhelm opponents with sheer numbers. 
+          <strong class="text-[#f0ede8]">Nidzilla</strong> lists go the opposite direction — 
+          fewer, bigger creatures. A Hive Tyrant, several Carnifexes, a Screamer-Killer. 
+          Slower but terrifying to face and far fewer models to paint.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-green-400">Tyranids are for you if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✓ You love the alien, biomechanical aesthetic</li>
+            <li>✓ You want a fast, aggressive playstyle</li>
+            <li>✓ You want total creative freedom on colors</li>
+            <li>✓ You want big impressive monster models</li>
+            <li>✓ You want an army that feels genuinely alien — no guns, no mercy</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-red-400">Maybe look elsewhere if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✗ You want a strong shooting army</li>
+            <li>✗ You don't want to assemble and paint 50+ small models</li>
+            <li>✗ You want a disciplined, structured playstyle</li>
+            <li>✗ You prefer human or humanoid armies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Painting -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How to paint Tyranids</h2>
+      <p class="text-[#8a8590] mb-4 text-lg">Using Hive Fleet Kraken (red chitin + bone flesh) — the easiest scheme for beginners.</p>
+      <p class="text-[#b8b4c0] mb-10 leading-relaxed">
+        Tyranids are one of the best armies for contrast paints. The organic shapes — 
+        muscle, chitin plates, tendons — are exactly what contrast paints were designed for. 
+        You can paint a Hormagaunt to a great tabletop standard in under 15 minutes.
+      </p>
+
+      <div class="space-y-4 mb-10">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Spray Wraithbone</p>
+            <p class="text-[#8a8590] text-sm">The warm cream base coat is essential for Contrast paints to look their best. Don't substitute grey — it'll change all your colors.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Blood Angels Red Contrast on all chitin plates</p>
+            <p class="text-[#8a8590] text-sm">The hard, raised armor sections. One coat self-shades — darker in the recesses, brighter on the raised areas. Looks great immediately.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Skeleton Horde Contrast on flesh and muscle</p>
+            <p class="text-[#8a8590] text-sm">The soft, organic body areas — legs, torso, head. Bone-colored with instant shadow in all the muscle crevices. One coat.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Casandora Yellow Contrast on talons and claws</p>
+            <p class="text-[#8a8590] text-sm">Optional but striking — gives the claws a distinct amber color that reads well from a distance and breaks up the red/bone.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">5</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Drybrush Wraithbone over the flesh areas</p>
+            <p class="text-[#8a8590] text-sm">Light drybrush on raised muscles brings the highlights back and gives the flesh a dry, sinew-like quality. Takes 30 seconds per model.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">6</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Pick out eyes with Moot Green, base the model</p>
+            <p class="text-[#8a8590] text-sm">A single dot of bright green in each eye socket makes the model pop from across the table. Base with a brown or grey texture paint and a tuft.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">Batch painting is everything</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          With Tyranids, you'll often paint 10–20 identical small models at once. 
+          Line them all up on a strip of cardboard. Do step 1 on all of them. 
+          Move to step 2 on all of them. Each pass takes minutes and you finish a squad 
+          in the same time it takes to do one model carefully. 
+          This is how Tyranid players paint 60-model armies without losing their mind.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What to buy -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">What to buy first</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">One box. Paint it. Then decide if you're going swarm or monsters — they need very different second purchases.</p>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-6 mb-6">
+        <div class="mb-4">
+          <span class="bg-[#c9a84c] text-[#111113] text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Start Here</span>
+          <span class="text-xs text-[#4a4855]">~$160</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Combat Patrol: Tyranids</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Includes a Winged Tyranid Prime (fast, hard-hitting leader), Neurogaunts (cheap troops), 
+          Barbgaunts (mid-range shooting), and a Psychophage (big monstrous creature). 
+          Gives you a taste of both swarm and monster playstyles in one box.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Combat-Patrol-Tyranids-2023"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Buy from Games Workshop →
+        </a>
+      </div>
+
+      <!-- Second purchase options -->
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <p class="text-xs text-[#4a4855] mb-3">If you want to go swarm → ~$55</p>
+          <h3 class="font-display font-semibold mb-2">Termagants (24-model box)</h3>
+          <p class="text-[#8a8590] text-sm">Your core troop. Flood the board with them. Fast to paint in batches and exactly what opponents don't want to deal with.</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <p class="text-xs text-[#4a4855] mb-3">If you want to go monsters → ~$70</p>
+          <h3 class="font-display font-semibold mb-2">Carnifex</h3>
+          <p class="text-[#8a8590] text-sm">A tank on legs. One of the most iconic 40k models. Customize with different bio-weapon arms. Incredibly satisfying to paint and play.</p>
+        </div>
+      </div>
+
+      <!-- Paints -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+        <h3 class="font-display font-semibold text-xl mb-4">Paints you need (Kraken scheme)</h3>
+        <div class="space-y-3">
+          {[
+            { name: 'Wraithbone Spray', use: 'Base coat — essential for contrast paints', required: true },
+            { name: 'Blood Angels Red (Contrast)', use: 'Chitin plates — one coat, self-shading', required: true },
+            { name: 'Skeleton Horde (Contrast)', use: 'Flesh and muscle areas', required: true },
+            { name: 'Casandora Yellow (Contrast)', use: 'Talons and claws', required: true },
+            { name: 'Moot Green', use: 'Eye dots — one tiny dot per eye', required: false },
+            { name: 'Wraithbone (pot)', use: 'Drybrush on flesh highlights', required: false },
+          ].map(paint => (
+            <div class="flex items-start gap-3">
+              <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${paint.required ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+                {paint.required ? 'Essential' : 'Optional'}
+              </span>
+              <div>
+                <span class="text-sm font-semibold">{paint.name}</span>
+                <span class="text-[#8a8590] text-sm"> — {paint.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-[#4a4855] text-sm mt-4 italic">~$32 for the essentials. Contrast paints are slightly more expensive but do the work of three paints in one.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Cost breakdown -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Honest cost breakdown</h2>
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg overflow-hidden">
+        {[
+          { item: 'Combat Patrol: Tyranids', cost: '~$160', note: 'Prime, Gaunts, Barbgaunts, Psychophage' },
+          { item: 'Essential paints (4 Contrast + spray)', cost: '~$32', note: 'Wraithbone spray + 3 contrast paints' },
+          { item: 'Basing supplies', cost: '~$12', note: 'Texture paint + tufts' },
+          { item: 'Clippers + hobby knife', cost: '~$20', note: 'One-time purchase' },
+          { item: 'Superglue', cost: '~$5', note: 'Multi-part models need glue' },
+        ].map((row, i) => (
+          <div class={`flex items-start justify-between px-5 py-4 gap-4 ${i % 2 === 0 ? '' : 'bg-[#111113]'}`}>
+            <div>
+              <p class="text-sm font-semibold">{row.item}</p>
+              <p class="text-xs text-[#4a4855] mt-0.5">{row.note}</p>
+            </div>
+            <span class="text-sm font-semibold text-[#c9a84c] flex-shrink-0">{row.cost}</span>
+          </div>
+        ))}
+        <div class="flex items-center justify-between px-5 py-4 bg-[#1f1d14] border-t border-[#c9a84c]">
+          <p class="font-display font-semibold">All-in starter total</p>
+          <span class="font-display font-bold text-[#c9a84c] text-lg">~$229</span>
+        </div>
+      </div>
+      <p class="text-[#4a4855] text-sm mt-4 italic">
+        Swarm players: budget for Termagants next (~$55 for 24). Monster players: budget for a Carnifex (~$70). 
+        Both are very different second purchases — paint the patrol first to know which direction you want.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">The Hive hungers.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Pick your Hive Fleet colors, grab the Combat Patrol, and start painting in batches of ten. 
+        The swarm builds itself one model at a time.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Retake the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,435 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="T'au Empire Beginner's Guide — Warhammer 40k"
+  description="New to the T'au? Learn the Greater Good lore, how the shooting army plays, how to paint battlesuits fast, and what to buy first."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-4xl mx-auto">
+      <a href="/factions" class="text-sm text-[#4a4855] hover:text-[#8a8590] transition-colors mb-6 inline-block">
+        ← All Factions
+      </a>
+      <div class="flex items-start gap-6">
+        <div class="text-6xl">🎯</div>
+        <div>
+          <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-2 font-display">Faction Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">T'au Empire</h1>
+          <p class="text-[#8a8590] text-lg max-w-2xl leading-relaxed">
+            The most technologically advanced active civilization in the galaxy, 
+            united under a philosophy of collective purpose — the Greater Good. 
+            They shoot things from very far away with extreme efficiency, 
+            pilot giant battlesuits, and are genuinely the closest thing to "good guys" in 40k.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Playstyle</p>
+          <p class="font-semibold text-sm">Pure Shooting</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Painting</p>
+          <p class="font-semibold text-sm text-green-400">Easy ✓</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Rules</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Starter Cost</p>
+          <p class="font-semibold text-sm">~$160–$230</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Who are the T'au?</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          In a setting defined by ancient evils, dying empires, and ten-thousand-year-old grudges, 
+          the T'au are startlingly young. Six thousand years ago they were primitive. 
+          Now they have faster-than-light travel, plasma weapons, and giant walking battlesuits 
+          piloted by warrior monks. The speed of their development is, to every other faction, 
+          deeply suspicious.
+        </p>
+        <p>
+          Their society is built around the philosophy of the <strong class="text-[#f0ede8]">Greater Good</strong> — 
+          Tau'va in their language. The idea that every individual exists to serve the collective, 
+          that cooperation achieves more than competition, and that the universe is better 
+          when more beings join the cause. It sounds noble. In practice it means: 
+          join us willingly, or be absorbed anyway.
+        </p>
+        <p>
+          The T'au are divided into castes determined at birth. 
+          The <strong class="text-[#f0ede8]">Fire caste</strong> are the warriors — disciplined soldiers 
+          and battlesuit pilots. The <strong class="text-[#f0ede8]">Earth caste</strong> are engineers 
+          who build everything. The <strong class="text-[#f0ede8]">Water caste</strong> are diplomats. 
+          The <strong class="text-[#f0ede8]">Air caste</strong> pilot the ships. 
+          Above all of them sit the <strong class="text-[#f0ede8]">Ethereals</strong> — 
+          mysterious leaders who command absolute loyalty through means nobody fully understands.
+        </p>
+        <p>
+          The strangest thing about the T'au: they have almost no presence in the Warp. 
+          They can't use psychic powers. Chaos cannot corrupt them. 
+          In a galaxy where everything is touched by the immaterium, 
+          the T'au exist largely outside it — which makes them unique, 
+          and makes the older, darker powers deeply uncomfortable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Sept choice -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Choose your Sept</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        Septs are the T'au equivalent of Space Marine Chapters — different homeworlds with different colors and special rules.
+      </p>
+
+      <div class="space-y-4">
+        {[
+          {
+            name: "T'au Sept",
+            colors: 'Bone White & Blue',
+            swatch1: 'bg-gray-100',
+            swatch2: 'bg-blue-600',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: "The home sept — the original T'au world. Clean white/bone armor with blue markings. The default scheme and the most tutorials exist for it. Elegant, clinical, immediately recognizable.",
+          },
+          {
+            name: "Sa'cea Sept",
+            colors: 'Red & White',
+            swatch1: 'bg-red-600',
+            swatch2: 'bg-gray-100',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: "A disciplined, traditional sept known for producing exceptional Fire Warriors. Bold red and white scheme that's easy to execute and looks striking on the table.",
+          },
+          {
+            name: "Dal'yth Sept",
+            colors: 'Blue-Green Camo',
+            swatch1: 'bg-teal-600',
+            swatch2: 'bg-cyan-400',
+            painting: 'Medium',
+            paintColor: 'text-yellow-400',
+            desc: "Specialists in stealth operations. Blue-green urban camouflage with a more muted, tactical look. Slightly more complex to execute but very distinctive.",
+          },
+          {
+            name: "Vior'la Sept",
+            colors: 'Dark Red & Black',
+            swatch1: 'bg-red-800',
+            swatch2: 'bg-gray-900',
+            painting: 'Easy',
+            paintColor: 'text-green-400',
+            desc: "Aggressive, hot-headed warriors — the most combat-focused sept. Dark red armor with black panels. Rules-wise they favor the aggressive Mont'ka doctrine. Easy and fast to paint.",
+          },
+        ].map(sept => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="flex gap-1 flex-shrink-0">
+                <div class={`w-3 h-12 rounded-l ${sept.swatch1}`}></div>
+                <div class={`w-3 h-12 rounded-r ${sept.swatch2}`}></div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center flex-wrap gap-3 mb-1">
+                  <h3 class="font-display font-semibold text-lg">{sept.name}</h3>
+                  <span class="text-xs text-[#4a4855]">{sept.colors}</span>
+                  <span class={`text-xs font-semibold ${sept.paintColor}`}>Painting: {sept.painting}</span>
+                </div>
+                <p class="text-[#b8b4c0] text-sm leading-relaxed">{sept.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Playstyle -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">How they play on the table</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-10">
+        <p>
+          T'au are the <strong class="text-[#f0ede8]">premier shooting army in 40k</strong>. 
+          Their weapons have longer range and better accuracy than almost any equivalent in the game. 
+          Their goal every turn is simple: stay at distance, shoot everything, don't let anything 
+          reach close combat.
+        </p>
+        <p>
+          The army's core mechanic is <strong class="text-[#f0ede8]">Markerlights</strong>. 
+          Pathfinders and drones illuminate targets, stacking benefits that make the rest of 
+          your army shoot better at that target — improved accuracy, more shots, ignoring cover. 
+          A well-markerlit target tends not to survive.
+        </p>
+        <p>
+          Battlesuits are the army's centerpiece. 
+          <strong class="text-[#f0ede8]">XV8 Crisis Suits</strong> are versatile, 
+          loadable with different weapons for different roles. 
+          The <strong class="text-[#f0ede8]">Riptide</strong> is a towering walking fortress 
+          that dominates the battlefield. The <strong class="text-[#f0ede8]">Ghostkeel</strong> 
+          is a stealth battlesuit that appears behind enemy lines. 
+          All of them are incredible models and the main reason people pick the faction.
+        </p>
+        <p>
+          One unique rule: T'au units can <strong class="text-[#f0ede8]">Fall Back and Fire</strong>. 
+          If something charges you and gets into melee, you can retreat next turn and still shoot. 
+          For an army this bad at close combat, that's a lifeline.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-green-400">T'au are for you if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✓ You want to win through precision firepower</li>
+            <li>✓ You love giant mech suit models</li>
+            <li>✓ You prefer clean sci-fi aesthetics over grimdark</li>
+            <li>✓ You want the "least evil" faction in the game</li>
+            <li>✓ You want a focused playstyle with one phase to master</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-red-400">Maybe look elsewhere if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✗ You want a melee army — T'au in melee is a death sentence</li>
+            <li>✗ You want grim, gothic, or horror aesthetics</li>
+            <li>✗ You want psychic powers</li>
+            <li>✗ You want to overwhelm with hordes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Painting -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How to paint T'au</h2>
+      <p class="text-[#8a8590] mb-4 text-lg">Using T'au Sept (bone white + blue). The clean, flat armor panels are genuinely beginner-friendly.</p>
+      <p class="text-[#b8b4c0] mb-10 leading-relaxed">
+        T'au armor is the opposite of Orks and Guard — it's smooth, geometric, and clean. 
+        That means no hiding mistakes behind "battle damage." 
+        But it also means the techniques are simple: flat color, wash into recesses, 
+        highlight edges. Each step is quick and the results are satisfying.
+      </p>
+
+      <div class="space-y-4 mb-10">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Spray Wraithbone</p>
+            <p class="text-[#8a8590] text-sm">The warm cream base gives the bone-white armor a natural tint — better than pure white. Covers everything evenly.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Skeleton Horde Contrast on armor panels</p>
+            <p class="text-[#8a8590] text-sm">A thin, warm beige contrast paint that shades into the recesses between armor plates. One coat gives you instant depth on the flat surfaces.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Talassar Blue Contrast on the accent panels</p>
+            <p class="text-[#8a8590] text-sm">The blue sept markings — shoulder accents, helmet stripes, knee pads. Pick two or three areas per model and stay consistent. Less is more.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Leadbelcher on all weapons and tech</p>
+            <p class="text-[#8a8590] text-sm">Pulse rifles, fusion blasters, battlesuit arms. Metallic on everything mechanical. Follow with Nuln Oil for instant shadow.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">5</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Moot Green on sensor lenses and eye slits</p>
+            <p class="text-[#8a8590] text-sm">Every T'au helmet has a visor slit or lens array. A tiny stripe of bright green makes the model look alive and finished. One of the best payoff details in the game.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">6</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Drybrush Wraithbone on armor edges, base the model</p>
+            <p class="text-[#8a8590] text-sm">A light edge drybrush restores brightness to the armor rims and panel edges. Clean, crisp highlight with minimal effort. Then a grey-blue base texture to match the T'au aesthetic.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">Battlesuits paint differently than infantry</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Crisis Suits and Riptides have large, flat armor panels — more like painting a vehicle than a soldier. 
+          They go faster than infantry but require neater work since the smooth surfaces 
+          show mistakes more than textured Ork or Tyranid skin would. 
+          Start with infantry to get the colors right, then tackle a battlesuit as your 
+          first "hero" model. The payoff is significant.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What to buy -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">What to buy first</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">One box, paint it, then decide if you want more infantry or your first battlesuit.</p>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-6 mb-6">
+        <div class="mb-4">
+          <span class="bg-[#c9a84c] text-[#111113] text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Start Here</span>
+          <span class="text-xs text-[#4a4855]">~$160</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Combat Patrol: T'au Empire</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Includes an Ethereal (commander), Fire Warriors (core infantry), Pathfinders 
+          (your Markerlight unit — essential to how the army works), and a Broadside Battlesuit 
+          (heavy support). Covers every role you need to understand how T'au actually plays.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Combat-Patrol-Tau-Empire"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Buy from Games Workshop →
+        </a>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6 mb-6">
+        <div class="mb-3">
+          <span class="text-xs text-[#4a4855]">~$65 · the must-have second purchase</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">XV8 Crisis Battlesuits</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Three customizable battlesuits, each loadable with different weapon combinations. 
+          The iconic T'au unit. Versatile, powerful, and genuinely stunning models — 
+          this is the box that makes people fall in love with the faction. 
+          Don't buy them until you've painted the patrol, but do budget for them.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/XV8-Crisis-Battlesuits"
+          target="_blank"
+          rel="noopener"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          View on Games Workshop →
+        </a>
+      </div>
+
+      <!-- Paints -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+        <h3 class="font-display font-semibold text-xl mb-4">Paints you need (T'au Sept scheme)</h3>
+        <div class="space-y-3">
+          {[
+            { name: 'Wraithbone Spray', use: 'Base coat — armor and battlesuits', required: true },
+            { name: 'Skeleton Horde (Contrast)', use: 'Bone-white armor panels', required: true },
+            { name: 'Talassar Blue (Contrast)', use: 'Sept color accent panels', required: true },
+            { name: 'Leadbelcher', use: 'Weapons and mechanical parts', required: true },
+            { name: 'Nuln Oil', use: 'Wash on metal areas', required: true },
+            { name: 'Moot Green', use: 'Sensor lenses and eye slits', required: true },
+            { name: 'Wraithbone (pot)', use: 'Edge drybrush on armor panels', required: false },
+          ].map(paint => (
+            <div class="flex items-start gap-3">
+              <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${paint.required ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+                {paint.required ? 'Essential' : 'Optional'}
+              </span>
+              <div>
+                <span class="text-sm font-semibold">{paint.name}</span>
+                <span class="text-[#8a8590] text-sm"> — {paint.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-[#4a4855] text-sm mt-4 italic">~$38 total. The same paints cover infantry and battlesuits — the sept color is the only decision.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Cost breakdown -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Honest cost breakdown</h2>
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg overflow-hidden">
+        {[
+          { item: "Combat Patrol: T'au Empire", cost: '~$160', note: 'Ethereal, Fire Warriors, Pathfinders, Broadside' },
+          { item: 'Essential paints (6)', cost: '~$38', note: 'Spray + 2 contrast + metal + wash + green' },
+          { item: 'Basing supplies', cost: '~$12', note: 'Grey-blue texture paint + tufts' },
+          { item: 'Clippers + hobby knife', cost: '~$20', note: 'One-time purchase' },
+          { item: 'Superglue', cost: '~$5', note: 'Battlesuits and multi-part kits' },
+        ].map((row, i) => (
+          <div class={`flex items-start justify-between px-5 py-4 gap-4 ${i % 2 === 0 ? '' : 'bg-[#111113]'}`}>
+            <div>
+              <p class="text-sm font-semibold">{row.item}</p>
+              <p class="text-xs text-[#4a4855] mt-0.5">{row.note}</p>
+            </div>
+            <span class="text-sm font-semibold text-[#c9a84c] flex-shrink-0">{row.cost}</span>
+          </div>
+        ))}
+        <div class="flex items-center justify-between px-5 py-4 bg-[#1f1d14] border-t border-[#c9a84c]">
+          <p class="font-display font-semibold">All-in starter total</p>
+          <span class="font-display font-bold text-[#c9a84c] text-lg">~$235</span>
+        </div>
+      </div>
+      <p class="text-[#4a4855] text-sm mt-4 italic">
+        Budget for Crisis Battlesuits (~$65) as your second purchase — they're the reason most people choose T'au 
+        and the models that make the army feel complete.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">For the Greater Good.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Pick your Sept, grab the Combat Patrol, and learn your Markerlights. 
+        Then buy Crisis Suits and never look back.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Retake the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

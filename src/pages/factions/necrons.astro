@@ -1,0 +1,345 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Necrons Beginner's Guide — Warhammer 40k"
+  description="New to Necrons? Learn who they are, how they play, how to paint them (it's easier than you think), and exactly what to buy first."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-4xl mx-auto">
+      <a href="/factions" class="text-sm text-[#4a4855] hover:text-[#8a8590] transition-colors mb-6 inline-block">
+        ← All Factions
+      </a>
+      <div class="flex items-start gap-6">
+        <div class="text-6xl">🤖</div>
+        <div>
+          <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-2 font-display">Faction Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Necrons</h1>
+          <p class="text-[#8a8590] text-lg max-w-2xl leading-relaxed">
+            Ancient machine gods sleeping for 60 million years — and now they're waking up angry. 
+            One of the best starter factions: beginner-friendly to paint, durable on the table, 
+            and iconic as hell.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats bar -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Playstyle</p>
+          <p class="font-semibold text-sm">Durable Shooter</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Painting</p>
+          <p class="font-semibold text-sm text-green-400">Easy ✓</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Rules</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Starter Cost</p>
+          <p class="font-semibold text-sm">~$170–$250</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Who are the Necrons?</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          Sixty million years ago, the Necrontyr were a dying race — their sun bathed their worlds in radiation, 
+          and their lives were miserable and short. Desperate for immortality, they struck a bargain with 
+          god-like entities called the C'tan: trade their organic bodies for immortal metal ones.
+        </p>
+        <p>
+          They got what they asked for. Sort of. The transfer stripped away their souls — leaving behind 
+          cold, calculating machines that remembered being alive but could no longer feel it. 
+          The C'tan got something too: they feasted on the Necrontyr's consciousnesses like energy. 
+          It wasn't a fair deal.
+        </p>
+        <p>
+          Eventually the Necrons turned on the C'tan, shattered them into shards, and then 
+          retreated into stasis — sleeping in vast tomb worlds while the galaxy moved on without them. 
+          Now they're waking up. Their ancient empire predates humanity by tens of millions of years, 
+          and they intend to reclaim it.
+        </p>
+        <p>
+          The aesthetic is ancient Egypt meets skeletal robots. Glowing green eyes and gauss weapons, 
+          silver metal bodies, and a deeply unsettling calm. They don't rage. They don't fear. 
+          They simply <em>are</em> — and they're very, very patient.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Playstyle -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">How they play on the table</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-10">
+        <p>
+          Necrons are a <strong class="text-[#f0ede8]">resilient shooting army</strong>. They're not the fastest faction 
+          and they're not the most aggressive, but they're hard to kill — and that's the point.
+        </p>
+        <p>
+          Their signature ability is <strong class="text-[#f0ede8]">Reanimation Protocols</strong>: at the end of each 
+          phase, destroyed models have a chance to stand back up. It's infuriating to play against 
+          and deeply satisfying to play with. As a new player, this is a massive advantage — your 
+          mistakes are more survivable than most factions.
+        </p>
+        <p>
+          Their gauss weapons are efficient at stripping wounds. Their HQ units (Overlords, 
+          Crypteks) provide strong auras that buff nearby units. The army rewards you for 
+          keeping things in coherent groups rather than spreading out.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-green-400">Necrons are for you if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✓ You want an army that feels hard to kill</li>
+            <li>✓ You like the idea of models coming back from the dead</li>
+            <li>✓ You're new and want something forgiving to learn on</li>
+            <li>✓ You love the skeletal robot / ancient alien aesthetic</li>
+            <li>✓ You want to spend less time painting and more time playing</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-red-400">Maybe look elsewhere if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✗ You want to get in close and smash things in melee</li>
+            <li>✗ You want lots of movement tricks and speed</li>
+            <li>✗ You want a horde of cheap, expendable troops</li>
+            <li>✗ You prefer organic, living aesthetics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Painting -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How to paint Necrons</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">The honest answer: Necrons are one of the easiest armies in the game to paint well. Here's why.</p>
+
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 mb-10">
+        <p>
+          The core body is metallic silver — you can basecoat an entire Necron Warrior in one pass 
+          with a spray can. One wash of dark contrast medium later and you've got depth and shadow 
+          without touching a brush to 90% of the model. The classic Necron scheme is genuinely 
+          achievable by a complete beginner on day one.
+        </p>
+        <p>
+          The glowing green energy effects (eyes, weapon coils) are where you can add personality — 
+          but even those are optional. A wash of the right contrast paint gets you most of the way there.
+        </p>
+      </div>
+
+      <!-- Step by step -->
+      <div class="space-y-4">
+        <h3 class="font-display font-semibold text-lg mb-4">The classic scheme — step by step</h3>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Spray with Leadbelcher</p>
+            <p class="text-[#8a8590] text-sm">Citadel's metallic silver spray primer. Covers the whole model in 30 seconds. Let it dry fully.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Wash with Nuln Oil</p>
+            <p class="text-[#8a8590] text-sm">A thin black wash that flows into recesses and creates instant shadow and depth. Apply generously across the whole model.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Drybrush with Ironbreaker</p>
+            <p class="text-[#8a8590] text-sm">Load a dry brush, wipe most of it off on paper, then brush lightly across raised edges. Brings the metal back to life and adds highlights instantly.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Pick out the eyes and weapon coils</p>
+            <p class="text-[#8a8590] text-sm">Load a small brush with Tesseract Glow (a green technical paint). Dab it into the eye sockets and the glowing coils on gauss weapons. It's self-shading — one coat is enough.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">5</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Base the model</p>
+            <p class="text-[#8a8590] text-sm">A texture paint like Astrogranite Debris on the base, a drybrush of Administratum Grey over it, and a static grass tuft. Done.</p>
+          </div>
+        </div>
+
+        <p class="text-[#4a4855] text-sm mt-4 italic">
+          That's a table-ready Necron Warrior in under 20 minutes. The scheme scales perfectly to an entire army.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What to buy -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">What to buy first</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">In order. Don't buy anything else until you've finished step one.</p>
+
+      <!-- Step 1: Combat Patrol -->
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-6 mb-6">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <span class="bg-[#c9a84c] text-[#111113] text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Start Here</span>
+            <span class="text-xs text-[#4a4855]">~$170</span>
+          </div>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Combat Patrol: Necrons</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          The best entry point for any new Necron player. Includes a Necron Overlord (your commander), 
+          10 Necron Warriors (your core troop), Canoptek Scarabs (fast-moving objective grabbers), 
+          and a Canoptek Reanimator (support unit that helps your reanimation rolls). 
+          It's a legal, playable army out of one box.
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Combat-Patrol-Necrons-2023"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Buy from Games Workshop →
+        </a>
+        <!-- TODO: replace with Amazon affiliate link once account is set up -->
+      </div>
+
+      <!-- Step 2: Extra Warriors -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6 mb-6">
+        <div class="flex items-start justify-between gap-4 mb-3">
+          <span class="text-xs text-[#4a4855]">~$55 · optional first expansion</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Necron Warriors (12-model box)</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          More Warriors means more reanimation rolls — the backbone of how the army plays. 
+          If you're having fun after painting the Combat Patrol, this is the natural next box. 
+          Gives you two weapon options: gauss flayer (reliable) and gauss reaper (close range).
+        </p>
+        <a
+          href="https://www.games-workshop.com/en-US/Necron-Warriors-2020"
+          target="_blank"
+          rel="noopener"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          View on Games Workshop →
+        </a>
+      </div>
+
+      <!-- Paints -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+        <h3 class="font-display font-semibold text-xl mb-4">Paints you need</h3>
+        <div class="space-y-3">
+          {[
+            { name: 'Leadbelcher Spray', use: 'Base coat — covers the whole model', required: true },
+            { name: 'Nuln Oil', use: 'Shade wash — instant depth and shadow', required: true },
+            { name: 'Ironbreaker', use: 'Drybrush highlight — brings metal back to life', required: true },
+            { name: 'Tesseract Glow', use: 'The glowing green eye/weapon effect', required: true },
+            { name: 'Astrogranite Debris', use: 'Texture paint for bases', required: false },
+            { name: 'Administratum Grey', use: 'Drybrush over basing texture', required: false },
+          ].map(paint => (
+            <div class="flex items-start gap-3">
+              <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${paint.required ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+                {paint.required ? 'Essential' : 'Optional'}
+              </span>
+              <div>
+                <span class="text-sm font-semibold">{paint.name}</span>
+                <span class="text-[#8a8590] text-sm"> — {paint.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-[#4a4855] text-sm mt-5 italic">~$35 total for all six. Citadel paints are available at most game stores and online.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Cost breakdown -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Honest cost breakdown</h2>
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg overflow-hidden">
+        {[
+          { item: 'Combat Patrol: Necrons', cost: '~$170', note: 'Playable army out of one box' },
+          { item: 'Essential paints (4)', cost: '~$24', note: 'Spray + wash + drybrush + glow' },
+          { item: 'Spray primer', cost: 'Included', note: 'Leadbelcher spray is your primer' },
+          { item: 'Basing supplies', cost: '~$12', note: 'Texture paint + tuft + grey' },
+          { item: 'Clippers + hobby knife', cost: '~$20', note: 'One-time purchase — use forever' },
+          { item: 'Superglue', cost: '~$5', note: 'Standard plastic glue works too' },
+        ].map((row, i) => (
+          <div class={`flex items-start justify-between px-5 py-4 gap-4 ${i % 2 === 0 ? '' : 'bg-[#111113]'}`}>
+            <div>
+              <p class="text-sm font-semibold">{row.item}</p>
+              <p class="text-xs text-[#4a4855] mt-0.5">{row.note}</p>
+            </div>
+            <span class="text-sm font-semibold text-[#c9a84c] flex-shrink-0">{row.cost}</span>
+          </div>
+        ))}
+        <div class="flex items-center justify-between px-5 py-4 bg-[#1f1d14] border-t border-[#c9a84c]">
+          <p class="font-display font-semibold">All-in starter total</p>
+          <span class="font-display font-bold text-[#c9a84c] text-lg">~$230</span>
+        </div>
+      </div>
+      <p class="text-[#4a4855] text-sm mt-4 italic">
+        Prices approximate and subject to change. Some items (clippers, glue) are reusable forever.
+        Third-party paints like Army Painter can cut paint costs by 30–40%.
+      </p>
+    </div>
+  </section>
+
+  <!-- Next steps CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">Ready to start?</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Grab the Combat Patrol, get your four essential paints, and follow the painting steps above. 
+        You'll have a painted, playable army faster than you think.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Retake the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
