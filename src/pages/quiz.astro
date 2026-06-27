@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArmyQuiz from '../components/ArmyQuiz.jsx';
+---
+
+<BaseLayout
+  title="Army Quiz — Find Your Faction"
+  description="Answer 5 questions and find your perfect Warhammer 40k army. Playstyle, painting complexity, budget, and more."
+>
+  <section class="px-6 py-16">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-3 font-display">Army Quiz</p>
+      <h1 class="font-display text-4xl font-bold mb-4">Find Your Army</h1>
+      <p class="text-[#8a8590] text-lg">5 questions. We'll match you to the faction that fits how you want to play and paint.</p>
+    </div>
+
+    <ArmyQuiz client:load />
+  </section>
+</BaseLayout>
