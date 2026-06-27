@@ -1,0 +1,427 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="How to Build Warhammer 40k Models — Beginner's Guide"
+  description="A practical guide to assembling Warhammer 40k miniatures. Learn how to clip, trim mold lines, glue parts, and avoid the mistakes that ruin models before you even paint them."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-4 font-display">Assembly Guide</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold mb-6">
+        Build it right<br />the first time.
+      </h1>
+      <p class="text-[#8a8590] text-lg leading-relaxed max-w-2xl mx-auto">
+        Most painting problems start at assembly. 
+        Mold lines left on, parts glued in the wrong order, gaps that won't close. 
+        This guide covers what the official instructions skip — 
+        so your models are ready to paint, not fighting you.
+      </p>
+    </div>
+  </section>
+
+  <!-- What you need -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">What you need</h2>
+      <p class="text-[#b8b4c0] mb-8 text-lg leading-relaxed">
+        Four tools. That's genuinely all you need to build almost any plastic kit Games Workshop produces.
+      </p>
+
+      <div class="space-y-4 mb-10">
+        {[
+          {
+            tool: 'Sprue cutters (clippers)',
+            cost: '~$10–20',
+            note: 'The most important tool. Thin-bladed flush cutters are the best — they leave smaller nubs and cause less stress damage to parts. Don\'t use scissors. Don\'t use your teeth.',
+            essential: true,
+          },
+          {
+            tool: 'Hobby knife (X-Acto #1 or similar)',
+            cost: '~$8–15',
+            note: 'For trimming mold lines, scraping gates, and cleaning up parts. Keep it sharp — a dull blade tears instead of cuts. Replace blades often, they go dull fast.',
+            essential: true,
+          },
+          {
+            tool: 'Plastic cement (Tamiya or GW)',
+            cost: '~$8–12',
+            note: 'For plastic-to-plastic joins. Chemically melts the plastic and creates a bond stronger than the plastic itself. Slower than superglue but the right tool for plastic kits.',
+            essential: true,
+          },
+          {
+            tool: 'Superglue (thin or medium viscosity)',
+            cost: '~$5–8',
+            note: 'For resin parts, metal bits, trophies, basing materials, and anything that isn\'t plastic-to-plastic. Loctite or Gorilla Glue work fine — GW brand is the same thing at twice the price.',
+            essential: true,
+          },
+          {
+            tool: 'Fine files or sandpaper (400–600 grit)',
+            cost: '~$5',
+            note: 'Optional but useful for smoothing stubborn mold lines and cleaning up glue joins. A set of hobby files covers everything.',
+            essential: false,
+          },
+          {
+            tool: 'Blu-Tack or modeling putty',
+            cost: '~$4',
+            note: 'For holding parts in position while glue dries. Invaluable for awkward joins and for dry-fitting before committing.',
+            essential: false,
+          },
+        ].map(tool => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5 flex items-start gap-4">
+            <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${tool.essential ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+              {tool.essential ? 'Essential' : 'Optional'}
+            </span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-4 mb-1">
+                <p class="font-semibold text-sm">{tool.tool}</p>
+                <span class="text-xs text-[#4a4855] flex-shrink-0">{tool.cost}</span>
+              </div>
+              <p class="text-[#8a8590] text-sm leading-relaxed">{tool.note}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">Plastic cement vs. superglue — use the right one</h3>
+        <div class="grid sm:grid-cols-2 gap-4 text-sm text-[#b8b4c0]">
+          <div>
+            <p class="font-semibold text-[#f0ede8] mb-1">Use plastic cement when:</p>
+            <ul class="space-y-1 text-[#8a8590]">
+              <li>→ Gluing plastic to plastic</li>
+              <li>→ Both parts are from the same kit</li>
+              <li>→ You want the strongest possible bond</li>
+              <li>→ You have time to hold the join</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold text-[#f0ede8] mb-1">Use superglue when:</p>
+            <ul class="space-y-1 text-[#8a8590]">
+              <li>→ Gluing resin or metal parts</li>
+              <li>→ Attaching small detail bits</li>
+              <li>→ Fixing broken parts</li>
+              <li>→ Basing materials and tufts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Understanding the sprue -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Understanding the sprue</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-8">
+        <p>
+          Your models arrive attached to plastic frames called sprues — 
+          the rectangular grids of plastic that everything is cast onto. 
+          Parts are connected to the sprue at specific points called gates. 
+          The job is to remove parts cleanly without damaging them.
+        </p>
+        <p>
+          Every part on the sprue is labeled with a letter and number combination 
+          that matches the instruction booklet. Before you clip anything, 
+          read the instructions and understand which parts belong to which step. 
+          GW instructions show parts by their code — 
+          find the part on the sprue before you cut.
+        </p>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-3">Don't clip everything off at once</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          New builders often clip all the parts off the sprue before starting, 
+          then lose track of which part is which. 
+          Instead, follow the instructions step by step — 
+          clip only the parts you need for the current step, 
+          assemble them, then move to the next step. 
+          The sprue is your parts organizer. Use it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Step by step process -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">The assembly process</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">Every model, every kit, every faction. This is the order.</p>
+
+      <div class="space-y-4">
+        {[
+          {
+            step: 'Read the instructions first',
+            detail: 'The whole thing. Before you touch the sprue. GW instructions are visual and mostly straightforward, but there are sub-assemblies and ordering constraints you need to know before you start gluing.',
+            warn: null,
+          },
+          {
+            step: 'Clip with two cuts — never one',
+            detail: 'Cut #1: clip away from the part, leaving a 2–3mm nub attached to it. Cut #2: clip the nub as close to the part as you can. This two-step approach prevents stress marks and pulled plastic that can ruin a surface.',
+            warn: 'One cut right at the gate often pulls a chunk out of the model. Always leave a nub first.',
+          },
+          {
+            step: 'Remove mold lines',
+            detail: 'Hold the part up to a light and rotate it. You\'ll see a thin raised line running across the model — this is the mold line, left over from where the two halves of the mold meet during casting. Every part has one. If you paint over it, it looks terrible.',
+            warn: null,
+          },
+          {
+            step: 'How to remove mold lines',
+            detail: 'Hold your hobby knife perpendicular (90 degrees) to the mold line and draw it along the line with light pressure — you\'re scraping, not cutting. The raised plastic shaves off cleanly. For curved surfaces, a round file or fine sandpaper works better.',
+            warn: 'Don\'t use the blade edge-on to slice along the line. You\'ll gouge the model. Scrape, don\'t slice.',
+          },
+          {
+            step: 'Dry fit everything before gluing',
+            detail: 'Hold all the parts together — no glue — to check they align correctly. Most kits fit well, but some joins need slight pressure or a specific order. Identify any problems now, before they\'re permanent.',
+            warn: null,
+          },
+          {
+            step: 'Decide on sub-assemblies',
+            detail: 'Some areas are impossible to paint after assembly. Decide which parts to leave off until after painting. Common sub-assemblies: arms/backpack on Space Marines, head on Guard infantry, separate weapons. More on this below.',
+            warn: null,
+          },
+          {
+            step: 'Apply plastic cement to one surface only',
+            detail: 'Apply a thin layer of plastic cement to one part of the join. Wait 10–15 seconds for it to begin activating the plastic surface, then press the parts firmly together and hold for 30–60 seconds. The cement melts both surfaces, creating a chemical weld.',
+            warn: 'Too much cement causes plastic to swell and squeeze out of the join. A thin coat is better than a thick one.',
+          },
+          {
+            step: 'Check alignment before the glue sets',
+            detail: 'You have a short window — 15–30 seconds with plastic cement — to adjust position. Check the join from multiple angles, particularly the front. Twisted torsos and canted heads are permanent once the glue cures.',
+            warn: null,
+          },
+          {
+            step: 'Let everything cure before painting',
+            detail: 'Plastic cement reaches working strength in minutes but full cure in 24 hours. For best results, build your models the night before a painting session. A partially cured join can snap under spray primer pressure.',
+            warn: null,
+          },
+        ].map((s, i) => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-7 h-7 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">{i + 1}</div>
+              <div class="flex-1">
+                <p class="font-semibold mb-1">{s.step}</p>
+                <p class="text-[#8a8590] text-sm leading-relaxed">{s.detail}</p>
+                {s.warn && (
+                  <p class="text-amber-500 text-xs mt-2 font-semibold">⚠ {s.warn}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Sub-assemblies -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Sub-assemblies — the technique most guides skip</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        A sub-assembly is leaving a part off until after painting, 
+        so you can reach areas that would be blocked by it.
+      </p>
+
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 mb-8">
+        <p>
+          Consider a Space Marine: if you glue the arms on before painting, 
+          you can't reach the chest aquila or the torso details between the arms. 
+          But if you leave the arms off, paint the torso fully, 
+          then glue the arms on after — everything is accessible, 
+          nothing is masked, and the result looks much cleaner.
+        </p>
+        <p>
+          You don't need to do this for every model — basic Guardsmen or Poxwalkers don't need it. 
+          But for complex multi-part characters and anything with an arm that covers the chest, 
+          sub-assemblies save significant frustration.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-sm">Good candidates for sub-assembly</h3>
+          <ul class="text-[#8a8590] text-sm space-y-2">
+            <li>→ Arms on Space Marines and CSM</li>
+            <li>→ Heads on any infantry model</li>
+            <li>→ Backpacks on Space Marines</li>
+            <li>→ Weapon arms on large monsters</li>
+            <li>→ Capes and cloaks on characters</li>
+            <li>→ Separate torso/legs on multi-piece infantry</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-sm">What to use instead of glue temporarily</h3>
+          <ul class="text-[#8a8590] text-sm space-y-2">
+            <li>→ Blu-Tack to hold parts while painting</li>
+            <li>→ Small pieces of cork or foam as handles</li>
+            <li>→ Cocktail sticks stuck into the part's connector</li>
+            <li>→ Alligator clips for very small parts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Common mistakes -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Mistakes that ruin models before you paint them</h2>
+
+      <div class="space-y-4">
+        {[
+          {
+            mistake: 'Clipping right at the gate in one cut',
+            fix: 'Always two cuts. The first cut leaves a nub. The second removes the nub. One cut at the gate stresses the plastic and often tears a chunk out — especially on thin details like sword blades and antennae.',
+          },
+          {
+            mistake: 'Skipping mold line removal',
+            fix: 'Mold lines are invisible until you paint them, then they\'re all you can see. Five minutes per model with a hobby knife before assembly saves you from a model that looks unfinished no matter how well it\'s painted.',
+          },
+          {
+            mistake: 'Too much glue',
+            fix: 'Plastic cement: one thin coat on one surface, that\'s all. Superglue: a tiny dot per join. Excess glue squeezes out of joins, fills in surface detail, and is nearly impossible to remove cleanly.',
+          },
+          {
+            mistake: 'Not dry-fitting before gluing',
+            fix: 'Some parts only fit one specific way, and it\'s not always obvious which way. Dry-fitting reveals alignment issues, backwards parts, and wrong-part-in-wrong-slot errors before they become permanent.',
+          },
+          {
+            mistake: 'Gluing parts in the wrong order',
+            fix: 'Instructions exist for a reason — some parts block access to others if assembled in the wrong sequence. Torso before legs. Main body before arms. Read the whole instruction sheet once before starting.',
+          },
+          {
+            mistake: 'Priming immediately after gluing',
+            fix: 'Plastic cement needs at least a few hours to reach real strength. Spray primer at pressure can break a fresh join. Build the night before, prime in the morning.',
+          },
+          {
+            mistake: 'Using the wrong glue for the material',
+            fix: 'Plastic cement only works on plastic. On resin or metal, it does absolutely nothing. Those need superglue. Most kits are plastic, but some special characters and older kits are resin — check before you glue.',
+          },
+        ].map(item => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <p class="text-red-400 text-sm font-semibold mb-1">✗ {item.mistake}</p>
+            <p class="text-[#b8b4c0] text-sm leading-relaxed">{item.fix}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Fixing mistakes -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">How to fix common accidents</h2>
+
+      <div class="space-y-4">
+        {[
+          {
+            problem: 'Part broke off the sprue and left a chunk missing',
+            fix: 'If the chunk is still on the sprue, glue it back carefully. If it\'s gone, fill the gap with Green Stuff (a two-part modeling putty), let it cure, then smooth and sand. Small imperfections can also be hidden with basing material or painted as battle damage.',
+          },
+          {
+            problem: 'Parts glued slightly out of alignment',
+            fix: 'If caught immediately (within 30 seconds of plastic cement): twist firmly to break and reset. If fully cured: carefully score the join with a knife, use isopropyl alcohol to soften, and try to twist apart. Expect some damage. For minor misalignment, sometimes it\'s better to leave it and adjust your painting to draw the eye elsewhere.',
+          },
+          {
+            problem: 'Superglue on fingers (bonded skin)',
+            fix: 'Don\'t panic. Don\'t pull. Soak in warm water for a few minutes to loosen, or use nail polish remover (acetone) carefully. Acetone also dissolves superglue from model surfaces if you need to unstick a join.',
+          },
+          {
+            problem: 'Visible gap between parts',
+            fix: 'Small gaps: liquid plastic cement wicked into the gap can partially fill it. Medium gaps: Green Stuff or Vallejo Plastic Putty, sanded smooth when dry. Large gaps: usually a sign the parts weren\'t aligned correctly — consider rebreaking and regluing.',
+          },
+          {
+            problem: 'Mold line discovered after priming',
+            fix: 'Carefully scrape with a hobby knife. The primer will come off but that\'s fine — it\'ll be covered by paint. Sand lightly if needed. Re-prime the area with a touch from a spray or brush-on primer.',
+          },
+        ].map(item => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <p class="text-amber-400 text-sm font-semibold mb-2">? {item.problem}</p>
+            <p class="text-[#b8b4c0] text-sm leading-relaxed">{item.fix}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Ready to paint -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Ready to prime and paint</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 mb-8">
+        <p>
+          Before you prime, do a final check:
+        </p>
+      </div>
+
+      <div class="space-y-3 mb-10">
+        {[
+          'All mold lines removed',
+          'Sprue gates trimmed flush (no nubs sticking up)',
+          'All parts firmly glued — no movement when gently squeezed',
+          'Glue fully cured (built at least a few hours ago)',
+          'Sub-assemblies planned and any separate parts stored safely',
+          'Model is free of fingerprints and oils (handle by the base)',
+        ].map(check => (
+          <div class="flex items-center gap-3 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg px-4 py-3">
+            <span class="text-[#c9a84c] text-lg">□</span>
+            <span class="text-[#b8b4c0] text-sm">{check}</span>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">Priming tip</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Spray from 25–30cm (10–12 inches) away in short, sweeping passes. 
+          Rotate the model between passes to catch every angle. 
+          Multiple thin coats beat one thick coat — thick primer fills in fine detail and looks rough. 
+          Don't prime in cold weather (under 10°C/50°F) or high humidity — the paint will granulate. 
+          When in doubt, prime indoors.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">Built. Now paint it.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Assembly done right means painting goes smoothly. 
+        No mold lines emerging halfway through, no parts falling off mid-session. 
+        Take your time here — it pays off.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/factions"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Faction Guides
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
