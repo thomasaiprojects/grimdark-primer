@@ -1,0 +1,429 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="How to Base Warhammer 40k Models — Beginner's Guide"
+  description="A practical guide to basing Warhammer 40k miniatures. The step most tutorials rush past — and the one that makes the biggest visual difference to a finished army."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-4 font-display">Basing Guide</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold mb-6">
+        The step everyone<br />rushes past.
+      </h1>
+      <p class="text-[#8a8590] text-lg leading-relaxed max-w-2xl mx-auto">
+        Basing takes 10 minutes per squad and multiplies how good your army looks. 
+        A well-painted model on a plain grey plastic base looks unfinished. 
+        The same model on a textured, highlighted base looks like it belongs in a world. 
+        This guide covers everything you need to get it right.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why it matters -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Why basing matters more than you think</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-8">
+        <p>
+          When you look at a miniature on the table, your eye doesn't just see the model — 
+          it sees the model in context. The base is that context. 
+          It tells your brain where the model exists: a muddy battlefield, 
+          a ruined cityscape, an alien desert, corrupted ground. 
+          Without it, the model floats.
+        </p>
+        <p>
+          More practically: consistent basing is what ties an entire army together. 
+          Ten Space Marines with different paint quality levels still look like a cohesive force 
+          if they're all on the same style of base. 
+          Basing is the glue that makes an army look like an army, not a collection of models.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-4">
+        {[
+          { stat: '10 min', label: 'Per squad with the simple method' },
+          { stat: '3×', label: 'Visual improvement vs. bare plastic base' },
+          { stat: '1 style', label: 'Across your whole army — consistency wins' },
+        ].map(s => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5 text-center">
+            <p class="font-display text-3xl font-bold text-[#c9a84c] mb-1">{s.stat}</p>
+            <p class="text-[#8a8590] text-sm">{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What you need -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">What you need</h2>
+      <p class="text-[#b8b4c0] mb-8 text-lg">
+        You don't need much. The texture paint does most of the work — 
+        everything else is finishing and detail.
+      </p>
+
+      <div class="space-y-4 mb-8">
+        {[
+          {
+            item: 'Texture paint (your base style choice)',
+            cost: '~$10–12',
+            note: 'GW\'s texture paints are thick, pre-mixed, and apply straight from the pot. One pot covers dozens of bases. More on choosing one below.',
+            essential: true,
+          },
+          {
+            item: 'Drybrush + highlight paint',
+            cost: 'Already have these',
+            note: 'The same drybrush from your painting kit. You need one color lighter than your texture paint to drybrush highlights over the texture.',
+            essential: true,
+          },
+          {
+            item: 'Superglue',
+            cost: 'Already have this',
+            note: 'For attaching tufts and any larger rocks or debris.',
+            essential: true,
+          },
+          {
+            item: 'Static grass tufts',
+            cost: '~$6–10',
+            note: 'Pre-made tufts on small backing paper — peel and stick (with superglue). Army Painter and Gamers Grass make great ones. Buy a mix of green, brown, and dead grass.',
+            essential: true,
+          },
+          {
+            item: 'Abaddon Black for the rim',
+            cost: 'Already have this',
+            note: 'Paint the edge (rim) of every base black. Takes 30 seconds and looks massively more finished.',
+            essential: true,
+          },
+          {
+            item: 'PVA glue + fine sand',
+            cost: '~$5',
+            note: 'Optional but adds natural texture variety. Apply PVA, dip in sand, let dry, then paint.',
+            essential: false,
+          },
+          {
+            item: 'Small rocks or gravel',
+            cost: 'Free (outdoors)',
+            note: 'Real small rocks from outside, rinsed and dried. Superglued to bases before texture paint for natural-looking rubble.',
+            essential: false,
+          },
+        ].map(item => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5 flex items-start gap-4">
+            <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${item.essential ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+              {item.essential ? 'Essential' : 'Optional'}
+            </span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-4 mb-1">
+                <p class="font-semibold text-sm">{item.item}</p>
+                <span class="text-xs text-[#4a4855] flex-shrink-0">{item.cost}</span>
+              </div>
+              <p class="text-[#8a8590] text-sm leading-relaxed">{item.note}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Choose your base style -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">Choose your base style — and commit to it</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        Pick one style and use it across your entire army. Consistency matters more than complexity.
+        These are the most popular options with exact GW texture paint recommendations.
+      </p>
+
+      <div class="space-y-4">
+        {[
+          {
+            style: 'Rocky Ground',
+            texture: 'Astrogranite Debris',
+            drybrush: 'Administratum Grey',
+            highlight: 'Light grey, stone-like texture',
+            tufts: 'Green/dry grass tufts',
+            factions: 'Space Marines, Necrons, Aeldari, Tau',
+            difficulty: 'Easiest',
+            diffColor: 'text-green-400',
+            desc: 'The most versatile base — works for almost any faction. Dark grey stone texture with lighter grey highlights reads as rocky terrain universally.',
+          },
+          {
+            style: 'Sandy Desert',
+            texture: 'Armageddon Dust',
+            drybrush: 'Ushabti Bone',
+            highlight: 'Warm sandy yellow, dry and arid',
+            tufts: 'Dry/dead grass tufts — sparse',
+            factions: 'Astra Militarum, Tau, Necrons, Orks',
+            difficulty: 'Easiest',
+            diffColor: 'text-green-400',
+            desc: 'Light tan texture with bone highlights. Reads as desert, dry plains, or alien dunes. Fast to apply and the highlights are very forgiving.',
+          },
+          {
+            style: 'Muddy Battlefield',
+            texture: 'Stirland Mud or Stirland Battlemire',
+            drybrush: 'Baneblade Brown',
+            highlight: 'Dark brown with lighter earth tones',
+            tufts: 'Green or autumn tufts',
+            factions: 'Astra Militarum, Death Guard, Orks, CSM',
+            difficulty: 'Easy',
+            diffColor: 'text-green-400',
+            desc: 'Dark brown textured mud — perfect for war-torn battlefields. Battlemire has a shinier, wetter finish. Great for grimdark armies.',
+          },
+          {
+            style: 'Urban Rubble',
+            texture: 'Astrogranite or Mechanicus Standard Grey base',
+            drybrush: 'Celestra Grey then Ulthuan Grey',
+            highlight: 'Pale concrete and stone',
+            tufts: 'Urban tufts, debris, broken masonry',
+            factions: 'Space Marines, Chaos, Adeptus Mechanicus',
+            difficulty: 'Medium',
+            diffColor: 'text-yellow-400',
+            desc: 'Concrete and rubble. Add small bits of sprue or cork as broken masonry before the texture paint. Two drybrush passes for depth.',
+          },
+          {
+            style: 'Corrupted/Nurgle',
+            texture: 'Stirland Mud + Nurgle\'s Rot pools',
+            drybrush: 'Deathworld Forest',
+            highlight: 'Dark, diseased green-brown earth',
+            tufts: 'Dead grass, minimal — the ground is dying',
+            factions: 'Death Guard, CSM (Nurgle), Tyranids',
+            difficulty: 'Easy',
+            diffColor: 'text-green-400',
+            desc: 'Apply mud texture, let dry, then pool Nurgle\'s Rot in depressions and cracks. The green slime spreading through the ground ties directly to the Death Guard models above.',
+          },
+          {
+            style: 'Alien/Xenos',
+            texture: 'Astrogranite + any accent color drybrushed',
+            drybrush: 'Any non-natural color — purple, teal, red',
+            highlight: 'Alien and otherworldly',
+            tufts: 'Unusual colors — purple, blue tufts if available',
+            factions: 'Tyranids, Necrons, Aeldari',
+            difficulty: 'Easy',
+            diffColor: 'text-green-400',
+            desc: 'Standard grey texture with a colored drybrush — purple over grey makes instant alien boneyard, teal makes alien mineral terrain. One unexpected color choice transforms the whole look.',
+          },
+        ].map(base => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <div class="flex items-center gap-3 mb-1">
+                  <h3 class="font-display font-semibold text-lg">{base.style}</h3>
+                  <span class={`text-xs font-semibold ${base.diffColor}`}>{base.difficulty}</span>
+                </div>
+                <p class="text-[#4a4855] text-xs">Best for: {base.factions}</p>
+              </div>
+            </div>
+            <p class="text-[#b8b4c0] text-sm leading-relaxed mb-3">{base.desc}</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-[#8a8590]">
+              <span><strong class="text-[#b8b4c0]">Texture:</strong> {base.texture}</span>
+              <span><strong class="text-[#b8b4c0]">Drybrush:</strong> {base.drybrush}</span>
+              <span class="col-span-2"><strong class="text-[#b8b4c0]">Tufts:</strong> {base.tufts}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- The process -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">The standard process</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">Eight steps. Works for any style. Takes about 10 minutes per squad once you're comfortable.</p>
+
+      <div class="space-y-4">
+        {[
+          {
+            step: 'Decide your style before you start your first model',
+            detail: 'Pick a base style and stick with it for your entire army. It\'s very hard to change later. Write it down if you need to — which texture paint, which drybrush color, which tufts.',
+            warn: null,
+          },
+          {
+            step: 'Paint the base rim black first',
+            detail: 'Before any texture goes on — paint the side edge of the base with Abaddon Black. It\'s much easier to do before the model is fully finished, and you\'ll always need to touch it up otherwise.',
+            warn: null,
+          },
+          {
+            step: 'Apply texture paint to the base surface',
+            detail: 'Use an old brush or the end of a palette knife. Apply a consistent, roughly 2–3mm thick layer over the base — right up to the model\'s feet but not over them. Don\'t worry about perfect coverage, small gaps are fine.',
+            warn: 'Too thick and it takes ages to dry and cracks. Too thin and the texture disappears. Aim for consistent depth, not maximum thickness.',
+          },
+          {
+            step: 'Let it dry completely',
+            detail: 'Texture paints take 20–40 minutes to fully dry. Rushing this is how you get fingerprints in your beautiful texture. Walk away.',
+            warn: null,
+          },
+          {
+            step: 'Drybrush the texture',
+            detail: 'Load your drybrush with the highlight color, wipe most of it off, then drag lightly across the texture surface. The paint catches on raised grit and edges, creating instant highlight. Two light passes is better than one heavy pass.',
+            warn: null,
+          },
+          {
+            step: 'Add any optional extras',
+            detail: 'Small rocks, pieces of cork, broken bits — if you want them. Superglue them before the texture paint and the texture paint covers the base of each rock naturally. Or add after — both work.',
+            warn: null,
+          },
+          {
+            step: 'Apply tufts last',
+            detail: 'Put a small dot of superglue on the base where you want a tuft. Wait 10 seconds for it to get slightly tacky, then press the tuft down firmly for 10–15 seconds. Slightly tacky superglue grips better than fresh.',
+            warn: null,
+          },
+          {
+            step: 'Touch up the base rim',
+            detail: 'A final pass of Abaddon Black on the rim, cleaning up any texture paint that got on the sides. Takes 20 seconds and makes everything look finished.',
+            warn: null,
+          },
+        ].map((s, i) => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-7 h-7 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">{i + 1}</div>
+              <div class="flex-1">
+                <p class="font-semibold mb-1">{s.step}</p>
+                <p class="text-[#8a8590] text-sm leading-relaxed">{s.detail}</p>
+                {s.warn && (
+                  <p class="text-amber-500 text-xs mt-2 font-semibold">⚠ {s.warn}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Mistakes -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Common basing mistakes</h2>
+
+      <div class="space-y-4">
+        {[
+          {
+            mistake: 'Inconsistent basing across the army',
+            fix: 'Write down your exact basing recipe before you start the first model. Which texture paint. Which drybrush color. Which tufts. How many tufts per base. Consistency is more important than quality — ten simply-based models that all match look better than ten individually creative bases.',
+          },
+          {
+            mistake: 'Forgetting to paint the rim',
+            fix: 'The rim (edge) of every base should be black. Bare grey plastic or bare resin bases stand out badly on a table. It takes 30 seconds. Do it every time.',
+          },
+          {
+            mistake: 'Applying texture paint over the model\'s feet',
+            fix: 'Texture paint on the feet looks terrible and is nearly impossible to remove cleanly. Apply right up to the feet, not over them. Use a cocktail stick to push texture into tight gaps.',
+          },
+          {
+            mistake: 'Too many tufts',
+            fix: 'One or two tufts per 25mm base, two or three on 32mm. Covered-in-grass bases look like carpet samples, not terrain. Sparse is more realistic.',
+          },
+          {
+            mistake: 'Drybrushing too heavily',
+            fix: 'The highlight drybrush should be subtle — you want to see the darker texture underneath with lighter edges, not a uniformly bright surface. Two very light passes beat one heavy pass.',
+          },
+          {
+            mistake: 'Basing before the model is finished',
+            fix: 'Texture paint drips onto your model. Tufts get knocked off during painting. Base last, always — after all painting is done, including varnishing if you use it.',
+          },
+        ].map(item => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <p class="text-red-400 text-sm font-semibold mb-1">✗ {item.mistake}</p>
+            <p class="text-[#b8b4c0] text-sm leading-relaxed">{item.fix}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Advanced techniques -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Going further — when the basics aren't enough</h2>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        {[
+          {
+            name: 'Water effects',
+            difficulty: 'Intermediate',
+            desc: 'Vallejo Water Effects or Realistic Water poured into depressions in textured bases creates convincing puddles, pools, and streams. Apply in thin layers, let each cure.',
+          },
+          {
+            name: 'Cork rocks',
+            difficulty: 'Easy',
+            desc: 'Wine corks pulled apart in layers create convincing rock and cliff textures. Superglue chunks to the base, paint with Mechanicus Standard Grey, drybrush with lighter grey. Free and fast.',
+          },
+          {
+            name: 'Snow effects',
+            difficulty: 'Easy',
+            desc: 'Valhallan Blizzard or Citadel\'s Snow texture paint applied over a dark base. Dab on in irregular patches — too neat looks fake. Great for Space Wolves and Valhallan Guard.',
+          },
+          {
+            name: 'Lava bases',
+            difficulty: 'Medium',
+            desc: 'Black base, add cork cracks, paint cracks with yellow → orange → red gradient, pool Mordant Earth technical paint in between for a cracked lava effect. Dramatic and striking.',
+          },
+          {
+            name: 'Laser-cut inserts',
+            difficulty: 'Easy',
+            desc: 'Pre-cut resin or MDF base inserts with detailed texture (cobblestones, alien terrain, hive city floors). Buy them, prime them, paint them. Zero effort, professional result.',
+          },
+          {
+            name: 'OSL on bases',
+            difficulty: 'Advanced',
+            desc: 'If your model has a glowing element (Necron gauss, Tyranid bioluminescence), add a faint glow of that color to the base around the model\'s feet. Ties the model and base into one coherent piece.',
+          },
+        ].map(tech => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-display font-semibold">{tech.name}</h3>
+              <span class={`text-xs px-2 py-0.5 rounded font-display flex-shrink-0 ml-2 ${
+                tech.difficulty === 'Easy' ? 'bg-green-900 text-green-300' :
+                tech.difficulty === 'Intermediate' ? 'bg-yellow-900 text-yellow-300' :
+                'bg-red-900 text-red-300'
+              }`}>{tech.difficulty}</span>
+            </div>
+            <p class="text-[#8a8590] text-sm leading-relaxed">{tech.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">Ten minutes. Every model.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Pick one style, commit to it, apply it to everything. 
+        Six months from now you'll have an army that looks like it belongs somewhere —
+        not just a collection of figures on grey plastic.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/factions"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Faction Guides
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
