@@ -62,7 +62,7 @@ const questions = [
 // Scoring: each answer adds points to faction scores
 const scoringMap = {
   aesthetic: {
-    noble: { space_marines: 3, death_guard: 0, chaos_marines: 0, aeldari: 1 },
+    noble: { space_marines: 3, adepta_sororitas: 2, death_guard: 0, chaos_marines: 0, aeldari: 1 },
     chaos: { chaos_marines: 3, death_guard: 3, world_eaters: 3, thousand_sons: 2, space_marines: 0, aeldari: 0 },
     ancient: { necrons: 3, aeldari: 3, thousand_sons: 2, tyranids: 1, adeptus_mechanicus: 1 },
     swarm: { tyranids: 3, orks: 2, astra_militarum: 2, chaos_marines: 0 },
@@ -71,24 +71,24 @@ const scoringMap = {
   },
   playstyle: {
     aggressive: { space_marines: 2, chaos_marines: 3, world_eaters: 3, death_guard: 2, orks: 3, tyranids: 2 },
-    shooty: { tau: 3, astra_militarum: 3, necrons: 2, space_marines: 1 },
-    tactical: { aeldari: 3, thousand_sons: 3, tau: 2, space_marines: 2, adeptus_mechanicus: 2 },
+    shooty: { tau: 3, astra_militarum: 3, necrons: 2, adepta_sororitas: 2, space_marines: 1 },
+    tactical: { aeldari: 3, thousand_sons: 3, tau: 2, adepta_sororitas: 2, space_marines: 2, adeptus_mechanicus: 2 },
     horde: { orks: 3, tyranids: 3, astra_militarum: 3 },
     beginner: { space_marines: 3, necrons: 3, orks: 2 },
   },
   painting: {
     fast: { necrons: 3, orks: 3, astra_militarum: 2, space_marines: 1 },
-    invested: { space_marines: 2, aeldari: 3, thousand_sons: 3, chaos_marines: 2, death_guard: 2, adeptus_mechanicus: 3 },
-    middle: { space_marines: 2, necrons: 2, tau: 2, tyranids: 2, chaos_marines: 2, world_eaters: 2, thousand_sons: 2 },
+    invested: { space_marines: 2, aeldari: 3, thousand_sons: 3, adepta_sororitas: 3, chaos_marines: 2, death_guard: 2, adeptus_mechanicus: 3 },
+    middle: { space_marines: 2, necrons: 2, tau: 2, tyranids: 2, chaos_marines: 2, world_eaters: 2, thousand_sons: 2, adepta_sororitas: 2 },
   },
   difficulty: {
     simple: { space_marines: 3, necrons: 3, orks: 3, death_guard: 2 },
-    complex: { aeldari: 3, adeptus_mechanicus: 3, thousand_sons: 3, tau: 2, chaos_marines: 2 },
+    complex: { aeldari: 3, adeptus_mechanicus: 3, thousand_sons: 3, tau: 2, adepta_sororitas: 2, chaos_marines: 2 },
     any: { space_marines: 1, necrons: 1, tau: 1, aeldari: 1 },
   },
   budget: {
     low: { orks: 3, necrons: 2, astra_militarum: 2 },
-    medium: { space_marines: 2, necrons: 2, chaos_marines: 2, death_guard: 2, tau: 2, tyranids: 2, world_eaters: 2, thousand_sons: 2 },
+    medium: { space_marines: 2, necrons: 2, chaos_marines: 2, death_guard: 2, tau: 2, tyranids: 2, world_eaters: 2, thousand_sons: 2, adepta_sororitas: 2 },
     high: { space_marines: 2, aeldari: 2, adeptus_mechanicus: 2, tyranids: 2 },
     any: { space_marines: 1, aeldari: 2, adeptus_mechanicus: 2 },
   },
@@ -191,6 +191,15 @@ const factions = {
     tagline: "Khorne's berserkers — pure melee fury",
     description: "The most aggressive army in 40k. No psychic powers, no shooting strategy — just chainaxes and rage. Get into melee, kill everything. Red and brass, blood optional but encouraged.",
     emoji: '🪓',
+    difficulty: 'Medium',
+    painting: 'Medium',
+  },
+  adepta_sororitas: {
+    name: 'Sisters of Battle',
+    slug: 'adepta-sororitas',
+    tagline: 'Faith made manifest — divine miracles on the battlefield',
+    description: 'Fanatical warrior-nuns in black power armor whose belief literally bends fate. Their Acts of Faith mechanic gives you a pool of Miracle Dice to spend at critical moments. Flexible, visually stunning, and one of the best-value starter boxes in the game.',
+    emoji: '⚜️',
     difficulty: 'Medium',
     painting: 'Medium',
   },

@@ -1,0 +1,393 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Sisters of Battle Beginner's Guide — Warhammer 40k"
+  description="New to Adepta Sororitas? Learn who the Sisters of Battle are, how Acts of Faith works, how to paint black armor and red robes, and exactly what to buy first."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-4xl mx-auto">
+      <a href="/factions" class="text-sm text-[#4a4855] hover:text-[#8a8590] transition-colors mb-6 inline-block">
+        ← All Factions
+      </a>
+      <div class="flex items-start gap-6">
+        <div class="text-6xl">⚜️</div>
+        <div>
+          <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-2 font-display">Faction Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Sisters of Battle</h1>
+          <p class="text-[#8a8590] text-lg max-w-2xl leading-relaxed">
+            Adepta Sororitas — the Emperor's holy warriors. 
+            Fanatical women in black power armor, fueled by unshakeable faith that literally 
+            manifests as divine miracles on the battlefield. One of the most visually 
+            distinctive armies in the game.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats bar -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Playstyle</p>
+          <p class="font-semibold text-sm">Faith + Firepower</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Painting</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Rules</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Starter Cost</p>
+          <p class="font-semibold text-sm">~$140–150</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Who are the Sisters of Battle?</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          In the 40th millennium, the Imperium of Man is governed by two great powers that hate each other 
+          just slightly less than they hate everything else: the military and the church. 
+          The Ecclesiarchy — the Imperial Church — worships the Emperor as a god. For a long time, 
+          it grew bloated and corrupt, until a despot named Goge Vandire seized both church and 
+          state simultaneously, plunging the galaxy into a catastrophic civil war called the 
+          Age of Apostasy.
+        </p>
+        <p>
+          When Vandire was finally brought down, the Ecclesiarchy was stripped of its armies. 
+          A law was passed: the church could not maintain any men under arms. 
+          The Ecclesiarchy's response was lawyerly and audacious — they created the Adepta Sororitas. 
+          Women. The law said nothing about women.
+        </p>
+        <p>
+          The Sisters of Battle are an order of warrior-nuns, raised from infancy in convents, 
+          trained relentlessly, and armed with bolters, flamers, and melta weapons. 
+          They are the military arm of the Ecclesiarchy — zealots in power armor who truly, 
+          completely, and absolutely believe in the divine power of the Emperor. 
+          And in the 40th millennium, that belief is not just comfort. It is power.
+        </p>
+        <p>
+          The Sisters' faith manifests on the battlefield as <strong class="text-[#f0ede8]">miracles</strong> — 
+          genuine, measurable, game-mechanical divine intervention. Sisters who survive against 
+          impossible odds, who press forward when logic says retreat, who die and inspire the 
+          living — these acts of devotion generate holy energy that bends fate itself.
+        </p>
+        <p>
+          They are organized into Orders. The most famous is the <strong class="text-[#f0ede8]">Order of Our Martyred Lady</strong> — 
+          black armor, red cloth, gold trim, founded in honor of a Saint who died protecting 
+          the faithful. Their aesthetic is cathedral-grim: gothic armor covered in devotional 
+          script, incense censers hanging from their bolters, skull iconography everywhere, 
+          prayer scrolls fluttering in battle. It is extreme and beautiful.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Playstyle -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">How they play on the table</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-10">
+        <p>
+          Sisters of Battle are a <strong class="text-[#f0ede8]">flexible combined-arms army</strong> built around 
+          generating and spending Miracle Dice. Their core infantry shoots well, their elite units 
+          hit hard in melee, and their jump troops move fast. They don't specialize in one thing — 
+          they do everything at a high level, held together by their unique faith mechanic.
+        </p>
+        <p>
+          Their army rule is <strong class="text-[#f0ede8]">Acts of Faith</strong>. Throughout the battle, 
+          your units generate Miracle Dice — a pool of divine fortune you can substitute for 
+          your own dice rolls at critical moments. Need a charge to land? Swap in a 6 from your 
+          Miracle pool. Need a key save to stick? Done. Managing this pool — when to save it, 
+          when to spend it — is the core skill of playing Sisters well.
+        </p>
+        <p>
+          <strong class="text-[#f0ede8]">Battle Sisters</strong> are your core — solid, versatile bolter troops 
+          with weapon options. <strong class="text-[#f0ede8]">Seraphim</strong> are jump pack troops that 
+          strike fast and hit from unexpected angles. <strong class="text-[#f0ede8]">Sisters Repentia</strong> 
+          are penitent warriors who fight with enormous two-handed saws — glass cannon melee 
+          shock troops. <strong class="text-[#f0ede8]">Penitent Engines</strong> are walkers piloted by 
+          condemned sinners strapped to the machine, controlled by pain — brutal close-range weapons.
+        </p>
+        <p>
+          The army rewards players who understand when to be aggressive and when to hold — 
+          and who know how to set up their Miracle Dice generation before spending it at 
+          exactly the right moment.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-green-400">Sisters are for you if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✓ You want a visually striking, iconic army</li>
+            <li>✓ You like gothic aesthetics — skulls, armor, devotional script</li>
+            <li>✓ You want a flexible army that can shoot, move, and melee</li>
+            <li>✓ You like resource management mechanics (the Miracle Dice)</li>
+            <li>✓ You want an army with incredible hobby potential</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-red-400">Maybe look elsewhere if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✗ You want a simple, single-strategy army</li>
+            <li>✗ You dislike the religious/gothic aesthetic</li>
+            <li>✗ You want a horde of cheap, expendable models</li>
+            <li>✗ You want the absolute highest model count for your money</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Painting -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How to paint Sisters of Battle</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        Black armor, red robes, gold trim. One of the most recognizable schemes in 40k — 
+        and more achievable than it looks.
+      </p>
+
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 mb-10">
+        <p>
+          The Order of Our Martyred Lady scheme (black, red, gold) is the most popular 
+          for good reason — it photographs beautifully, the contrast between elements is 
+          striking, and black armor is genuinely beginner-friendly once you know the trick: 
+          you're not trying to paint perfect flat black. You're building up from dark grey 
+          edges and letting the recesses stay black on their own.
+        </p>
+        <p>
+          The gold trim is where the most time goes — there's a lot of it on Sisters models, 
+          which are highly ornate. Take it slow and it rewards you. The red robes are 
+          the easiest part: two colors and a wash and they look excellent.
+        </p>
+        <p>
+          Alternative Order schemes: <strong class="text-[#f0ede8]">Order of the Bloody Rose</strong> 
+          uses red armor instead of black, with black detail — extremely dramatic. 
+          <strong class="text-[#f0ede8]">Order of the Valorous Heart</strong> uses black and white. 
+          Pick whichever calls to you — the Sisters' Order system means any color scheme 
+          is officially supported.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="font-display font-semibold text-lg mb-4">Order of Our Martyred Lady — step by step</h3>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Prime with Chaos Black spray</p>
+            <p class="text-[#8a8590] text-sm">Your black primer is also your armor base coat — that's the efficiency of this scheme. Let it fully dry. Make sure coverage is complete, especially in deep recesses.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Drybrush armor with Mechanicus Standard Grey</p>
+            <p class="text-[#8a8590] text-sm">Load a drybrush, wipe most of it off, and lightly brush across all the raised edges of the armor. This creates instant edge highlighting — the recesses stay black, the raised parts catch the light. The whole model transforms in 60 seconds.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Paint robes and cloth with Mephiston Red</p>
+            <p class="text-[#8a8590] text-sm">Apply to all cloth elements — tabards, robes, cloth hanging from the armor. Two thin coats for solid coverage. Keep it off the black armor panels.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Wash red areas with Agrax Earthshade</p>
+            <p class="text-[#8a8590] text-sm">Apply into the folds and recesses of all the red cloth. Adds instant depth and age. Wipe excess off flat surfaces to keep it looking clean.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">5</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Layer Evil Sunz Scarlet on raised cloth</p>
+            <p class="text-[#8a8590] text-sm">A brighter red applied to the raised folds of cloth, avoiding the recesses you just darkened. Brings the red back to a vivid tone and adds dimension.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">6</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Paint all gold trim with Retributor Armour</p>
+            <p class="text-[#8a8590] text-sm">The trim, filigree, shoulder details, aquila, and any skull or devotional ornament. There's a lot of it on Sisters models — take your time. Two thin coats.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">7</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Wash gold with Reikland Fleshshade</p>
+            <p class="text-[#8a8590] text-sm">A warm shade that ages the gold beautifully. Apply into the recesses and any deeply sculpted details. Wipe flat surfaces clean. The gold goes from looking bright and cheap to looking ancient and holy.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">8</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Weapons and metal: Leadbelcher, wash Nuln Oil</p>
+            <p class="text-[#8a8590] text-sm">Bolter casings, barrel, any other metal elements. Leadbelcher, then Nuln Oil into the recesses. Clean and simple.</p>
+          </div>
+        </div>
+
+        <p class="text-[#4a4855] text-sm mt-4 italic">
+          Steps 1–7 give you a table-ready Sister of Battle. Skin and eye detail come last — 
+          paint faces after everything else so you can clean up any mistakes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What to buy -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">What to buy first</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">In order. Don't buy anything else until you've finished step one.</p>
+
+      <!-- Combat Patrol -->
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-6 mb-6">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <span class="bg-[#c9a84c] text-[#111113] text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Start Here</span>
+            <span class="bg-green-900 text-green-300 text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Best Value</span>
+            <span class="text-xs text-[#4a4855]">~$140–150</span>
+          </div>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Combat Patrol: Adepta Sororitas</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          One of the best-value Combat Patrol boxes in the range — around $300 worth of models 
+          for roughly $140. Includes a Canoness (your commander), a 10-model Battle Sisters Squad 
+          (core infantry with weapon options), a 5-model Sisters Repentia Squad (devastating melee 
+          shock troops), a Penitent Engine (a walker piloted by a condemned sinner), 
+          3 Arco Flagellants, a Rhino transport, and a 5-model Seraphim Squad (jump pack troops). 
+          A legal, playable army with real tactical variety straight out of one box.
+        </p>
+        <a
+          href="https://www.amazon.com/dp/B0D63B2XCY?tag=grimdarkprime-20"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          See price on Amazon →
+        </a>
+      </div>
+
+      <!-- Expansion -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6 mb-6">
+        <div class="flex items-start justify-between gap-4 mb-3">
+          <span class="text-xs text-[#4a4855]">~$60 · natural first expansion</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Battle Sisters Squad (box of 10)</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Battle Sisters are your Battleline unit — the backbone of every Sisters army. 
+          More of them means more shooting, more objective holding, and more Acts of Faith 
+          generation across the board. The kit has excellent weapon options including 
+          flamers, meltaguns, and heavy weapons to customize your squad's role.
+        </p>
+        <a
+          href="https://www.amazon.com/s?k=battle+sisters+squad+warhammer+40k+adepta+sororitas&tag=grimdarkprime-20"
+          target="_blank"
+          rel="noopener"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Search Amazon →
+        </a>
+      </div>
+
+      <!-- Paints -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+        <h3 class="font-display font-semibold text-xl mb-4">Paints you need</h3>
+        <div class="space-y-3">
+          {[
+            { name: 'Chaos Black Spray', use: 'Primer and armor base coat in one', required: true },
+            { name: 'Mechanicus Standard Grey', use: 'Drybrush armor edges — the key step', required: true },
+            { name: 'Mephiston Red', use: 'Robes and cloth', required: true },
+            { name: 'Agrax Earthshade', use: 'Wash for both red cloth and gold', required: true },
+            { name: 'Evil Sunz Scarlet', use: 'Highlight on raised cloth areas', required: true },
+            { name: 'Retributor Armour', use: 'All the gold trim and decoration', required: true },
+            { name: 'Reikland Fleshshade', use: 'Shade wash over the gold', required: true },
+            { name: 'Leadbelcher', use: 'Bolters and metal weapons', required: true },
+            { name: 'Nuln Oil', use: 'Shade wash for metal', required: true },
+            { name: 'Bugman\'s Glow + Cadian Fleshtone', use: 'Skin tones for faces', required: false },
+            { name: 'White Scar', use: 'Devotional script and purity seals', required: false },
+          ].map(paint => (
+            <div class="flex items-start gap-3">
+              <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${paint.required ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+                {paint.required ? 'Essential' : 'Optional'}
+              </span>
+              <div>
+                <span class="text-sm font-semibold">{paint.name}</span>
+                <span class="text-[#8a8590] text-sm"> — {paint.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Edition note -->
+  <section class="px-6 py-12 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+        <p class="text-[#4a4855] text-sm leading-relaxed">
+          <strong class="text-[#8a8590]">Edition note:</strong> Warhammer 40,000 releases new editions periodically — 
+          specific rules, points costs, and detachment abilities change between them. 
+          The lore, models, and painting guides on this page are edition-agnostic. 
+          For current rules, check the <a href="https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas/" target="_blank" rel="noopener" class="text-[#c9a84c] hover:underline">Adepta Sororitas rules on Wahapedia</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">For the Emperor. And for the Saint.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Not sure Sisters are right for you? Take the quiz — it matches you to a faction 
+        based on how you actually want to play and paint.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/quiz"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Take the Faction Quiz →
+        </a>
+        <a
+          href="/factions"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          All Factions
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
