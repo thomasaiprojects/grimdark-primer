@@ -7,14 +7,22 @@ interface Props {
 }
 
 const { title, description = "Your guide into Warhammer 40,000. Find your army, learn to build, paint, and play." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="google-site-verification" content="b_PgyryjWZS5RV2eq58GNUzSiEop7ocwn3Rx5bH5V1o" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={`${title} | Grimdark Primer`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Grimdark Primer" />
     <title>{title} | Grimdark Primer</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,11 +36,12 @@ const { title, description = "Your guide into Warhammer 40,000. Find your army, 
           Grimdark Primer
         </a>
         <div class="flex items-center gap-6 text-sm text-[#8a8590]">
-          <a href="/quiz" class="hover:text-[#f0ede8] transition-colors">Army Quiz</a>
-          <a href="/factions" class="hover:text-[#f0ede8] transition-colors">Factions</a>
-          <a href="/building" class="hover:text-[#f0ede8] transition-colors">Building</a>
-          <a href="/painting" class="hover:text-[#f0ede8] transition-colors">Painting</a>
-          <a href="/getting-started" class="hover:text-[#f0ede8] transition-colors">How to Play</a>
+          <a href="/quiz/" class="hover:text-[#f0ede8] transition-colors">Army Quiz</a>
+          <a href="/factions/" class="hover:text-[#f0ede8] transition-colors">Factions</a>
+          <a href="/building/" class="hover:text-[#f0ede8] transition-colors">Building</a>
+          <a href="/painting/" class="hover:text-[#f0ede8] transition-colors">Painting</a>
+          <a href="/basing/" class="hover:text-[#f0ede8] transition-colors">Basing</a>
+          <a href="/getting-started/" class="hover:text-[#f0ede8] transition-colors">How to Play</a>
         </div>
       </div>
     </nav>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://grimdarkprimer.com/sitemap-index.xml

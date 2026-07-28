@@ -1,0 +1,473 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Chaos Daemons Beginner's Guide — Warhammer 40k"
+  description="New to Chaos Daemons? Learn how Khorne's armies play, how to paint red and brass Khorne daemons, and exactly what to buy first for this melee-aggressive faction."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-4xl mx-auto">
+      <a href="/factions/" class="text-sm text-[#4a4855] hover:text-[#8a8590] transition-colors mb-6 inline-block">
+        ← All Factions
+      </a>
+      <div class="flex items-start gap-6">
+        <div class="text-6xl">👹</div>
+        <div>
+          <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-2 font-display">Faction Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Chaos Daemons</h1>
+          <p class="text-[#8a8590] text-lg max-w-2xl leading-relaxed">
+            Pure warp energy given form. Not machines. Not soldiers. Things that should not
+            exist, bleeding through the boundary between reality and the immaterium.
+            Blood, fire, change, rot, excess — the four gods made manifest.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Playstyle</p>
+          <p class="font-semibold text-sm">Melee Aggression</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Painting</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Rules</p>
+          <p class="font-semibold text-sm text-yellow-400">Medium</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4 text-center">
+          <p class="text-xs text-[#4a4855] uppercase tracking-wide mb-1 font-display">Starter Cost</p>
+          <p class="font-semibold text-sm">~$160</p>
+        </div>
+      </div>
+      <p class="text-xs text-[#4a4855] mt-3 italic">*The Combat Patrol is all Khorne. Other god flavors are equally valid starting points — more on that below.</p>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">Who are the Chaos Daemons?</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          Everything that exists in the physical universe has a reflection in the warp — the
+          psychic parallel dimension that underlies reality. Every emotion, every thought,
+          every act of violence or love or despair sends ripples into the immaterium. Over
+          millennia, those ripples coalesced. The strongest emotions, the most powerful and
+          repeated impulses of billions upon billions of sentient beings, formed into
+          conscious entities of incomprehensible scale.
+        </p>
+        <p>
+          There are four of them. The Chaos Gods. And from each, daemon servants are born
+          continuously — fragments of divine will given physical form when the barrier
+          between realities thins enough for them to push through. They are not alive in
+          any conventional sense. They are <em>ideas</em> made flesh: rage, change, disease,
+          desire. They cannot truly be killed, only banished back to the warp to reform.
+        </p>
+        <p>
+          <strong class="text-[#f0ede8]">Khorne</strong> — the Blood God. Red rage, skulls,
+          eternal war. His daemons are the simplest and most direct: get close, tear apart,
+          offer the skull. They hate sorcery and psychic powers almost as much as they hate
+          the enemy. Bloodletters are his foot soldiers. Bloodcrushers ride massive iron
+          Juggernauts — daemonic constructs of brass and brute force. Flesh Hounds are
+          his hunters, tireless and impossible to outrun.
+        </p>
+        <p>
+          <strong class="text-[#f0ede8]">Tzeentch</strong> — the Changer of Ways. Blue and
+          pink, flame and feather, plans within plans. His daemons shift and mutate.
+          Horrors split when killed, spawning more. The Lord of Change is a vast
+          avian sorcerer of terrible intelligence. The most psychically powerful daemon
+          army in the game.
+        </p>
+        <p>
+          <strong class="text-[#f0ede8]">Nurgle</strong> — the Plague Father. Green rot and
+          eternal decay, but paradoxically the most joyful of the gods. His Plaguebearers
+          shamble forward unstoppably. Nurglings swarm and cling. The Great Unclean One
+          is a titanic bloated monstrosity that is almost impossible to kill and
+          inexplicably beloved by hobbyists.
+        </p>
+        <p>
+          <strong class="text-[#f0ede8]">Slaanesh</strong> — the Prince of Pleasure. Purple
+          and pink, speed and sensation. Daemonettes are razor-quick melee fighters.
+          Seekers ride Steeds of Slaanesh at terrifying speed. The Keeper of Secrets is
+          an elegant monster of horrifying beauty and lethal precision.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Playstyle -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">How they play on the table</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-10">
+        <p>
+          The Combat Patrol is all Khorne — and Khorne plays exactly how it looks.
+          <strong class="text-[#f0ede8]">No shooting. No psychic powers</strong> (Khorne despises
+          sorcery with a passion). Move forward. Charge. Kill. The strategy is aggression,
+          tempo, and getting into combat before the opponent can focus-fire your daemons down.
+        </p>
+        <p>
+          Bloodletters are your core — twenty of them in the Combat Patrol, marching forward
+          with Hellblades. Flesh Hounds move faster and are your threat range extenders —
+          getting in the opponent's face early to disrupt their plans. Bloodcrushers are
+          your heavy hitters: daemon-riders on iron Juggernauts who hit hard enough to
+          crush vehicles. The Bloodmaster is your Herald character, buffing nearby units
+          and fighting personally in melee.
+        </p>
+        <p>
+          Pure Khorne lists are refreshingly simple to learn: your job is to close distance
+          fast and let the melee rules do the work. Beginner-friendly in terms of
+          decision-making, though positioning matters enormously for making charges.
+          Mixed-god lists — Khorne with Tzeentch or Nurgle support — add significant
+          complexity and tactical depth for players who want it later.
+        </p>
+      </div>
+
+      <!-- God flavor cards -->
+      <h3 class="font-display text-lg font-semibold text-[#c9a84c] mb-4">Pick your god, pick your playstyle</h3>
+      <div class="space-y-3 mb-8">
+        {[
+          {
+            god: 'Khorne',
+            emoji: '🔴',
+            palette: 'Red skin, brass armor, black bases',
+            style: 'Aggressive forward melee. No shooting, no magic. Simple and brutal.',
+            color: 'text-red-400',
+            border: 'border-red-900',
+          },
+          {
+            god: 'Tzeentch',
+            emoji: '🔵',
+            palette: 'Blue, pink, and purple flames',
+            style: 'Psychic firepower, shifting units that multiply when killed. Most complex.',
+            color: 'text-blue-400',
+            border: 'border-blue-900',
+          },
+          {
+            god: 'Nurgle',
+            emoji: '🟢',
+            palette: 'Rotting greens and browns',
+            style: 'Durable, slow advance. Hard to kill, contagion debuffs on enemies.',
+            color: 'text-green-400',
+            border: 'border-green-900',
+          },
+          {
+            god: 'Slaanesh',
+            emoji: '🟣',
+            palette: 'Purple, pink, and bone',
+            style: 'Fastest daemons in the game. Devastating charges from range.',
+            color: 'text-purple-400',
+            border: 'border-purple-900',
+          },
+        ].map(g => (
+          <div class={`bg-[#1a1a1f] border ${g.border} rounded-lg p-4`}>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-xl">{g.emoji}</span>
+              <h4 class={`font-display font-semibold ${g.color}`}>{g.god}</h4>
+              <span class="text-xs text-[#4a4855]">{g.palette}</span>
+            </div>
+            <p class="text-[#8a8590] text-sm">{g.style}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-green-400">Chaos Daemons are for you if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✓ You want aggressive, in-your-face melee gameplay</li>
+            <li>✓ You love visually wild and horrifying models</li>
+            <li>✓ You want a beginner-friendly paint scheme (Khorne)</li>
+            <li>✓ You enjoy grimdark horror aesthetics</li>
+            <li>✓ You want to eventually build a multi-god collection</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-3 text-red-400">Maybe look elsewhere if...</h3>
+          <ul class="text-[#b8b4c0] text-sm space-y-2">
+            <li>✗ You want a shooting-focused army (especially Khorne)</li>
+            <li>✗ You prefer the Imperium's aesthetic over chaos</li>
+            <li>✗ You want psychic powers with Khorne specifically</li>
+            <li>✗ You're uncomfortable with the grimdark horror aesthetic</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Painting -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">How to paint Khorne Daemons</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">
+        Red skin and brass armor — one of the most beginner-friendly schemes in the entire hobby.
+        The contrast between deep red and warm brass is dramatic and forgiving of mistakes.
+      </p>
+
+      <div class="space-y-4 mb-10">
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">1</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Prime with Chaos Black or Mephiston Red spray</p>
+            <p class="text-[#8a8590] text-sm">Black primer gives you darker, moodier red skin. Mephiston Red spray jumps you straight to the skin base coat. Both work — black gives more depth, red is faster.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">2</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Base coat skin with Khorne Red</p>
+            <p class="text-[#8a8590] text-sm">Cover all the skin areas. Don't worry about getting it on the armor areas — you'll paint those next. The skin is the dominant color and should read as a deep, dark red.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">3</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Shade skin with Agrax Earthshade</p>
+            <p class="text-[#8a8590] text-sm">Apply over all the red skin. It flows into the muscle definition and deepens shadows dramatically. The warm brown of Agrax works beautifully with red — don't use Nuln Oil on red skin.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">4</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Layer skin with Wazdakka Red then Evil Sunz Scarlet</p>
+            <p class="text-[#8a8590] text-sm">Wazdakka Red on raised muscle areas. Then Evil Sunz Scarlet on the highest points — horns, shoulder muscles, fists. Two quick layers build the red from dark to vibrant.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">5</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Paint armor and weapons: Balthasar Gold → Agrax → Hashut Copper</p>
+            <p class="text-[#8a8590] text-sm">Balthasar Gold base on all brass/bronze armor. Agrax Earthshade wash over it (darkens and adds age). Then Hashut Copper on the raised edges to restore the warm metallic shine. This gives an ancient, battle-worn brass look.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+          <div class="w-8 h-8 rounded-full bg-[#c9a84c] text-[#111113] font-bold font-display flex items-center justify-center flex-shrink-0 text-sm">6</div>
+          <div>
+            <p class="font-semibold text-sm mb-1">Teeth, claws, eyes, and base</p>
+            <p class="text-[#8a8590] text-sm">Teeth: Ushabti Bone. Claws: Abaddon Black → drybrush Eshin Grey. Eyes: Yriel Yellow dot. Base: Astrogranite Debris, drybrush Administratum Grey, optional blood effects (Blood for the Blood God technical paint) for Khorne's signature look.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contrast shortcut -->
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <h3 class="font-display font-semibold mb-2">The Contrast paint shortcut</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Prime with <strong class="text-[#f0ede8]">Grey Seer</strong> or Wraithbone, then apply
+          <strong class="text-[#f0ede8]">Flesh Tearers Red Contrast</strong> over all skin in one
+          coat — it shades and highlights automatically. Then Snakebite Leather Contrast on the
+          brass areas. Two Contrast paints, twenty Bloodletters done in an afternoon.
+          The results won't be competition level but look genuinely good on a table.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- What to buy -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">What to buy first</h2>
+      <p class="text-[#8a8590] mb-10 text-lg">Start with the Combat Patrol. Paint it before buying anything else.</p>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-6 mb-6">
+        <div class="mb-4">
+          <span class="bg-[#c9a84c] text-[#111113] text-xs font-semibold px-2 py-0.5 rounded font-display mr-2">Start Here</span>
+          <span class="text-xs text-[#4a4855]">~$160</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Combat Patrol: Chaos Daemons</h3>
+        <p class="text-[#8a8590] text-sm mb-3 leading-relaxed">
+          All Khorne, all the time. Includes 1x Bloodmaster (Herald of Khorne — your
+          character leader), 3x Bloodcrushers (daemon-riders on iron Juggernauts),
+          10x Flesh Hounds (fast hunting daemons), and 20x Bloodletters (your core
+          melee infantry). 34 models total — one of the most model-rich Combat Patrols available.
+        </p>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          The 20 Bloodletters are the backbone. The Flesh Hounds rush forward to tie up
+          fast enemy units. The Bloodcrushers are your heavy shock cavalry. The Bloodmaster
+          leads from the front and buffs everything around him.
+        </p>
+        <a
+          href="https://www.amazon.com/s?k=combat+patrol+chaos+daemons+warhammer+40k&tag=grimdarkprime-20"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Search Amazon for Combat Patrol →
+        </a>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6 mb-6">
+        <div class="mb-3">
+          <span class="text-xs text-[#4a4855]">~$45 · first expansion</span>
+        </div>
+        <h3 class="font-display font-semibold text-xl mb-2">Bloodletters (additional 10)</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          More Bloodletters extends your main battleline and gives you flexibility to run larger
+          squads or split into two independent units. Khorne lists love redundancy — having
+          more foot soldiers means the opponent can't just focus-fire your entire army away.
+        </p>
+        <a
+          href="https://www.amazon.com/s?k=bloodletters+of+khorne+warhammer+40k&tag=grimdarkprime-20"
+          target="_blank"
+          rel="noopener"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-5 py-2.5 rounded text-sm transition-colors font-display"
+        >
+          Search Amazon →
+        </a>
+      </div>
+
+      <!-- Other gods box -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6 mb-6">
+        <h3 class="font-display font-semibold text-xl mb-4">If Khorne isn't calling to you...</h3>
+        <p class="text-[#8a8590] text-sm mb-4 leading-relaxed">
+          Chaos Daemons can be devoted to any of the four Chaos Gods — each plays completely
+          differently. You don't have to start with Khorne just because the Combat Patrol is
+          Khorne-themed.
+        </p>
+        <div class="space-y-3">
+          {[
+            {
+              name: 'Tzeentch Start',
+              hint: 'Pink Horrors of Tzeentch box',
+              desc: 'The Tzeentch half of the Mortal Realms starter has Pink Horrors — they split into Blue Horrors when killed, making them self-replenishing. Great for psychic-heavy builds.',
+              search: 'pink+horrors+tzeentch+warhammer+40k',
+            },
+            {
+              name: 'Nurgle Start',
+              hint: 'Plaguebearers of Nurgle box',
+              desc: 'Slow but nearly unkillable. Plaguebearers carry disease-ridden blades and are the most durable daemon troops in the game. Excellent for players who prefer attrition.',
+              search: 'plaguebearers+nurgle+warhammer+40k',
+            },
+            {
+              name: 'Slaanesh Start',
+              hint: 'Daemonettes of Slaanesh box',
+              desc: 'Lightning-fast melee. Daemonettes have rending claws and exceptional movement — they get into combat faster than any other daemon troop. High skill ceiling.',
+              search: 'daemonettes+slaanesh+warhammer+40k',
+            },
+          ].map(g => (
+            <div class="bg-[#111113] border border-[#2a2a35] rounded-lg p-4">
+              <h4 class="font-display font-semibold mb-1">{g.name}</h4>
+              <p class="text-xs text-[#4a4855] mb-2">{g.hint}</p>
+              <p class="text-[#8a8590] text-sm mb-3">{g.desc}</p>
+              <a
+                href={`https://www.amazon.com/s?k=${g.search}&tag=grimdarkprime-20`}
+                target="_blank"
+                rel="noopener"
+                class="text-[#c9a84c] hover:text-[#dfc070] text-xs font-semibold transition-colors font-display"
+              >
+                Search Amazon →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Paints -->
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+        <h3 class="font-display font-semibold text-xl mb-4">Paints you need (Khorne)</h3>
+        <div class="space-y-3">
+          {[
+            { name: 'Khorne Red', use: 'Skin base coat — the foundation', required: true },
+            { name: 'Agrax Earthshade', use: 'Shade wash on skin and brass both', required: true },
+            { name: 'Wazdakka Red + Evil Sunz Scarlet', use: 'Layer skin from mid to highlight', required: true },
+            { name: 'Balthasar Gold', use: 'Brass/bronze armor base', required: true },
+            { name: 'Hashut Copper', use: 'Brass armor edge highlight', required: true },
+            { name: 'Abaddon Black', use: 'Claws, Hellblade details, hooves', required: true },
+            { name: 'Ushabti Bone', use: 'Teeth and horns', required: false },
+            { name: 'Blood for the Blood God', use: 'Technical paint — splash gore effects', required: false },
+          ].map(paint => (
+            <div class="flex items-start gap-3">
+              <span class={`text-xs px-2 py-0.5 rounded mt-0.5 flex-shrink-0 font-display ${paint.required ? 'bg-[#c9a84c] text-[#111113]' : 'border border-[#2a2a35] text-[#4a4855]'}`}>
+                {paint.required ? 'Essential' : 'Optional'}
+              </span>
+              <div>
+                <span class="text-sm font-semibold">{paint.name}</span>
+                <span class="text-[#8a8590] text-sm"> — {paint.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-[#4a4855] text-sm mt-4 italic">The Contrast route (Flesh Tearers Red + Snakebite Leather) requires only Grey Seer spray and two Contrast pots. Much cheaper and still table-ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Cost breakdown -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Honest cost breakdown</h2>
+      <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg overflow-hidden">
+        {[
+          { item: 'Combat Patrol: Chaos Daemons', cost: '~$160', note: '34 Khorne models — exceptional model count for the price' },
+          { item: 'Essential paints (6)', cost: '~$35', note: 'Reds, shade, brass, black' },
+          { item: 'Basing supplies', cost: '~$12', note: 'Texture paint + tuft + grey drybrush' },
+          { item: 'Clippers + hobby knife', cost: '~$20', note: 'One-time purchase' },
+          { item: 'Superglue', cost: '~$5', note: 'Or plastic glue — both work' },
+        ].map((row, i) => (
+          <div class={`flex items-start justify-between px-5 py-4 gap-4 ${i % 2 === 0 ? '' : 'bg-[#111113]'}`}>
+            <div>
+              <p class="text-sm font-semibold">{row.item}</p>
+              <p class="text-xs text-[#4a4855] mt-0.5">{row.note}</p>
+            </div>
+            <span class="text-sm font-semibold text-[#c9a84c] flex-shrink-0">{row.cost}</span>
+          </div>
+        ))}
+        <div class="flex items-center justify-between px-5 py-4 bg-[#1f1d14] border-t border-[#c9a84c]">
+          <p class="font-display font-semibold">All-in starter total</p>
+          <span class="font-display font-bold text-[#c9a84c] text-lg">~$232</span>
+        </div>
+      </div>
+      <p class="text-[#4a4855] text-sm mt-4 italic">
+        Prices approximate. Chaos Daemons are among the best value starter boxes — 34 models
+        for the Combat Patrol price point is exceptional. The Contrast paint route cuts paint
+        costs by roughly half.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">Blood for the Blood God.</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        Thirty-four models. Red skin. Brass armor. Charge everything.
+        The Khorne Combat Patrol teaches you the game the direct way —
+        and when you're ready for more, three other gods are waiting.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/painting"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Painting Guide →
+        </a>
+        <a
+          href="/quiz"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Retake the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
