@@ -2,17 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const factions = [
-  {
-    slug: 'necrons',
-    name: 'Necrons',
-    emoji: '🤖',
-    tagline: 'Ancient machine gods, awoken and merciless',
-    painting: 'Easy',
-    paintingColor: 'text-green-400',
-    playstyle: 'Durable Shooter',
-    cost: '~$170–$250',
-    beginner: true,
-  },
+  // --- Imperium ---
   {
     slug: 'space-marines',
     name: 'Space Marines',
@@ -23,28 +13,7 @@ const factions = [
     playstyle: 'Versatile',
     cost: '~$160–$230',
     beginner: true,
-  },
-  {
-    slug: 'orks',
-    name: 'Orks',
-    emoji: '💀',
-    tagline: 'Fungal alien berserkers who win through sheer overwhelming numbers',
-    painting: 'Easy',
-    paintingColor: 'text-green-400',
-    playstyle: 'Melee Horde',
-    cost: '~$160–$220',
-    beginner: true,
-  },
-  {
-    slug: 'tyranids',
-    name: 'Tyranids',
-    emoji: '🐛',
-    tagline: 'An extragalactic swarm that consumes entire worlds — no mercy, no individual will',
-    painting: 'Easy',
-    paintingColor: 'text-green-400',
-    playstyle: 'Fast Swarm',
-    cost: '~$160–$220',
-    beginner: false,
+    group: 'imperium',
   },
   {
     slug: 'astra-militarum',
@@ -56,28 +25,7 @@ const factions = [
     playstyle: 'Gunline + Armor',
     cost: '~$160–$230',
     beginner: false,
-  },
-  {
-    slug: 'tau',
-    name: "T'au Empire",
-    emoji: '🎯',
-    tagline: 'Technologically advanced mech-suit warriors united under the Greater Good',
-    painting: 'Easy',
-    paintingColor: 'text-green-400',
-    playstyle: 'Pure Shooting',
-    cost: '~$160–$230',
-    beginner: false,
-  },
-  {
-    slug: 'aeldari',
-    name: 'Aeldari',
-    emoji: '👁️',
-    tagline: 'Ancient masters of the galaxy, now a dying race haunted by the god they created',
-    painting: 'Medium',
-    paintingColor: 'text-yellow-400',
-    playstyle: 'Elite & Fast',
-    cost: '~$160–$240',
-    beginner: false,
+    group: 'imperium',
   },
   {
     slug: 'adeptus-mechanicus',
@@ -89,50 +37,7 @@ const factions = [
     playstyle: 'Shooting + Combo',
     cost: '~$160–$240',
     beginner: false,
-  },
-  {
-    slug: 'chaos-space-marines',
-    name: 'Chaos Space Marines',
-    emoji: '💀',
-    tagline: 'Traitor Legions who turned against the Emperor ten thousand years ago and never stopped',
-    painting: 'Easy',
-    paintingColor: 'text-green-400',
-    playstyle: 'Aggressive Melee',
-    cost: '~$160–$230',
-    beginner: false,
-  },
-  {
-    slug: 'death-guard',
-    name: 'Death Guard',
-    emoji: '🦫',
-    tagline: 'Nurgle\'s plague marines — rotting, unkillable, and trudging forward forever',
-    painting: 'Easy',
-    paintingColor: 'text-green-400',
-    playstyle: 'Slow Juggernaut',
-    cost: '~$160–$230',
-    beginner: true,
-  },
-  {
-    slug: 'world-eaters',
-    name: 'World Eaters',
-    emoji: '🪓',
-    tagline: "Khorne's berserkers — pure melee fury, no psychics, no mercy, no stopping",
-    painting: 'Medium',
-    paintingColor: 'text-yellow-400',
-    playstyle: 'All-In Melee',
-    cost: '~$170',
-    beginner: false,
-  },
-  {
-    slug: 'thousand-sons',
-    name: 'Thousand Sons',
-    emoji: '🔮',
-    tagline: 'Sorcerer Space Marines — hollow armor animated by bound souls, led by Tzeentch\'s finest',
-    painting: 'Medium',
-    paintingColor: 'text-yellow-400',
-    playstyle: 'Psychic Control',
-    cost: '~$170',
-    beginner: false,
+    group: 'imperium',
   },
   {
     slug: 'adepta-sororitas',
@@ -142,8 +47,9 @@ const factions = [
     painting: 'Medium',
     paintingColor: 'text-yellow-400',
     playstyle: 'Faith + Firepower',
-    cost: '~$140–150',
+    cost: '~$140–$150',
     beginner: false,
+    group: 'imperium',
   },
   {
     slug: 'adeptus-custodes',
@@ -155,6 +61,7 @@ const factions = [
     playstyle: 'Elite Melee',
     cost: '~$160–$200',
     beginner: false,
+    group: 'imperium',
   },
   {
     slug: 'grey-knights',
@@ -166,6 +73,7 @@ const factions = [
     playstyle: 'Elite Psychic',
     cost: '~$160',
     beginner: false,
+    group: 'imperium',
   },
   {
     slug: 'deathwatch',
@@ -177,6 +85,7 @@ const factions = [
     playstyle: 'Flexible Kill Teams',
     cost: '~$160',
     beginner: false,
+    group: 'imperium',
   },
   {
     slug: 'imperial-knights',
@@ -188,6 +97,57 @@ const factions = [
     playstyle: 'Walking Tanks',
     cost: '~$250+',
     beginner: false,
+    group: 'imperium',
+  },
+
+  // --- Chaos ---
+  {
+    slug: 'death-guard',
+    name: 'Death Guard',
+    emoji: '🦠',
+    tagline: 'Nurgle\'s plague marines — rotting, unkillable, and trudging forward forever',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Slow Juggernaut',
+    cost: '~$160–$230',
+    beginner: true,
+    group: 'chaos',
+  },
+  {
+    slug: 'chaos-space-marines',
+    name: 'Chaos Space Marines',
+    emoji: '💀',
+    tagline: 'Traitor Legions who turned against the Emperor ten thousand years ago and never stopped',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Aggressive Melee',
+    cost: '~$160–$230',
+    beginner: false,
+    group: 'chaos',
+  },
+  {
+    slug: 'world-eaters',
+    name: 'World Eaters',
+    emoji: '🪓',
+    tagline: "Khorne's berserkers — pure melee fury, no psychics, no mercy, no stopping",
+    painting: 'Medium',
+    paintingColor: 'text-yellow-400',
+    playstyle: 'All-In Melee',
+    cost: '~$170',
+    beginner: false,
+    group: 'chaos',
+  },
+  {
+    slug: 'thousand-sons',
+    name: 'Thousand Sons',
+    emoji: '🔮',
+    tagline: 'Sorcerer Space Marines — hollow armor animated by bound souls, led by Tzeentch\'s finest',
+    painting: 'Medium',
+    paintingColor: 'text-yellow-400',
+    playstyle: 'Psychic Control',
+    cost: '~$170',
+    beginner: false,
+    group: 'chaos',
   },
   {
     slug: 'chaos-daemons',
@@ -199,6 +159,7 @@ const factions = [
     playstyle: 'Melee Aggression',
     cost: '~$160',
     beginner: false,
+    group: 'chaos',
   },
   {
     slug: 'chaos-knights',
@@ -210,28 +171,33 @@ const factions = [
     playstyle: 'Chaos Walking Tanks',
     cost: '~$165+',
     beginner: false,
+    group: 'chaos',
   },
+
+  // --- Xenos ---
   {
-    slug: 'drukhari',
-    name: 'Drukhari',
-    emoji: '🗡️',
-    tagline: 'Dark Eldar slave-raiders — the fastest and most sadistic army in 40k',
-    painting: 'Medium',
-    paintingColor: 'text-yellow-400',
-    playstyle: 'Glass Cannon',
-    cost: '~$160',
-    beginner: false,
-  },
-  {
-    slug: 'genestealer-cults',
-    name: 'Genestealer Cults',
-    emoji: '🧬',
-    tagline: 'Alien-infected insurgents who rise up from within Imperial society',
+    slug: 'necrons',
+    name: 'Necrons',
+    emoji: '🤖',
+    tagline: 'Ancient machine gods, awoken and merciless',
     painting: 'Easy',
     paintingColor: 'text-green-400',
-    playstyle: 'Ambush Insurgents',
-    cost: '~$160',
-    beginner: false,
+    playstyle: 'Durable Shooter',
+    cost: '~$170–$250',
+    beginner: true,
+    group: 'xenos',
+  },
+  {
+    slug: 'orks',
+    name: 'Orks',
+    emoji: '💪',
+    tagline: 'Fungal alien berserkers who win through sheer overwhelming numbers',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Melee Horde',
+    cost: '~$160–$220',
+    beginner: true,
+    group: 'xenos',
   },
   {
     slug: 'leagues-of-votann',
@@ -243,6 +209,85 @@ const factions = [
     playstyle: 'Tough Shooting',
     cost: '~$160',
     beginner: true,
+    group: 'xenos',
+  },
+  {
+    slug: 'tyranids',
+    name: 'Tyranids',
+    emoji: '🐛',
+    tagline: 'An extragalactic swarm that consumes entire worlds — no mercy, no individual will',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Fast Swarm',
+    cost: '~$160–$220',
+    beginner: false,
+    group: 'xenos',
+  },
+  {
+    slug: 'tau',
+    name: "T'au Empire",
+    emoji: '🎯',
+    tagline: 'Technologically advanced mech-suit warriors united under the Greater Good',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Pure Shooting',
+    cost: '~$160–$230',
+    beginner: false,
+    group: 'xenos',
+  },
+  {
+    slug: 'aeldari',
+    name: 'Aeldari',
+    emoji: '👁️',
+    tagline: 'Ancient masters of the galaxy, now a dying race haunted by the god they created',
+    painting: 'Medium',
+    paintingColor: 'text-yellow-400',
+    playstyle: 'Elite & Fast',
+    cost: '~$160–$240',
+    beginner: false,
+    group: 'xenos',
+  },
+  {
+    slug: 'drukhari',
+    name: 'Drukhari',
+    emoji: '🗡️',
+    tagline: 'Dark Eldar slave-raiders — the fastest and most sadistic army in 40k',
+    painting: 'Medium',
+    paintingColor: 'text-yellow-400',
+    playstyle: 'Glass Cannon',
+    cost: '~$160',
+    beginner: false,
+    group: 'xenos',
+  },
+  {
+    slug: 'genestealer-cults',
+    name: 'Genestealer Cults',
+    emoji: '🧬',
+    tagline: 'Alien-infected insurgents who rise up from within Imperial society',
+    painting: 'Easy',
+    paintingColor: 'text-green-400',
+    playstyle: 'Ambush Insurgents',
+    cost: '~$160',
+    beginner: false,
+    group: 'xenos',
+  },
+];
+
+const groups = [
+  {
+    id: 'imperium',
+    name: 'The Imperium',
+    blurb: "Humanity's defenders — Space Marines, armies of faith, and towering god-machines. The most common place for new players to start.",
+  },
+  {
+    id: 'chaos',
+    name: 'Chaos',
+    blurb: 'The corrupted and the damned — traitor legions and daemons serving the Dark Gods. Aggressive, characterful, and visually striking.',
+  },
+  {
+    id: 'xenos',
+    name: 'Xenos',
+    blurb: 'The alien races of the galaxy, each utterly unlike the last — from undying robots to world-eating swarms to grudge-bearing space dwarves.',
   },
 ];
 ---
@@ -256,39 +301,59 @@ const factions = [
     <div class="max-w-4xl mx-auto">
       <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-4 font-display">Faction Guides</p>
       <h1 class="font-display text-4xl sm:text-5xl font-bold mb-4">Choose Your Army</h1>
-      <p class="text-[#8a8590] text-lg max-w-2xl mb-12">
-        Every faction guide covers the lore, how they play, how hard they are to paint, and exactly what to buy first. Not sure where to start? <a href="/quiz" class="text-[#c9a84c] hover:text-[#dfc070] transition-colors">Take the quiz</a>.
+      <p class="text-[#8a8590] text-lg max-w-2xl mb-8">
+        Every faction guide covers the lore, how they play, how hard they are to paint, and exactly what to buy first. Not sure where to start? <a href="/quiz/" class="text-[#c9a84c] hover:text-[#dfc070] transition-colors">Take the quiz</a>.
       </p>
 
-      <div class="space-y-4">
-        {factions.map(f => (
-          <a
-            href={`/factions/${f.slug}`}
-            class="block bg-[#1a1a1f] border border-[#2a2a35] hover:border-[#c9a84c] rounded-lg p-6 transition-colors group"
-          >
-            <div class="flex items-start gap-4">
-              <div class="text-4xl">{f.emoji}</div>
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-1 flex-wrap">
-                  <h2 class="font-display font-semibold text-xl group-hover:text-[#c9a84c] transition-colors">{f.name}</h2>
-                  {f.beginner && (
-                    <span class="bg-green-900 text-green-300 text-xs font-semibold px-2 py-0.5 rounded font-display">Beginner Friendly</span>
-                  )}
-                </div>
-                <p class="text-[#8a8590] text-sm mb-3">{f.tagline}</p>
-                <div class="flex gap-5 text-xs text-[#4a4855]">
-                  <span>Playstyle: <span class="text-[#b8b4c0]">{f.playstyle}</span></span>
-                  <span>Painting: <span class={f.paintingColor}>{f.painting}</span></span>
-                  <span>Starter cost: <span class="text-[#b8b4c0]">{f.cost}</span></span>
-                </div>
-              </div>
-              <div class="text-[#4a4855] group-hover:text-[#c9a84c] transition-colors text-xl self-center">→</div>
-            </div>
-          </a>
+      <!-- Jump nav + legend -->
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm border-t border-b border-[#2a2a35] py-4">
+        <span class="text-[#4a4855] uppercase tracking-wide text-xs font-display">Jump to</span>
+        {groups.map(g => (
+          <a href={`#${g.id}`} class="text-[#b8b4c0] hover:text-[#c9a84c] transition-colors">{g.name}</a>
         ))}
+        <span class="flex items-center gap-2 sm:ml-auto text-[#8a8590]">
+          <span class="bg-green-900 text-green-300 text-xs font-semibold px-2 py-0.5 rounded font-display">Beginner Friendly</span>
+          <span class="text-xs">= good first army</span>
+        </span>
       </div>
-
     </div>
   </section>
+
+  {groups.map(group => (
+    <section id={group.id} class="px-6 pb-14 scroll-mt-24">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold mb-2">{group.name}</h2>
+        <p class="text-[#8a8590] mb-6 max-w-2xl">{group.blurb}</p>
+
+        <div class="space-y-4">
+          {factions.filter(f => f.group === group.id).map(f => (
+            <a
+              href={`/factions/${f.slug}`}
+              class="block bg-[#1a1a1f] border border-[#2a2a35] hover:border-[#c9a84c] rounded-lg p-6 transition-colors group"
+            >
+              <div class="flex items-start gap-4">
+                <div class="text-4xl">{f.emoji}</div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-1 flex-wrap">
+                    <h3 class="font-display font-semibold text-xl group-hover:text-[#c9a84c] transition-colors">{f.name}</h3>
+                    {f.beginner && (
+                      <span class="bg-green-900 text-green-300 text-xs font-semibold px-2 py-0.5 rounded font-display">Beginner Friendly</span>
+                    )}
+                  </div>
+                  <p class="text-[#8a8590] text-sm mb-3">{f.tagline}</p>
+                  <div class="flex gap-5 text-xs text-[#4a4855] flex-wrap">
+                    <span>Playstyle: <span class="text-[#b8b4c0]">{f.playstyle}</span></span>
+                    <span>Painting: <span class={f.paintingColor}>{f.painting}</span></span>
+                    <span>Starter cost: <span class="text-[#b8b4c0]">{f.cost}</span></span>
+                  </div>
+                </div>
+                <div class="text-[#4a4855] group-hover:text-[#c9a84c] transition-colors text-xl self-center">→</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
 
 </BaseLayout>

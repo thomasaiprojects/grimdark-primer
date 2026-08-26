@@ -8,6 +8,8 @@ interface Props {
 
 const { title, description = "Your guide into Warhammer 40,000. Find your army, learn to build, paint, and play." } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// Bump this whenever the site gets a content/accuracy review pass.
+const lastReviewed = "August 2026";
 ---
 
 <html lang="en">
@@ -31,17 +33,41 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body class="bg-[#111113] text-[#f0ede8] font-sans antialiased min-h-screen flex flex-col">
     <nav class="border-b border-[#2a2a35] px-6 py-4">
-      <div class="max-w-5xl mx-auto flex items-center justify-between">
-        <a href="/" class="font-display text-lg font-semibold text-[#c9a84c] tracking-wide hover:text-[#dfc070] transition-colors">
-          Grimdark Primer
-        </a>
-        <div class="flex items-center gap-6 text-sm text-[#8a8590]">
-          <a href="/quiz/" class="hover:text-[#f0ede8] transition-colors">Army Quiz</a>
-          <a href="/factions/" class="hover:text-[#f0ede8] transition-colors">Factions</a>
-          <a href="/building/" class="hover:text-[#f0ede8] transition-colors">Building</a>
-          <a href="/painting/" class="hover:text-[#f0ede8] transition-colors">Painting</a>
-          <a href="/basing/" class="hover:text-[#f0ede8] transition-colors">Basing</a>
-          <a href="/getting-started/" class="hover:text-[#f0ede8] transition-colors">How to Play</a>
+      <div class="max-w-5xl mx-auto">
+        <!-- CSS-only mobile toggle: no JS needed; resets on page navigation -->
+        <input type="checkbox" id="nav-toggle" class="peer sr-only" />
+        <div class="flex items-center justify-between">
+          <a href="/" class="font-display text-lg font-semibold text-[#c9a84c] tracking-wide hover:text-[#dfc070] transition-colors">
+            Grimdark Primer
+          </a>
+          <!-- Desktop links -->
+          <div class="hidden sm:flex items-center gap-6 text-sm text-[#8a8590]">
+            <a href="/what-is-warhammer/" class="hover:text-[#f0ede8] transition-colors">Start Here</a>
+            <a href="/quiz/" class="hover:text-[#f0ede8] transition-colors">Army Quiz</a>
+            <a href="/factions/" class="hover:text-[#f0ede8] transition-colors">Factions</a>
+            <a href="/building/" class="hover:text-[#f0ede8] transition-colors">Building</a>
+            <a href="/painting/" class="hover:text-[#f0ede8] transition-colors">Painting</a>
+            <a href="/basing/" class="hover:text-[#f0ede8] transition-colors">Basing</a>
+            <a href="/getting-started/" class="hover:text-[#f0ede8] transition-colors">How to Play</a>
+          </div>
+          <!-- Mobile hamburger -->
+          <label for="nav-toggle" class="sm:hidden cursor-pointer text-[#8a8590] hover:text-[#f0ede8] transition-colors -mr-1 p-1" aria-label="Toggle navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </label>
+        </div>
+        <!-- Mobile dropdown (revealed via peer-checked) -->
+        <div class="hidden peer-checked:flex sm:hidden flex-col mt-4 text-sm text-[#8a8590]">
+          <a href="/what-is-warhammer/" class="py-2 hover:text-[#f0ede8] transition-colors">Start Here</a>
+          <a href="/quiz/" class="py-2 hover:text-[#f0ede8] transition-colors">Army Quiz</a>
+          <a href="/factions/" class="py-2 hover:text-[#f0ede8] transition-colors">Factions</a>
+          <a href="/building/" class="py-2 hover:text-[#f0ede8] transition-colors">Building</a>
+          <a href="/painting/" class="py-2 hover:text-[#f0ede8] transition-colors">Painting</a>
+          <a href="/basing/" class="py-2 hover:text-[#f0ede8] transition-colors">Basing</a>
+          <a href="/getting-started/" class="py-2 hover:text-[#f0ede8] transition-colors">How to Play</a>
         </div>
       </div>
     </nav>
@@ -50,10 +76,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <slot />
     </main>
 
-    <footer class="border-t border-[#2a2a35] px-6 py-8 mt-16">
-      <div class="max-w-5xl mx-auto text-center text-sm text-[#4a4855]">
-        <p>Grimdark Primer is an independent guide. Not affiliated with Games Workshop.</p>
-        <p class="mt-1">Some links are affiliate links — we earn a small commission at no extra cost to you.</p>
+    <footer class="border-t border-[#2a2a35] px-6 py-10 mt-16">
+      <div class="max-w-5xl mx-auto">
+        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[#8a8590] mb-6">
+          <a href="/what-is-warhammer/" class="hover:text-[#f0ede8] transition-colors">Start Here</a>
+          <a href="/quiz/" class="hover:text-[#f0ede8] transition-colors">Army Quiz</a>
+          <a href="/factions/" class="hover:text-[#f0ede8] transition-colors">Factions</a>
+          <a href="/building/" class="hover:text-[#f0ede8] transition-colors">Building</a>
+          <a href="/painting/" class="hover:text-[#f0ede8] transition-colors">Painting</a>
+          <a href="/basing/" class="hover:text-[#f0ede8] transition-colors">Basing</a>
+          <a href="/getting-started/" class="hover:text-[#f0ede8] transition-colors">How to Play</a>
+        </nav>
+        <div class="text-center text-sm text-[#4a4855] space-y-1">
+          <p>Grimdark Primer is an independent guide. Not affiliated with Games Workshop.</p>
+          <p>Some links are affiliate links — we earn a small commission at no extra cost to you.</p>
+          <p>Content last reviewed {lastReviewed}. Rules and prices change between editions — always confirm against official sources.</p>
+        </div>
       </div>
     </footer>
   </body>

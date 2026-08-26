@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const games = [
+  {
+    name: 'Warhammer 40,000',
+    badge: 'The main game',
+    badgeType: 'primary',
+    models: '~20–60+ models',
+    length: 'A game: ~2–3 hrs',
+    cost: 'Start: ~$150+',
+    desc: "The flagship. Two players field armies of dozens of models and fight a full-scale battle over objectives. It has the deepest rules, the biggest model range, and by far the largest community. When someone says \"I play Warhammer,\" they almost always mean this — and most people start here.",
+  },
+  {
+    name: 'Combat Patrol',
+    badge: 'A small mode of 40k — not a separate game',
+    badgeType: 'mode',
+    models: '~10–25 models (one box)',
+    length: 'A game: ~1 hr',
+    cost: 'Start: ~$150 (one box)',
+    desc: "Not a different game — a smaller, streamlined way to play 40k, built around a single \"Combat Patrol\" starter box. One box is a ready-to-play force, the rules are trimmed down, and a game takes about an hour. It's the on-ramp: the easiest way to actually learn 40k without buying and painting a whole army first. (This is why \"Combat Patrol\" shows up all over this site — it's the box we recommend buying first.)",
+  },
+  {
+    name: 'Kill Team',
+    badge: 'A separate game',
+    badgeType: 'separate',
+    models: '~6–14 models',
+    length: 'A game: ~1–1.5 hrs',
+    cost: 'Start: ~$60–$170',
+    desc: "A standalone skirmish game set in the same 40k universe. Instead of an army, you control a small squad of individual specialists on a dense, terrain-packed board. It's more tactical and granular than 40k — every single model matters — and much cheaper to get into. A brilliant low-commitment way to try the hobby, and a favourite of people who love painting a handful of models to a high standard.",
+  },
+  {
+    name: 'Necromunda',
+    badge: 'A separate game',
+    badgeType: 'separate',
+    models: '~4–10 models (a gang)',
+    length: 'Campaign-based',
+    cost: 'Start: ~$50–$170',
+    desc: "A standalone game about rival gangs fighting for survival in the underhive — the crime-ridden depths beneath a 40k hive city. It's built around campaigns: your gang carries over between games, fighters earn skills, suffer lasting injuries, and get richer or die trying. Smaller, grittier, and closer to a tabletop RPG than a wargame. Deeper and more niche — usually someone's second or third game, not their first.",
+  },
+];
+
+const badgeStyles = {
+  primary: 'bg-[#c9a84c] text-[#111113]',
+  mode: 'bg-amber-900/60 text-amber-300 border border-amber-700/50',
+  separate: 'bg-[#2a2a35] text-[#b8b4c0]',
+};
+---
+
+<BaseLayout
+  title="What Is Warhammer? The Games Explained — Beginner's Guide"
+  description="New to Warhammer? A plain-English guide to what it actually is — and the difference between Warhammer 40,000, Combat Patrol, Kill Team, and Necromunda."
+>
+
+  <!-- Hero -->
+  <section class="px-6 pt-16 pb-12 border-b border-[#2a2a35]">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-[#c9a84c] text-sm font-semibold tracking-widest uppercase mb-4 font-display">Start Here</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold mb-6">
+        What is Warhammer, actually?
+      </h1>
+      <p class="text-[#8a8590] text-lg leading-relaxed max-w-2xl mx-auto">
+        If you're standing in a shop staring at a wall of boxes with no idea what any of it means —
+        this page is for you. Here's what Warhammer is, and how the different games fit together,
+        in plain English.
+      </p>
+    </div>
+  </section>
+
+  <!-- Hobby and a game -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">It's a hobby and a game</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg">
+        <p>
+          "Warhammer" isn't one thing — it's two, bolted together.
+          It's a <strong class="text-[#f0ede8]">hobby</strong>: you buy kits of plastic miniatures, build them,
+          and paint them. And it's a <strong class="text-[#f0ede8]">game</strong>: you take those models
+          and play tabletop battles against other people.
+        </p>
+        <p>
+          Plenty of people do only one half. Some never play a single game and are here purely to build
+          and paint. Others buy their models pre-assembled to get to the table faster. Both are completely
+          valid — there's no "right" way in.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- One setting, many games -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">One universe isn't one game</h2>
+      <div class="text-[#b8b4c0] leading-relaxed space-y-4 text-lg mb-8">
+        <p>
+          Here's the thing that trips up almost every newcomer: Warhammer is a <em>family</em> of games,
+          not a single one. Games Workshop — the company behind it — makes several different games,
+          and they split across two big universes:
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-8">
+        <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+          <h3 class="font-display font-semibold text-lg mb-2">Warhammer 40,000</h3>
+          <p class="text-[#8a8590] text-sm leading-relaxed">The <strong class="text-[#f0ede8]">sci-fi</strong> one. A grimdark far future of space marines, aliens, and endless war. The flagship — and what this site focuses on.</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold text-lg mb-2">Age of Sigmar</h3>
+          <p class="text-[#8a8590] text-sm leading-relaxed">The <strong class="text-[#f0ede8]">fantasy</strong> one. Sword-and-sorcery, gods, and monsters. A separate universe with its own games and models.</p>
+        </div>
+      </div>
+
+      <p class="text-[#b8b4c0] leading-relaxed text-lg">
+        Within each universe there are several games at different sizes and price points. Below are
+        the <strong class="text-[#f0ede8]">40k</strong> ones — the games you're most likely choosing between.
+      </p>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- The 40k games -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-2">The Warhammer 40,000 games</h2>
+      <p class="text-[#8a8590] mb-8 text-lg">Same universe, different games. Here's how they actually differ.</p>
+
+      <div class="space-y-4">
+        {games.map(game => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-6">
+            <div class="flex items-center flex-wrap gap-3 mb-3">
+              <h3 class="font-display font-semibold text-xl">{game.name}</h3>
+              <span class={`text-xs font-semibold px-2 py-0.5 rounded font-display ${badgeStyles[game.badgeType]}`}>{game.badge}</span>
+            </div>
+            <div class="flex flex-wrap gap-x-5 gap-y-1 text-xs text-[#4a4855] mb-4">
+              <span>{game.models}</span>
+              <span>{game.length}</span>
+              <span>{game.cost}</span>
+            </div>
+            <p class="text-[#b8b4c0] text-sm leading-relaxed">{game.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Combat Patrol clarifier -->
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5 mt-8">
+        <h3 class="font-display font-semibold mb-2">Wait — is Combat Patrol a game or a box?</h3>
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Both, confusingly. "Combat Patrol" is the name of the <strong class="text-[#f0ede8]">starter boxes</strong>
+          (one per faction), <em>and</em> the name of the small <strong class="text-[#f0ede8]">game mode</strong>
+          designed to be played with them. It is <strong class="text-[#f0ede8]">not</strong> a separate game from
+          40k — it <em>is</em> 40k, just smaller and simpler. When this site says "grab the Combat Patrol,"
+          it means the box.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Even more games -->
+  <section class="px-6 py-16 bg-[#0d0d0f]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-6">There are even more (don't worry about these yet)</h2>
+      <p class="text-[#b8b4c0] leading-relaxed text-lg mb-6">
+        Games Workshop makes a whole shelf of other games — you'll spot them in shops. You don't need to
+        care about any of them as a beginner, but so the names aren't a total mystery:
+      </p>
+      <div class="grid sm:grid-cols-2 gap-3 text-sm">
+        {[
+          { n: 'Warcry', d: 'Fast, brutal fantasy skirmish (Age of Sigmar side)' },
+          { n: 'Blood Bowl', d: 'Fantasy football. Yes, really — and it\'s great' },
+          { n: 'Legions Imperialis', d: '40k at tiny "epic" scale — whole armies of small models' },
+          { n: 'The Horus Heresy', d: '40k\'s history: a bigger, older-era version of the main game' },
+        ].map(g => (
+          <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-4">
+            <p class="font-semibold text-[#f0ede8]">{g.n}</p>
+            <p class="text-[#8a8590] text-xs mt-0.5 leading-relaxed">{g.d}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-[#4a4855] text-sm mt-6 italic">File all of these under "later."</p>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6"><div class="border-t border-[#2a2a35]"></div></div>
+
+  <!-- Which to start with -->
+  <section class="px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-display text-2xl font-semibold text-[#c9a84c] mb-8">Which should I start with?</h2>
+
+      <div class="space-y-4 mb-8">
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-1">Most people → <span class="text-[#c9a84c]">Warhammer 40,000</span></h3>
+          <p class="text-[#8a8590] text-sm leading-relaxed">Via a Combat Patrol box. Pick a faction that looks cool, buy its Combat Patrol, build and paint it, and play the small mode. That's the path this entire site is built around.</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-1">Tight budget, or love painting over playing → <span class="text-[#c9a84c]">Kill Team</span></h3>
+          <p class="text-[#8a8590] text-sm leading-relaxed">Fewer models, lower cost, deep tactics, and the boxes come with their own terrain. A low-pressure way to find out if the hobby is for you.</p>
+        </div>
+        <div class="bg-[#1a1a1f] border border-[#2a2a35] rounded-lg p-5">
+          <h3 class="font-display font-semibold mb-1">You love campaigns and stories → <span class="text-[#c9a84c]">Necromunda</span></h3>
+          <p class="text-[#8a8590] text-sm leading-relaxed">Just know going in that it's a bigger rules commitment and a smaller community than 40k. Better as a second game once you know you're hooked.</p>
+        </div>
+      </div>
+
+      <div class="bg-[#1a1a1f] border border-[#c9a84c] rounded-lg p-5">
+        <p class="text-[#b8b4c0] text-sm leading-relaxed">
+          Whichever you pick, the <strong class="text-[#f0ede8]">hobby skills carry across</strong> —
+          building, painting, and basing are the same everywhere. Start with one, and don't overthink it.
+          You can always branch out later.
+        </p>
+      </div>
+
+      <p class="text-[#4a4855] text-sm mt-6 italic">
+        Box names, prices, and exact formats shift between editions — treat the specifics here as a rough
+        guide, and check official sources before you buy.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">Ready to pick a side?</h2>
+      <p class="text-[#8a8590] text-lg mb-8">
+        This site focuses on Warhammer 40,000. The army quiz matches you to a faction in about two minutes —
+        the best first move once you know what you're getting into.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/quiz/"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Find Your Army →
+        </a>
+        <a
+          href="/getting-started/"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          How the game works
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
