@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { factionMeta, relatedFactions } from '../data/factions.js';
 
 interface Props {
   title: string;
@@ -10,6 +11,18 @@ const { title, description = "Your guide into Warhammer 40,000. Find your army, 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Bump this whenever the site gets a content/accuracy review pass.
 const lastReviewed = "August 2026";
+
+// Detect a faction detail page from the URL (e.g. /factions/necrons/) so we can
+// auto-render the "Where to next?" cross-link band without editing all 22 pages.
+const factionMatch = Astro.url.pathname.match(/^\/factions\/([^/]+)\/?$/);
+const factionSlug = factionMatch && factionMeta[factionMatch[1]] ? factionMatch[1] : null;
+const related = factionSlug ? (relatedFactions[factionSlug] || []) : [];
+const hobbyLinks = [
+  { href: '/building/', emoji: '🔧', label: 'Building guide' },
+  { href: '/painting/', emoji: '🎨', label: 'Painting guide' },
+  { href: '/basing/', emoji: '🏔️', label: 'Basing guide' },
+  { href: '/getting-started/', emoji: '⚔️', label: 'How to play' },
+];
 ---
 
 <html lang="en">
@@ -75,6 +88,36 @@ const lastReviewed = "August 2026";
     <main class="flex-1">
       <slot />
     </main>
+
+    {factionSlug && (
+      <section class="border-t border-[#2a2a35] bg-[#0d0d0f] px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="font-display text-xl font-semibold text-[#c9a84c] mb-6">Where to next?</h2>
+          <div class="grid sm:grid-cols-2 gap-8">
+            <div>
+              <p class="text-xs uppercase tracking-wide text-[#4a4855] font-display mb-3">Learn the hobby</p>
+              <div class="flex flex-col gap-2 text-sm">
+                {hobbyLinks.map(l => (
+                  <a href={l.href} class="text-[#b8b4c0] hover:text-[#c9a84c] transition-colors">
+                    <span class="mr-2">{l.emoji}</span>{l.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-[#4a4855] font-display mb-3">Similar armies</p>
+              <div class="flex flex-col gap-2 text-sm">
+                {related.map(s => (
+                  <a href={`/factions/${s}/`} class="text-[#b8b4c0] hover:text-[#c9a84c] transition-colors">
+                    <span class="mr-2">{factionMeta[s].emoji}</span>{factionMeta[s].name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
 
     <footer class="border-t border-[#2a2a35] px-6 py-10 mt-16">
       <div class="max-w-5xl mx-auto">
