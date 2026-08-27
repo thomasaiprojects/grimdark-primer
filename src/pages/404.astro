@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found (404)"
+  description="That page couldn't be found. Head back to the Grimdark Primer beginner's guide to Warhammer 40,000."
+>
+
+  <section class="px-6 py-24 text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="font-display text-[#c9a84c] text-7xl sm:text-8xl font-bold mb-4">404</p>
+      <h1 class="font-display text-3xl sm:text-4xl font-bold mb-6">This page was lost to the warp.</h1>
+      <p class="text-[#8a8590] text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        The page you're looking for doesn't exist — it may have moved, or the link was mistyped.
+        No matter. Here's the way back.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/"
+          class="inline-block bg-[#c9a84c] hover:bg-[#dfc070] text-[#111113] font-semibold px-8 py-4 rounded text-lg transition-colors font-display tracking-wide"
+        >
+          Back to Home →
+        </a>
+        <a
+          href="/quiz/"
+          class="inline-block border border-[#2a2a35] hover:border-[#c9a84c] text-[#b8b4c0] hover:text-[#c9a84c] font-semibold px-8 py-4 rounded text-lg transition-colors font-display"
+        >
+          Take the Army Quiz
+        </a>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-[#2a2a35]">
+        <p class="text-xs uppercase tracking-wide text-[#4a4855] font-display mb-4">Or jump to</p>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[#8a8590]">
+          <a href="/what-is-warhammer/" class="hover:text-[#c9a84c] transition-colors">Start Here</a>
+          <a href="/factions/" class="hover:text-[#c9a84c] transition-colors">Factions</a>
+          <a href="/building/" class="hover:text-[#c9a84c] transition-colors">Building</a>
+          <a href="/painting/" class="hover:text-[#c9a84c] transition-colors">Painting</a>
+          <a href="/basing/" class="hover:text-[#c9a84c] transition-colors">Basing</a>
+          <a href="/getting-started/" class="hover:text-[#c9a84c] transition-colors">How to Play</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
